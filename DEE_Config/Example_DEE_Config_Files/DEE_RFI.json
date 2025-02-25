@@ -1,0 +1,30 @@
+{
+  "DEE_Name": "RFI Stage DEE",
+  "Purpose": "Support creation of Request for Information documentation and decks.",
+  "Business_Unit": "Capture Team",
+  "Status": "Active",
+  "Tools_Used": [
+    {
+      "Tool_Name": "Word for RFI",
+      "Role": "Draft the RFI document text",
+      "Storage_Type": "Shared Drive",
+      "Compute_Type": "Local"
+    },
+    {
+      "Tool_Name": "PowerPoint for RFI Deck",
+      "Role": "Generate RFI presentation slides",
+      "Storage_Type": "Shared Drive",
+      "Compute_Type": "Local"
+    }
+  ],
+  "Integration_Details": {
+    "Data_Flow": "Both Word docs and PowerPoint decks stored on shared drive; no advanced collaboration tool required at RFI stage.",
+    "Security_Constraints": ["Unclassified", "CUI possible depending on content"]
+  },
+  "Key_Stakeholders": [
+    "Capture Manager",
+    "Proposal Writer",
+    "Contracts Liaison"
+  ],
+  "Documentation": "RFI guidelines found in internal process docs. Ad hoc collaboration via email and shared drive."
+}
