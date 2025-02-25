@@ -1,0 +1,37 @@
+{
+  "Families_and_Types": {
+    "Physical System Representation": [
+      "CAD",
+      "ECAD",
+      "PLM"
+    ],
+    "Simulations": [
+      "LowFidelitySimulations",
+      "CFD",
+      "FEA",
+      "EM",
+      "Dynamic",
+      "MissionModels",
+      "SimulationManagers"
+    ],
+    "Model-Based System Engineering": [
+      "SharedArchitecture",
+      "ArchitectureTools",
+      "RequirementsTools"
+    ],
+    "Computer Science and Software Engineering": [
+      "IDE",
+      "VersionControl",
+      "CI_CD",
+      "AIFoundationModels"
+    ],
+    "Productivity and Digital Engineering": [
+      "Email",
+      "WordProcessing",
+      "Presentations",
+      "Spreadsheets",
+      "TaskManagement",
+      "SharedDrives"
+    ]
+  }
+}
