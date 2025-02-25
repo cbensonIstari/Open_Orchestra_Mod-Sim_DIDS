@@ -1,0 +1,113 @@
+{
+  "DEE_Name": "RFP Stage Ecosystem",
+  "Tools_Used": [
+    {
+      "Tool": {
+        "Class": "Productivity Tools and Digital Engineering",
+        "Type": "Word Processing",
+        "Instance": "Microsoft Word (RFP)",
+        "Vendor": "Microsoft",
+        "Version": "365",
+        "POC": {
+          "Name": "Capture Lead",
+          "Email": "capture.lead@example.com"
+        }
+      },
+      "Licensing": {
+        "Type": "Subscription",
+        "Server": {
+          "Vendor": "Office 365",
+          "Hostname": "office365.microsoft.com",
+          "IP": null,
+          "Port": "443",
+          "Protocol": "HTTPS"
+        }
+      },
+      "Access_Control": {
+        "IAM": "Azure AD"
+      },
+      "Deployment": {
+        "Level": "Enterprise",
+        "Type": "Cloud",
+        "Cloud": {
+          "Type": "Public",
+          "Provider": "Microsoft"
+        },
+        "InfoSec_Level": ["CUI"]
+      },
+      "Plugins": []
+    },
+    {
+      "Tool": {
+        "Class": "Productivity Tools and Digital Engineering",
+        "Type": "Presentations",
+        "Instance": "Microsoft PowerPoint (RFP Deck)",
+        "Vendor": "Microsoft",
+        "Version": "365",
+        "POC": {
+          "Name": "RFP Coordinator",
+          "Email": "rfp.coordinator@example.com"
+        }
+      },
+      "Licensing": {
+        "Type": "Subscription",
+        "Server": {
+          "Vendor": "Office 365",
+          "Hostname": "office365.microsoft.com",
+          "IP": null,
+          "Port": "443",
+          "Protocol": "HTTPS"
+        }
+      },
+      "Access_Control": {
+        "IAM": "Azure AD"
+      },
+      "Deployment": {
+        "Level": "Department",
+        "Type": "Cloud",
+        "Cloud": {
+          "Type": "Public",
+          "Provider": "Microsoft"
+        },
+        "InfoSec_Level": ["CUI"]
+      },
+      "Plugins": []
+    },
+    {
+      "Tool": {
+        "Class": "Productivity Tools and Digital Engineering",
+        "Type": "Task Management",
+        "Instance": "MS Project (RFP WBS)",
+        "Vendor": "Microsoft",
+        "Version": "2019",
+        "POC": {
+          "Name": "Schedule Analyst",
+          "Email": "schedule.analyst@example.com"
+        }
+      },
+      "Licensing": {
+        "Type": "Subscription",
+        "Server": {
+          "Vendor": "Project License",
+          "Hostname": "msproject-license.corp.internal",
+          "IP": "192.168.10.80",
+          "Port": "443",
+          "Protocol": "HTTPS"
+        }
+      },
+      "Access_Control": {
+        "IAM": "Active Directory"
+      },
+      "Deployment": {
+        "Level": "Business Unit",
+        "Type": "On-Premise",
+        "Cloud": {
+          "Type": null,
+          "Provider": null
+        },
+        "InfoSec_Level": ["CUI"]
+      },
+      "Plugins": []
+    }
+  ]
+}
