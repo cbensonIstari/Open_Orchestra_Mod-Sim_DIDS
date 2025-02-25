@@ -1,0 +1,233 @@
+{
+  "DEE_Name": "SRR Stage Ecosystem",
+  "Tools_Used": [
+    {
+      "Tool": {
+        "Class": "Simulations",
+        "Type": "LowFidelitySimulations",
+        "Instance": "MATLAB (Low-Fidelity Analytical Models)",
+        "Vendor": "MathWorks",
+        "Version": "R2023a",
+        "POC": {
+          "Name": "Simulation Lead",
+          "Email": "sim.lead@example.com"
+        }
+      },
+      "Licensing": {
+        "Type": "Concurrent",
+        "Server": {
+          "Vendor": "MathWorks License Manager",
+          "Hostname": "matlab-license.corp.internal",
+          "IP": "192.168.30.110",
+          "Port": "27000",
+          "Protocol": "TCP/IP"
+        }
+      },
+      "Access_Control": {
+        "IAM": "LDAP"
+      },
+      "Deployment": {
+        "Level": "Program",
+        "Type": "On-Premise",
+        "InfoSec_Level": ["ITAR"]
+      },
+      "Plugins": ["Simulink"]
+    },
+    {
+      "Tool": {
+        "Class": "Simulations",
+        "Type": "LowFidelitySimulations",
+        "Instance": "MATLAB (Tradespace Model)",
+        "Vendor": "MathWorks",
+        "Version": "R2023a",
+        "POC": {
+          "Name": "Concept Analyst",
+          "Email": "concept.analyst@example.com"
+        }
+      },
+      "Licensing": {
+        "Type": "Concurrent",
+        "Server": {
+          "Vendor": "MathWorks License Manager",
+          "Hostname": "matlab-license.corp.internal",
+          "IP": "192.168.30.110",
+          "Port": "27000",
+          "Protocol": "TCP/IP"
+        }
+      },
+      "Access_Control": {
+        "IAM": "LDAP"
+      },
+      "Deployment": {
+        "Level": "Department",
+        "Type": "On-Premise",
+        "InfoSec_Level": ["CUI"]
+      },
+      "Plugins": ["Optimization Toolbox"]
+    },
+    {
+      "Tool": {
+        "Class": "Model-Based System Engineering",
+        "Type": "Requirements Tools",
+        "Instance": "Cameo (Requirements)",
+        "Vendor": "Dassault Systèmes",
+        "Version": "2023x",
+        "POC": {
+          "Name": "Requirements Manager",
+          "Email": "req.manager@example.com"
+        }
+      },
+      "Licensing": {
+        "Type": "Floating",
+        "Server": {
+          "Vendor": "Cameo License Server",
+          "Hostname": "cameo-license.abccompany.com",
+          "IP": "192.168.20.100",
+          "Port": "27000",
+          "Protocol": "TCP/IP"
+        }
+      },
+      "Access_Control": {
+        "IAM": "Active Directory"
+      },
+      "Deployment": {
+        "Level": "Project",
+        "Type": "Collaboration Database",
+        "InfoSec_Level": ["CUI", "ITAR"]
+      },
+      "Plugins": ["SysML Plugin"]
+    },
+    {
+      "Tool": {
+        "Class": "Model-Based System Engineering",
+        "Type": "Architecture Tools",
+        "Instance": "Cameo (System Architecture)",
+        "Vendor": "Dassault Systèmes",
+        "Version": "2023x",
+        "POC": {
+          "Name": "Lead Architect",
+          "Email": "architect@example.com"
+        }
+      },
+      "Licensing": {
+        "Type": "Floating",
+        "Server": {
+          "Vendor": "Cameo License Server",
+          "Hostname": "cameo-license.abccompany.com",
+          "IP": "192.168.20.100",
+          "Port": "27000",
+          "Protocol": "TCP/IP"
+        }
+      },
+      "Access_Control": {
+        "IAM": "Active Directory"
+      },
+      "Deployment": {
+        "Level": "Enterprise",
+        "Type": "Collaboration Database",
+        "InfoSec_Level": ["CUI", "ITAR"]
+      },
+      "Plugins": ["SysML Plugin", "UPDM/UAF Plugin"]
+    },
+    {
+      "Tool": {
+        "Class": "Physical System Representation",
+        "Type": "PLM",
+        "Instance": "3DX for Product Lifecycle Manager",
+        "Vendor": "Dassault Systèmes",
+        "Version": "R2023x",
+        "POC": {
+          "Name": "Configuration Manager",
+          "Email": "config.manager@example.com"
+        }
+      },
+      "Licensing": {
+        "Type": "Token",
+        "Server": {
+          "Vendor": "DS License Server",
+          "Hostname": "3dx-license.abccompany.com",
+          "IP": "192.168.40.50",
+          "Port": "27010",
+          "Protocol": "TCP/IP"
+        }
+      },
+      "Access_Control": {
+        "IAM": "Active Directory"
+      },
+      "Deployment": {
+        "Level": "Program",
+        "Type": "Collaboration Database",
+        "InfoSec_Level": ["CUI", "ITAR"]
+      },
+      "Plugins": ["BOM Management", "Change Management"]
+    },
+    {
+      "Tool": {
+        "Class": "Productivity Tools and Digital Engineering",
+        "Type": "Task Management",
+        "Instance": "MS Project (Gantt Chart Model)",
+        "Vendor": "Microsoft",
+        "Version": "2019",
+        "POC": {
+          "Name": "Scheduler",
+          "Email": "scheduler@example.com"
+        }
+      },
+      "Licensing": {
+        "Type": "Subscription",
+        "Server": {
+          "Vendor": "MS Project License",
+          "Hostname": "msproject-license.corp.internal",
+          "IP": "192.168.10.80",
+          "Port": "443",
+          "Protocol": "HTTPS"
+        }
+      },
+      "Access_Control": {
+        "IAM": "Active Directory"
+      },
+      "Deployment": {
+        "Level": "Project",
+        "Type": "On-Premise",
+        "InfoSec_Level": ["CUI"]
+      },
+      "Plugins": []
+    },
+    {
+      "Tool": {
+        "Class": "Productivity Tools and Digital Engineering",
+        "Type": "Spreadsheets",
+        "Instance": "Excel (Cost Model)",
+        "Vendor": "Microsoft",
+        "Version": "365",
+        "POC": {
+          "Name": "Cost Lead",
+          "Email": "cost.lead@example.com"
+        }
+      },
+      "Licensing": {
+        "Type": "Subscription",
+        "Server": {
+          "Vendor": "Office 365",
+          "Hostname": "office365.microsoft.com",
+          "IP": null,
+          "Port": "443",
+          "Protocol": "HTTPS"
+        }
+      },
+      "Access_Control": {
+        "IAM": "Azure AD"
+      },
+      "Deployment": {
+        "Level": "Department",
+        "Type": "Cloud",
+        "Cloud": {
+          "Type": "Public",
+          "Provider": "Microsoft"
+        },
+        "InfoSec_Level": ["CUI"]
+      },
+      "Plugins": []
+    }
+  ]
+}
