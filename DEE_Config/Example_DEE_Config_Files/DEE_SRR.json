@@ -3,6 +3,78 @@
   "Tools_Used": [
     {
       "Tool": {
+        "Class": "Productivity Tools and Digital Engineering",
+        "Type": "Word Processing",
+        "Instance": "Microsoft Word",
+        "Vendor": "Microsoft",
+        "Version": "365",
+        "POC": {
+          "Name": "Capture Manager",
+          "Email": "capture.manager@example.com"
+        }
+      },
+      "Licensing": {
+        "Type": "Subscription",
+        "Server": {
+          "Vendor": "Office 365",
+          "Hostname": "office365.microsoft.com",
+          "IP": null,
+          "Port": "443",
+          "Protocol": "HTTPS"
+        }
+      },
+      "Access_Control": {
+        "IAM": "Azure AD"
+      },
+      "Deployment": {
+        "Level": "Department",
+        "Type": "Cloud",
+        "Cloud": {
+          "Type": "Public",
+          "Provider": "Microsoft"
+        },
+        "InfoSec_Level": ["CUI"]
+      },
+      "Plugins": []
+    },
+    {
+      "Tool": {
+        "Class": "Productivity Tools and Digital Engineering",
+        "Type": "Presentations",
+        "Instance": "Microsoft PowerPoint",
+        "Vendor": "Microsoft",
+        "Version": "365",
+        "POC": {
+          "Name": "Proposal Coordinator",
+          "Email": "proposal.coordinator@example.com"
+        }
+      },
+      "Licensing": {
+        "Type": "Subscription",
+        "Server": {
+          "Vendor": "Office 365",
+          "Hostname": "office365.microsoft.com",
+          "IP": null,
+          "Port": "443",
+          "Protocol": "HTTPS"
+        }
+      },
+      "Access_Control": {
+        "IAM": "Azure AD"
+      },
+      "Deployment": {
+        "Level": "Business Unit",
+        "Type": "Cloud",
+        "Cloud": {
+          "Type": "Public",
+          "Provider": "Microsoft"
+        },
+        "InfoSec_Level": ["CUI"]
+      },
+      "Plugins": []
+    },
+    {
+      "Tool": {
         "Class": "Simulations",
         "Type": "LowFidelitySimulations",
         "Instance": "MATLAB (Low-Fidelity Analytical Models)",
@@ -35,38 +107,6 @@
     },
     {
       "Tool": {
-        "Class": "Simulations",
-        "Type": "LowFidelitySimulations",
-        "Instance": "MATLAB (Tradespace Model)",
-        "Vendor": "MathWorks",
-        "Version": "R2023a",
-        "POC": {
-          "Name": "Concept Analyst",
-          "Email": "concept.analyst@example.com"
-        }
-      },
-      "Licensing": {
-        "Type": "Concurrent",
-        "Server": {
-          "Vendor": "MathWorks License Manager",
-          "Hostname": "matlab-license.corp.internal",
-          "IP": "192.168.30.110",
-          "Port": "27000",
-          "Protocol": "TCP/IP"
-        }
-      },
-      "Access_Control": {
-        "IAM": "LDAP"
-      },
-      "Deployment": {
-        "Level": "Department",
-        "Type": "On-Premise",
-        "InfoSec_Level": ["CUI"]
-      },
-      "Plugins": ["Optimization Toolbox"]
-    },
-    {
-      "Tool": {
         "Class": "Model-Based System Engineering",
         "Type": "Requirements Tools",
         "Instance": "Cameo (Requirements)",
@@ -96,38 +136,6 @@
         "InfoSec_Level": ["CUI", "ITAR"]
       },
       "Plugins": ["SysML Plugin"]
-    },
-    {
-      "Tool": {
-        "Class": "Model-Based System Engineering",
-        "Type": "Architecture Tools",
-        "Instance": "Cameo (System Architecture)",
-        "Vendor": "Dassault Systèmes",
-        "Version": "2023x",
-        "POC": {
-          "Name": "Lead Architect",
-          "Email": "architect@example.com"
-        }
-      },
-      "Licensing": {
-        "Type": "Floating",
-        "Server": {
-          "Vendor": "Cameo License Server",
-          "Hostname": "cameo-license.abccompany.com",
-          "IP": "192.168.20.100",
-          "Port": "27000",
-          "Protocol": "TCP/IP"
-        }
-      },
-      "Access_Control": {
-        "IAM": "Active Directory"
-      },
-      "Deployment": {
-        "Level": "Enterprise",
-        "Type": "Collaboration Database",
-        "InfoSec_Level": ["CUI", "ITAR"]
-      },
-      "Plugins": ["SysML Plugin", "UPDM/UAF Plugin"]
     },
     {
       "Tool": {
