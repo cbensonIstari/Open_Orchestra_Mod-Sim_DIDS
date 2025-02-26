@@ -1,0 +1,44 @@
+{
+  "CAD_Loading_Input_Data": {
+    "Metadata": [
+      "String-based metadata (e.g., project name, author, creation date)"
+    ],
+    "Configuration_Files": [
+      "XML configuration files (e.g., model settings, material definitions)"
+    ],
+    "Geometry": {
+      "Imported Neutral Geometry": [
+        ".step (ISO 10303, used for CAD data exchange)",
+        ".iges (Legacy format)",
+        ".usdz (OpenUSD for digital twin interoperability)"
+      ]
+    },
+    "3D_CAD_Models": {
+      "Proprietary_Formats": [
+        ".prt (Creo)",
+        ".asm (Creo Assembly)",
+        ".sldprt (SolidWorks Part)",
+        ".sldasm (SolidWorks Assembly)",
+        ".catpart (CATIA Part)",
+        ".catproduct (CATIA Assembly)",
+        ".x_t (Parasolid NX)",
+        ".ipt (Autodesk Inventor Part)",
+        ".iam (Autodesk Inventor Assembly)",
+        ".3dm (Rhinoceros)"
+      ]
+    },
+    "2D_Drawings": [
+      ".dwg (AutoCAD drawing)",
+      ".dxf (Drawing Exchange Format)"
+    ],
+    "Material_Properties": [
+      "Material definitions (e.g., Aluminum 6061-T6, AISI 304 Stainless Steel, composites)"
+    ],
+    "Bounding_Box": [
+      "Defining spatial dimensions (Length, Width, Height)"
+    ],
+    "Mass_Inertia_Values": [
+      "Physical properties (Mass, Center of Gravity, Moment of Inertia)"
+    ]
+  }
+}
