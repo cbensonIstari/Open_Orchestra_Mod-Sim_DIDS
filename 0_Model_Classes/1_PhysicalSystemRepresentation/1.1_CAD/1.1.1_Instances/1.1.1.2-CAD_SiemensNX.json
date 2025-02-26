@@ -1,0 +1,39 @@
+{
+  "Tool": {
+    "Class": "Physical System Representation",
+    "Type": "CAD",
+    "Instance": "Siemens NX",
+    "Vendor": "Siemens Digital Industries Software",
+    "Version": "2212",
+    "POC": {
+      "Name": "Kevin Malone",
+      "Email": "kevin.malone@example.com"
+    }
+  },
+  "Licensing": {
+    "Type": "Concurrent",
+    "Server": {
+      "Vendor": "Siemens License Manager",
+      "Hostname": "nx-license-server.corp.internal",
+      "IP": "192.168.10.60",
+      "Port": "28000",
+      "Protocol": "TCP/IP"
+    }
+  },
+  "Access_Control": {
+    "IAM": "LDAP"
+  },
+  "Deployment": {
+    "Level": "Enterprise",
+    "Type": "Hybrid",
+    "Cloud": {
+      "Type": "Private",
+      "Provider": "Azure"
+    },
+    "InfoSec_Level": ["CUI"]
+  },
+  "Plugins": [
+    "NX Sheet Metal",
+    "NX Advanced Simulation"
+  ]
+}
