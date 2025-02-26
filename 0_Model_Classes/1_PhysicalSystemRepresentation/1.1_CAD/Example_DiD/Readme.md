@@ -2,6 +2,8 @@
 
 This folder contains **digital deliverables** for a **Physical System Representation** Data Item Description (**DID**), specifically aligned with **DI-MNT-90101A** or similar DoD guidelines for CAD designs. 
 
+![Example CAD DID](images/example_cad_did.png)
+
 ## Contents
 
 1. **DID Documents**  
