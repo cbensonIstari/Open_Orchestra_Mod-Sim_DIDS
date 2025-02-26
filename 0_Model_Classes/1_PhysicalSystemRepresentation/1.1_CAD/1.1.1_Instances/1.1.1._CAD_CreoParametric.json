@@ -1,0 +1,40 @@
+{
+  "Tool": {
+    "Class": "Physical System Representation",
+    "Type": "CAD",
+    "Instance": "Creo Parametric",
+    "Vendor": "PTC",
+    "Version": "9.0",
+    "POC": {
+      "Name": "Jane Smith",
+      "Email": "jane.smith@example.com"
+    }
+  },
+  "Licensing": {
+    "Type": "Floating",
+    "Server": {
+      "Vendor": "Flexera FlexNet Publisher",
+      "Hostname": "licenseserver.abccompany.com",
+      "IP": "192.168.10.25",
+      "Port": "27000",
+      "Protocol": "TCP/IP"
+    }
+  },
+  "Access_Control": {
+    "IAM": "Active Directory"
+  },
+  "Deployment": {
+    "Level": "Business Unit",
+    "Type": "Cloud",
+    "Cloud": {
+      "Type": "Private",
+      "Provider": "AWS"
+    },
+    "InfoSec_Level": ["ITAR", "CUI"]
+  },
+  "Plugins": [
+    "Creo Simulation Live 2.1",
+    "Creo Mold Analysis 2023.1",
+    "Creo Topology Optimization 3.0"
+  ]
+}
