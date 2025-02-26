@@ -1,0 +1,88 @@
+{
+  "CAD_Extraction_Output_Data": {
+    "Proprietary_CAD_Files": [
+      ".prt (Creo)",
+      ".asm (Creo Assembly)",
+      ".sldprt (SolidWorks)",
+      ".sldasm (SolidWorks Assembly)",
+      ".catpart (CATIA Part)",
+      ".catproduct (CATIA Assembly)",
+      ".x_t (Parasolid, NX/Solid Edge)",
+      ".ipt (Inventor Part)",
+      ".iam (Inventor Assembly)"
+    ],
+    "Neutral_Files": [
+      ".step (ISO 10303)",
+      ".iges (Legacy format)",
+      ".stl (3D printing)",
+      ".dwg (AutoCAD drawings)",
+      ".dxf (2D vector format)",
+      ".usdz (OpenUSD for AR/VR and digital twins)"
+    ],
+    "Metadata": [
+      "Extracted author, project name, creation date, version"
+    ],
+    "Applicable_Standards": {
+      "Geometry_Exchange": [
+        "ISO 10303 (STEP)",
+        "IGES ANSI Y14.26M",
+        "OpenUSD"
+      ],
+      "CAD_Modeling": [
+        "ISO 16792",
+        "ASME Y14.41"
+      ],
+      "Mass_Properties": [
+        "ASME Y14.5 (GD&T)"
+      ],
+      "Material_Standards": [
+        "ASTM E1444",
+        "ISO 1043",
+        "ISO 15608"
+      ],
+      "Bill_of_Materials": [
+        "ISO 8000",
+        "IPC-2578"
+      ],
+      "2D_Drawings": [
+        "ASME Y14.1",
+        "ASME Y14.5",
+        "ISO 128"
+      ],
+      "3D_Viewing": [
+        "ISO 14739-1 (PRC for 3D PDF)",
+        "JT Open (ISO 14306)",
+        "OpenUSD"
+      ]
+    },
+    "Critical_Data_Fields": {
+      "Mass_Properties": {
+        "Bounding_Box": [
+          "Length, Width, Height"
+        ],
+        "Density": [
+          "Material-specific density"
+        ],
+        "Volume": [
+          "Computed volume"
+        ],
+        "Surface_Area": [
+          "Total external area of the part"
+        ],
+        "Mass": [
+          "Weight of the object"
+        ]
+      },
+      "Material_Properties": [
+        "Assigned material(s) for each part"
+      ],
+      "Bill_of_Materials": [
+        "List of components (item, quantity, description, material)"
+      ],
+      "3D_Rendering": [
+        ".obj for general 3D rendering",
+        ".usdz for AR/VR/digital twin usage"
+      ]
+    }
+  }
+}
