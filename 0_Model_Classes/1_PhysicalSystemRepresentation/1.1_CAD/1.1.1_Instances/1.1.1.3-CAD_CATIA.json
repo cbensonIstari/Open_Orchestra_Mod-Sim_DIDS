@@ -1,0 +1,35 @@
+{
+  "Tool": {
+    "Class": "Physical System Representation",
+    "Type": "CAD",
+    "Instance": "CATIA",
+    "Vendor": "Dassault Systèmes",
+    "Version": "V5-6R2022",
+    "POC": {
+      "Name": "Linda Zhou",
+      "Email": "linda.zhou@example.com"
+    }
+  },
+  "Licensing": {
+    "Type": "Token",
+    "Server": {
+      "Vendor": "Dassault License Server",
+      "Hostname": "catia-license.corp.internal",
+      "IP": "192.168.10.70",
+      "Port": "27010",
+      "Protocol": "TCP/IP"
+    }
+  },
+  "Access_Control": {
+    "IAM": "Active Directory"
+  },
+  "Deployment": {
+    "Level": "Department",
+    "Type": "On-Premise",
+    "InfoSec_Level": ["CUI"]
+  },
+  "Plugins": [
+    "CATIA Composites",
+    "CATIA Aerospace SheetMetal"
+  ]
+}
