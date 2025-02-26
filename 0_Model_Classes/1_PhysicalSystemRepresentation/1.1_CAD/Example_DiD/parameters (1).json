@@ -1,0 +1,16 @@
+[
+  {
+    "name": "DIHEDRAL_ANGLE",
+    "type": "double",
+    "part_name": "WING",
+    "value": 1.146,
+    "unit": "deg"
+  },
+  {
+    "name": "WING_LENGTH",
+    "type": "double",
+    "part_name": "WING",
+    "value": 2500,
+    "unit": "mm"
+  }
+]

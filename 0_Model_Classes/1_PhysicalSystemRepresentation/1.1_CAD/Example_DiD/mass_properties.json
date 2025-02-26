@@ -1,0 +1,46 @@
+[
+  {
+    "part_name": "WING",
+    "bounding_box": {
+      "min_corner": {
+        "x": -2501.301,
+        "y": -2747.3665,
+        "z": -70.024
+      },
+      "max_corner": {
+        "x": 2497.699,
+        "y": -2251.6335,
+        "z": 41.218
+      },
+      "unit": "mm",
+      "dimensions": {
+        "x": 4999,
+        "y": 495.7329,
+        "z": 111.242
+      },
+      "center": {
+        "x": -1.801,
+        "y": -2499.5,
+        "z": -14.403
+      }
+    },
+    "properties": {
+      "density": {
+        "value": 1600,
+        "unit": "kg_m3"
+      },
+      "volume": {
+        "value": 0.025,
+        "unit": "m3"
+      },
+      "surface_area": {
+        "value": 5.737,
+        "unit": "m2"
+      },
+      "mass": {
+        "value": 39.721,
+        "unit": "kg"
+      }
+    }
+  }
+]
