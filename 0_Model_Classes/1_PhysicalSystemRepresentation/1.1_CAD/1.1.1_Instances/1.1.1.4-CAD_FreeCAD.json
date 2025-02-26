@@ -1,0 +1,26 @@
+{
+  "Tool": {
+    "Class": "Physical System Representation",
+    "Type": "CAD",
+    "Instance": "FreeCAD",
+    "Vendor": "Open Source Community",
+    "Version": "0.20",
+    "POC": {
+      "Name": "FreeCAD Maintainers",
+      "Email": "community@freecadweb.org"
+    }
+  },
+  "Licensing": {
+    "Type": "LGPL-2.1",
+    "Server": null
+  },
+  "Access_Control": {
+    "IAM": "Local Accounts"
+  },
+  "Deployment": {
+    "Level": "Project",
+    "Type": "Desktop Install",
+    "InfoSec_Level": []
+  },
+  "Plugins": []
+}
