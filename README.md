@@ -2,8 +2,8 @@
 
 Welcome to the **Open Orchestra** repository for **Modeling and Simulation Data Item Descriptions (DiDs)**! This repo organizes **model definitions**, **model schemas**, and **Digital Engineering Ecosystems (DEEs)** for our organization, especially focusing on **DoD aircraft design** and beyond.
 
-![DEE_Orchestra](images/DEE_Orchestra.png)
-> *Figure 1.* A conceptual illustration of the Open Orchestra analogy, showing how multiple families of models (instruments) form a cohesive digital engineering “ensemble.”
+![IDE_to_IDE_Connection](images/IDE_to_IDE_Connection.png)
+> *Figure 1.* The goal of this effort is to allow organizations who may use different tools, modeling paradigms or work at different classification levels can work together more effectively
 
 
 ---
