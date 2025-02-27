@@ -62,6 +62,8 @@ Similarly, these **DEE Config** files:
 - Document their **roles** (CAD for mechanical geometry, simulation for performance analysis, MBSE for system architecture, etc.).  
 - Ensure each tool’s **input/output** aligns with the broader digital engineering data flows.
 
+![SRR_DEE](images/SRR_DEE.png)
+
 ## How To Use
 
 1. **Browse Example Config Files**  
