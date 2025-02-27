@@ -1,0 +1,171 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:ex="http://example.com/cadExtraction#"
+    xml:base="http://example.com/cadExtraction"
+    owl:versionInfo="1.0">
+
+  <!-- Define the ontology as a whole -->
+  <owl:Ontology rdf:about="">
+    <rdfs:comment>OWL Ontology for CAD Extraction Output Data, reflecting 1.1.3-CAD_Extraction_Output_Data.json</rdfs:comment>
+    <rdfs:label>CAD Extraction Output Ontology</rdfs:label>
+  </owl:Ontology>
+  
+  <!-- 
+    Classes 
+    ex:CADExtractionOutput - Represents the overall output data structure
+    ex:ProprietaryCADFile  - Category for proprietary file types
+    ex:NeutralFile         - Category for neutral file types
+    ex:Metadata            - Category for high-level metadata (author, date, version)
+    ex:ApplicableStandard  - Category for geometry exchange, modeling, BOM, etc.
+    ex:CriticalDataField   - Category grouping mass props, material props, BOM, 3D rendering
+  -->
+  
+  <owl:Class rdf:about="ex:CADExtractionOutput">
+    <rdfs:label>CAD Extraction Output</rdfs:label>
+    <rdfs:comment>The root concept for all data extracted from a CAD model.</rdfs:comment>
+  </owl:Class>
+  
+  <owl:Class rdf:about="ex:ProprietaryCADFile">
+    <rdfs:label>Proprietary CAD File</rdfs:label>
+    <rdfs:comment>Proprietary formats like .prt, .asm, .sldprt, .catpart, .ipt, etc.</rdfs:comment>
+  </owl:Class>
+  
+  <owl:Class rdf:about="ex:NeutralFile">
+    <rdfs:label>Neutral File</rdfs:label>
+    <rdfs:comment>Neutral formats like .step, .iges, .dwg, .stl, .usdz, etc.</rdfs:comment>
+  </owl:Class>
+  
+  <owl:Class rdf:about="ex:Metadata">
+    <rdfs:label>Metadata</rdfs:label>
+    <rdfs:comment>Extracted author, project name, creation date, version.</rdfs:comment>
+  </owl:Class>
+  
+  <owl:Class rdf:about="ex:ApplicableStandard">
+    <rdfs:label>Applicable Standard</rdfs:label>
+    <rdfs:comment>Standards for geometry exchange, modeling, BOM, etc. (IGES, STEP, ASME Y14.5...)</rdfs:comment>
+  </owl:Class>
+  
+  <owl:Class rdf:about="ex:CriticalDataField">
+    <rdfs:label>Critical Data Field</rdfs:label>
+    <rdfs:comment>Mass properties, material props, BOM, 3D rendering output, etc.</rdfs:comment>
+  </owl:Class>
+
+  <!-- 
+    Object Properties 
+    We'll link ex:CADExtractionOutput to these categories:
+      hasProprietaryFile
+      hasNeutralFile
+      hasMetadata
+      hasApplicableStandard
+      hasCriticalDataField
+  -->
+  
+  <owl:ObjectProperty rdf:about="ex:hasProprietaryFile">
+    <rdfs:domain rdf:resource="ex:CADExtractionOutput"/>
+    <rdfs:range rdf:resource="ex:ProprietaryCADFile"/>
+    <rdfs:comment>Links a CADExtractionOutput to its list of proprietary CAD files.</rdfs:comment>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="ex:hasNeutralFile">
+    <rdfs:domain rdf:resource="ex:CADExtractionOutput"/>
+    <rdfs:range rdf:resource="ex:NeutralFile"/>
+    <rdfs:comment>Links a CADExtractionOutput to neutral file entries (STEP, IGES, etc.).</rdfs:comment>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="ex:hasMetadata">
+    <rdfs:domain rdf:resource="ex:CADExtractionOutput"/>
+    <rdfs:range rdf:resource="ex:Metadata"/>
+    <rdfs:comment>Associates extracted metadata (author, date, version) with the output.</rdfs:comment>
+  </owl:ObjectProperty>
+  
+  <owl:ObjectProperty rdf:about="ex:hasApplicableStandard">
+    <rdfs:domain rdf:resource="ex:CADExtractionOutput"/>
+    <rdfs:range rdf:resource="ex:ApplicableStandard"/>
+    <rdfs:comment>Denotes the industry standards that apply to this CAD extraction (STEP, ASME Y14.5, etc.).</rdfs:comment>
+  </owl:ObjectProperty>
+  
+  <owl:ObjectProperty rdf:about="ex:hasCriticalDataField">
+    <rdfs:domain rdf:resource="ex:CADExtractionOutput"/>
+    <rdfs:range rdf:resource="ex:CriticalDataField"/>
+    <rdfs:comment>Links mass properties, material props, BOM, or 3D rendering data to the output.</rdfs:comment>
+  </owl:ObjectProperty>
+  
+  <!-- 
+    Example Instances 
+    (OPTIONAL demonstration of how you might define individuals for .prt or .step)
+  -->
+  
+  <!-- 
+    1) A single CADExtractionOutput instance 
+    2) A few sample file-type individuals referencing them
+  -->
+  
+  <ex:CADExtractionOutput rdf:about="ex:CADExtractionOutput_Example1">
+    <rdfs:label>CAD Extraction Output Example 1</rdfs:label>
+    <rdfs:comment>Demonstration instance referencing proprietary and neutral files</rdfs:comment>
+    
+    <!-- references to proprietary files -->
+    <ex:hasProprietaryFile rdf:resource="ex:ProprietaryFile_prt"/>
+    <ex:hasProprietaryFile rdf:resource="ex:ProprietaryFile_sldprt"/>
+    
+    <!-- references to neutral files -->
+    <ex:hasNeutralFile rdf:resource="ex:NeutralFile_step"/>
+    <ex:hasNeutralFile rdf:resource="ex:NeutralFile_usdz"/>
+    
+    <!-- references to metadata, standards, critical data fields (sample individuals) -->
+    <ex:hasMetadata rdf:resource="ex:Metadata_authorDate"/>
+    <ex:hasApplicableStandard rdf:resource="ex:Standard_STEP"/>
+    <ex:hasApplicableStandard rdf:resource="ex:Standard_ASME_Y1441"/>
+    <ex:hasCriticalDataField rdf:resource="ex:DataField_massProps"/>
+  </ex:CADExtractionOutput>
+  
+  <!-- Proprietary file individuals -->
+  <owl:NamedIndividual rdf:about="ex:ProprietaryFile_prt">
+    <rdf:type rdf:resource="ex:ProprietaryCADFile"/>
+    <rdfs:label>.prt (Creo)</rdfs:label>
+  </owl:NamedIndividual>
+  
+  <owl:NamedIndividual rdf:about="ex:ProprietaryFile_sldprt">
+    <rdf:type rdf:resource="ex:ProprietaryCADFile"/>
+    <rdfs:label>.sldprt (SolidWorks Part)</rdfs:label>
+  </owl:NamedIndividual>
+  
+  <!-- Neutral file individuals -->
+  <owl:NamedIndividual rdf:about="ex:NeutralFile_step">
+    <rdf:type rdf:resource="ex:NeutralFile"/>
+    <rdfs:label>.step (ISO 10303)</rdfs:label>
+  </owl:NamedIndividual>
+  
+  <owl:NamedIndividual rdf:about="ex:NeutralFile_usdz">
+    <rdf:type rdf:resource="ex:NeutralFile"/>
+    <rdfs:label>.usdz (OpenUSD for AR/VR)</rdfs:label>
+  </owl:NamedIndividual>
+  
+  <!-- Metadata example individual -->
+  <owl:NamedIndividual rdf:about="ex:Metadata_authorDate">
+    <rdf:type rdf:resource="ex:Metadata"/>
+    <rdfs:label>Author, Project, CreationDate, Version</rdfs:label>
+  </owl:NamedIndividual>
+  
+  <!-- Standard examples -->
+  <owl:NamedIndividual rdf:about="ex:Standard_STEP">
+    <rdf:type rdf:resource="ex:ApplicableStandard"/>
+    <rdfs:label>ISO 10303 (STEP)</rdfs:label>
+  </owl:NamedIndividual>
+  
+  <owl:NamedIndividual rdf:about="ex:Standard_ASME_Y1441">
+    <rdf:type rdf:resource="ex:ApplicableStandard"/>
+    <rdfs:label>ASME Y14.41 (3D Annotations)</rdfs:label>
+  </owl:NamedIndividual>
+  
+  <!-- Critical data fields -->
+  <owl:NamedIndividual rdf:about="ex:DataField_massProps">
+    <rdf:type rdf:resource="ex:CriticalDataField"/>
+    <rdfs:label>Mass Properties (bounding box, density, volume, mass)</rdfs:label>
+  </owl:NamedIndividual>
+
+</rdf:RDF>
