@@ -23,9 +23,17 @@ Welcome to the **Open Orchestra** repository for **Modeling and Simulation Data 
      - **CAD**, **ECAD**, **PLM** (under PhysicalSystemRepresentation),
      - **CFD**, **FEA**, **EM**, **Dynamic**, **MissionModels**, **SimulationManagers** (under Simulations),
      - **RequirementsTools**, **ArchitectureTools**, **SharedArchitecture** (under MBSE), etc.
+    
+  ![Additional Model Types Diagram](images/Tool_Type.png)
+   > *Figure 2a.* An expanded look at the Model Types (e.g., CAD, eCAD, PLM) within the Physical System Representation Model Class 
+
 
 3. **Model Instances**  
    - Concrete, vendor-specific model definitions, such as **CAD_CreoParametric.json** or **CFD_OpenFOAM.json**. Each instance includes version, licensing, deployment, and InfoSec details.
+
+ ![Model Instance Detail](images/Tool_Instance.png)
+   > *Figure 2b.* A closer look at a the Model Instances (e.g., Creo, Solidworks, NX) within a Model Type (CAD)
+
 
 This layered approach ensures **consistency**, **discoverability**, and **traceability** across multiple domains and classification levels.
 
@@ -40,6 +48,9 @@ Think of these **Model Classes** and **Types** as **instrument sections** and **
 - **Model Instances** = **Individual instruments** (a specific Stradivarius violin #123)
 
 Our **Data Item Descriptions (DiDs)** and **schema** files serve as the **“sheet music”**, providing a vendor-neutral notation so each “instrument” (model) can **harmonize** within the larger Digital Engineering ecosystem.
+
+ ![Musical_Notes](images/Musical_Notes.png)
+   > *Figure 3* Analogy for the common language **between** models
 
 ---
 
