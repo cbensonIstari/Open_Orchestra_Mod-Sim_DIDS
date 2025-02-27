@@ -2,6 +2,8 @@
 
 Welcome to the **DEE_Config** folder within the **Open_Orchestra_Mod-Sim_DIDS** repository. This directory houses various **configuration files** and **example JSON** that outline how our **Digital Engineering Ecosystems (DEE)** are organized and orchestrated across different security levels, model types, and tool families.
 
+![IDE_to_IDE_Connection](images/IDE_to_IDE_Connection.png)
+
 ## The Orchestra Analogy
 
 Think of this entire digital engineering environment as an **orchestra**:
