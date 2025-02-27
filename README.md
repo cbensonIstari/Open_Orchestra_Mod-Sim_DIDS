@@ -35,6 +35,9 @@ Welcome to the **Open Orchestra** repository for **Modeling and Simulation Data 
    > *Figure 2b.* A closer look at a the Model Instances (e.g., Creo, Solidworks, NX) within a Model Type (CAD)
 
 
+ ![Singular_Tool_Instance](images/Singular_Tool_Instance.png)
+   > *Figure 2c.* A closer look at a how a specific tool instance (e.g., Creo) can be described uniformly
+
 This layered approach ensures **consistency**, **discoverability**, and **traceability** across multiple domains and classification levels.
 
 ---
@@ -64,6 +67,9 @@ Our **Data Item Descriptions (DiDs)** and **schema** files serve as the **“she
 
 3. **ecosystems/**  
    - Defines **Digital Engineering Ecosystems (DEE)** in JSON form, specifying which **Model Instances** come together for particular program phases (e.g., `DEE_Simple.json`, `DEE_Comprehensive.json`).
+  
+ ![SRR_DEE](images/SRR_DEE.png)
+   > *Figure 4* Example of a JSON Schema for a Digital Engineering Environment needed for a System Requirements Review
 
 4. **model-classes/**  
    - Main structure organized by **Model Classes** (level 1).  
@@ -72,6 +78,11 @@ Our **Data Item Descriptions (DiDs)** and **schema** files serve as the **“she
      - A `README.md` describing that domain,
      - An `instances/` folder holding JSON definitions for **Model Instances** (level 3),
      - Two schema files describing **input** (`*_Loading_Input_Data.json`) and **output** (`*_Extraction_Output_Data.json`) for that domain.
+    
+
+
+ ![Digital_DID_CAD](images/Digital_DID_CAD.png)
+   > *Figure 5* Example of a 'Digital DID' for CAD
 
 ---
 ## Getting Started
