@@ -2,12 +2,21 @@
 
 Welcome to the **Open Orchestra** repository for **Modeling and Simulation Data Item Descriptions (DiDs)**! This repo organizes **model definitions**, **model schemas**, and **Digital Engineering Ecosystems (DEEs)** for our organization, especially focusing on **DoD aircraft design** and beyond.
 
+![DEE_Orchestra](images/DEE_Orchestra.png)
+> *Figure 1.* A conceptual illustration of the Open Orchestra analogy, showing how multiple families of models (instruments) form a cohesive digital engineering “ensemble.”
+
+
 ---
 
 ## Hierarchy: Model Classes → Model Types → Model Instances
 
 1. **Model Classes**  
    - The broad **families** (or “sections”) of models that capture high-level domains (e.g., **PhysicalSystemRepresentation**, **Simulations**, **MBSE**, **ComputerScienceSoftwareEngineering**, **ProductivityAndDigitalEngineering**).
+
+![Model Classes and Types Diagram](images/Tool_Class.png)
+> *Figure 2.* Each **Model Class** (e.g., PhysicalSystemRepresentation, Simulations, MBSE) contains **Model Types**, which in turn define **Model Instances** for specific vendor solutions.
+
+
 
 2. **Model Types**  
    - Subcategories within each Model Class. For instance:
