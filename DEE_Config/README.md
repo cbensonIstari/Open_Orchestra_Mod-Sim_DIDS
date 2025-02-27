@@ -84,9 +84,11 @@ Similarly, these **DEE Config** files:
 - **Add** your own Digital Ecosystem config files for specific DoD programs, adjusting the analogy or format as needed.  
 - **Link** these references to the **DID** documents in `Digital_Ecosystem_DID/` to maintain a common, vendor-neutral format.
 
+![DEE_DiD](images/DEE_DiD.png)
+
 ## Contact & Support
 
-For more details about this “Digital Engineering Orchestra” approach, see our main [README](../README.md) or contact the **Digital Engineering Lead** at `eng.orchestra@example.com`.
+For more details about this “Digital Engineering Orchestra” approach, see our main [README](../README.md) or contact the **Author** at `cbenson@istaridigital.com`.
 
 ---
 
