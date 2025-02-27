@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:ex="http://example.com/openorchestra#"
+    xml:base="http://example.com/openorchestra"
+    owl:versionInfo="1.0">
+
+    <!-- Define the ontology as a whole -->
+    <owl:Ontology rdf:about="">
+        <rdfs:comment>Open Orchestra Modeling & Simulation Ontology (Minimal Example)</rdfs:comment>
+    </owl:Ontology>
+    
+    <!-- Classes -->
+    <owl:Class rdf:about="ex:ModelClass">
+        <rdfs:label xml:lang="en">Model Class</rdfs:label>
+        <rdfs:comment>Top-level domain grouping, e.g. PhysicalSystemRepresentation, Simulations, MBSE</rdfs:comment>
+    </owl:Class>
+    
+    <owl:Class rdf:about="ex:ModelType">
+        <rdfs:label xml:lang="en">Model Type</rdfs:label>
+        <rdfs:comment>Subcategories within each class, e.g. CAD, FEA, CFD</rdfs:comment>
+    </owl:Class>
+    
+    <owl:Class rdf:about="ex:ModelInstance">
+        <rdfs:label xml:lang="en">Model Instance</rdfs:label>
+        <rdfs:comment>Vendor-specific definitions, e.g. CAD_CreoParametric, CFD_OpenFOAM</rdfs:comment>
+    </owl:Class>
+    
+    <!-- Object Properties -->
+    <owl:ObjectProperty rdf:about="ex:hasType">
+        <rdfs:domain rdf:resource="ex:ModelClass"/>
+        <rdfs:range rdf:resource="ex:ModelType"/>
+        <rdfs:comment>Links a ModelClass to its ModelTypes</rdfs:comment>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:about="ex:hasInstance">
+        <rdfs:domain rdf:resource="ex:ModelType"/>
+        <rdfs:range rdf:resource="ex:ModelInstance"/>
+        <rdfs:comment>Links a ModelType to its ModelInstances</rdfs:comment>
+    </owl:ObjectProperty>
+
+</rdf:RDF>
