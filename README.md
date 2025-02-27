@@ -1,25 +1,59 @@
-# Digital Engineering Tools Repository
+# Open Orchestra Modeling and Simulation Data Item Description Repository
 
-Welcome to the **Digital Engineering Tools** repository! This repo organizes all tool definitions, model schemas, and Digital Engineering Ecosystems (DEEs) for our organization, focused on **DoD aircraft design** and beyond.
+Welcome to the **Open Orchestra** repository for **Modeling and Simulation Data Item Descriptions (DiDs)**! This repo organizes **model definitions**, **model schemas**, and **Digital Engineering Ecosystems (DEEs)** for our organization, especially focusing on **DoD aircraft design** and beyond.
 
-## Structure Overview
+---
 
-1. **`docs/`**  
-   - Contains in-depth usage instructions (`USAGE.md`) and contribution guidelines (`CONTRIBUTING.md`).
+## Hierarchy: Model Classes → Model Types → Model Instances
 
-2. **`schema/`**  
-   - Houses JSON schema or classification files (like `families_and_types.json`) that define how we categorize Digital Engineering tools.
+1. **Model Classes**  
+   - The broad **families** (or “sections”) of models that capture high-level domains (e.g., **PhysicalSystemRepresentation**, **Simulations**, **MBSE**, **ComputerScienceSoftwareEngineering**, **ProductivityAndDigitalEngineering**).
 
-3. **`ecosystems/`**  
-   - Defines **Digital Engineering Ecosystems (DEE)**, each referencing multiple tool instances for a specific program scope (e.g., `DEE_Simple.json`, `DEE_Moderate.json`, `DEE_Comprehensive.json`).
+2. **Model Types**  
+   - Subcategories within each Model Class. For instance:
+     - **CAD**, **ECAD**, **PLM** (under PhysicalSystemRepresentation),
+     - **CFD**, **FEA**, **EM**, **Dynamic**, **MissionModels**, **SimulationManagers** (under Simulations),
+     - **RequirementsTools**, **ArchitectureTools**, **SharedArchitecture** (under MBSE), etc.
 
-4. **`model-classes/`**  
-   - Organized by **Model Classes** (e.g., PhysicalSystemRepresentation, Simulations, MBSE, etc.), each containing **Model Types** (CAD, ECAD, PLM, etc.).  
-   - Every Model Type folder has:
-     - A `README.md`
-     - A subfolder of `instances/` with JSON files for each tool instance
-     - Two JSON files describing the **input** (`*_Loading_Input_Data.json`) and **output** (`*_Extraction_Output_Data.json`) data for that Model Type.
+3. **Model Instances**  
+   - Concrete, vendor-specific model definitions, such as **CAD_CreoParametric.json** or **CFD_OpenFOAM.json**. Each instance includes version, licensing, deployment, and InfoSec details.
 
+This layered approach ensures **consistency**, **discoverability**, and **traceability** across multiple domains and classification levels.
+
+---
+
+## The Orchestra Analogy
+
+Think of these **Model Classes** and **Types** as **instrument sections** and **families** in an **orchestra**:
+
+- **Model Classes** = **Sections** (strings, brass, woodwinds…)  
+- **Model Types** = **Families of instruments** (violins, violas, cellos under strings…)  
+- **Model Instances** = **Individual instruments** (a specific Stradivarius violin #123)
+
+Our **Data Item Descriptions (DiDs)** and **schema** files serve as the **“sheet music”**, providing a vendor-neutral notation so each “instrument” (model) can **harmonize** within the larger Digital Engineering ecosystem.
+
+---
+
+## Repository Layout
+
+1. **docs/**  
+   - Contains usage instructions (`USAGE.md`) and contribution guidelines (`CONTRIBUTING.md`).
+
+2. **schema/**  
+   - Holds classification files (e.g., `families_and_types.json`) defining official Model Classes and Types.
+
+3. **ecosystems/**  
+   - Defines **Digital Engineering Ecosystems (DEE)** in JSON form, specifying which **Model Instances** come together for particular program phases (e.g., `DEE_Simple.json`, `DEE_Comprehensive.json`).
+
+4. **model-classes/**  
+   - Main structure organized by **Model Classes** (level 1).  
+   - Within each class folder, subfolders for **Model Types** (level 2).  
+   - Each **Model Type** contains:
+     - A `README.md` describing that domain,
+     - An `instances/` folder holding JSON definitions for **Model Instances** (level 3),
+     - Two schema files describing **input** (`*_Loading_Input_Data.json`) and **output** (`*_Extraction_Output_Data.json`) for that domain.
+
+---
 ## Getting Started
 
 1. **Clone** this repository:
