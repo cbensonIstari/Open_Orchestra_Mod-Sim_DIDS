@@ -7,11 +7,25 @@ Welcome to the **DEE_Config** folder within the **Open_Orchestra_Mod-Sim_DIDS** 
 ## The Orchestra Analogy
 
 Think of this entire digital engineering environment as an **orchestra**:
-- Each **family of tools** (e.g., **CAD**, **Simulations**, **MBSE**, **Software**, **Productivity**) is like a **section** in the orchestra (strings, woodwinds, brass, percussion, keyboards).
-- Individual **tool instances** (e.g., **PTC Creo**, **ANSYS Fluent**, **Cameo**, **GitLab**) are the **instruments**—each with its own unique sound (capabilities), vendor, licensing, and input/output data formats.
+- Each **family of models** (e.g., **CAD**, **Simulations**, **MBSE**, **Software**, **Productivity**) is like a **section** in the orchestra (strings, woodwinds, brass, percussion, keyboards).
+
+![Tool_Class](images/Tool_Class.png)
+
+- Each **model type** (e.g., **Parametric CAD, CFD, FEA, MBSE Architecture, Version Control**) is like an **instrument** in the orchestra (violin, flute, trombone, piano, drums), each serving a distinct role within the engineering workflow.
+
+![Tool_Type](images/Tool_Type.png)
+
+- Individual **model instances** (e.g., **PTC Creo**, **ANSYS Fluent**, **Cameo**, **GitLab**) are the **vendor-specific-instruments**—each with its own unique sound (capabilities), vendor, licensing, and input/output data formats.
+
+![Tool_Instance](images/Tool_Instance.png)
+  
 - A **Digital Data Item Description (DiD)** or **DEE configuration** provides the **sheet music**, telling each “instrument” how to play, when to come in, and how to stay in sync with the entire ensemble.
 
+![Singular_Tool_Instance](images/Singular_Tool_Instance.png)
+
+
 By standardizing how each tool is described and integrated, we can achieve a harmonious digital environment—no different from how an orchestra follows **common notation** to perform a unified symphony.
+
 
 ## What’s Inside This Folder?
 
@@ -39,7 +53,9 @@ By standardizing how each tool is described and integrated, we can achieve a har
 An orchestra performs best when:
 1. **Musicians** (engineers) are aligned with the conductor’s signals (project leads).  
 2. **Sheet music** (digital data item descriptions) is consistent and unambiguous.  
-3. Each **instrument** (tool) is tuned (properly configured) and in the correct section (model class/family).  
+3. Each **instrument** (tool) is tuned (properly configured) and in the correct section (model class/family).
+
+![Musical_Notes](images/Musical_Notes.png)
 
 Similarly, these **DEE Config** files:
 - Provide a clear **model** of which tools are “playing” at each milestone (RFI, RFP, etc.).  
