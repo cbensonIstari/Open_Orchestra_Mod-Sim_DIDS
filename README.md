@@ -1,4 +1,4 @@
-# All of this work done in collaboration with the OMG MBACQ DEE User Group.... to be migrated to an official OMG Repo soon!
+# All of this work done in collaboration with the OMG MBACQ User Group.... to be migrated to an official OMG Repo soon!
 
 
 # Open Orchestra Modeling and Simulation Data Item Description Repository
