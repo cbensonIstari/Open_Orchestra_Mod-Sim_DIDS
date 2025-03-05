@@ -1,3 +1,6 @@
+# All of this work done in collaboration with the OMG MBACQ DEE User Group.... to be migrated to an official OMG Repo soon!
+
+
 # Open Orchestra Modeling and Simulation Data Item Description Repository
 
 Welcome to the **Open Orchestra** repository for **Modeling and Simulation Data Item Descriptions (DiDs)**! This repo organizes **model definitions**, **model schemas**, and **Digital Engineering Ecosystems (DEEs)** for our organization, especially focusing on **DoD aircraft design** and beyond.
