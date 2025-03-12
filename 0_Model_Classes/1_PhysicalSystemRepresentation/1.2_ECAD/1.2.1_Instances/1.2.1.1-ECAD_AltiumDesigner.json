@@ -1,0 +1,40 @@
+{
+  "Tool": {
+    "Class": "Physical System Representation",
+    "Type": "ECAD",
+    "Instance": "Altium Designer",
+    "Vendor": "Altium",
+    "Version": "23.3.1",
+    "POC": {
+      "Name": "Jane Smith",
+      "Email": "jane.smith@example.com"
+    }
+  },
+  "Licensing": {
+    "Type": "Named User",
+    "Server": {
+      "Vendor": "Altium License Service",
+      "Hostname": "altium-license.corp.local",
+      "IP": "192.168.11.45",
+      "Port": "443",
+      "Protocol": "HTTPS"
+    }
+  },
+  "Access_Control": {
+    "IAM": "Active Directory"
+  },
+  "Deployment": {
+    "Level": "Department",
+    "Type": "Cloud",
+    "Cloud": {
+      "Type": "Public",
+      "Provider": "Azure"
+    },
+    "InfoSec_Level": ["CUI"]
+  },
+  "Plugins": [
+    "Altium 3D PCB View",
+    "Altium Vault Integration",
+    "Signal Integrity Analysis"
+  ]
+}
