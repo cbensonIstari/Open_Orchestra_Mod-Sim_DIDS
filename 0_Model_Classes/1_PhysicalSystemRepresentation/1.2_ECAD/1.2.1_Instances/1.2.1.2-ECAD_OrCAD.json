@@ -1,0 +1,36 @@
+{
+  "Tool": {
+    "Class": "Physical System Representation",
+    "Type": "ECAD",
+    "Instance": "OrCAD",
+    "Vendor": "Cadence",
+    "Version": "17.4",
+    "POC": {
+      "Name": "Bob Watson",
+      "Email": "bob.watson@example.com"
+    }
+  },
+  "Licensing": {
+    "Type": "Floating",
+    "Server": {
+      "Vendor": "Cadence License Manager",
+      "Hostname": "orcad-license.corp.local",
+      "IP": "192.168.11.46",
+      "Port": "27000",
+      "Protocol": "TCP/IP"
+    }
+  },
+  "Access_Control": {
+    "IAM": "LDAP"
+  },
+  "Deployment": {
+    "Level": "Enterprise",
+    "Type": "On-Premise",
+    "InfoSec_Level": ["ITAR", "CUI"]
+  },
+  "Plugins": [
+    "Constraint Manager",
+    "OrCAD PSpice",
+    "Library Builder"
+  ]
+}
