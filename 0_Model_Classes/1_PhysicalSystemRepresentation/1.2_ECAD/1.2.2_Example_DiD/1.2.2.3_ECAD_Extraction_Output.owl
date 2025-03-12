@@ -1,0 +1,126 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:ecad="http://example.com/ecadExtraction#"
+    xml:base="http://example.com/ecadExtraction"
+    owl:versionInfo="1.0">
+    
+    <!-- Define Ontology Info -->
+    <owl:Ontology rdf:about="">
+        <rdfs:label>ECAD Extraction Output Ontology</rdfs:label>
+        <rdfs:comment>Ontology for representing output data from ECAD tools (schematic, PCB, manufacturing, SPICE waveforms, etc.).</rdfs:comment>
+    </owl:Ontology>
+    
+    <!-- Classes -->
+    <owl:Class rdf:about="ecad:ECADExtractionOutput">
+        <rdfs:label>ECAD Extraction Output</rdfs:label>
+        <rdfs:comment>The root concept for data extracted from an ECAD tool (schematic, PCB layout, netlists, BOM, etc.).</rdfs:comment>
+    </owl:Class>
+    
+    <owl:Class rdf:about="ecad:ProprietaryECADFile">
+        <rdfs:label>Proprietary ECAD File</rdfs:label>
+        <rdfs:comment>Represents native file formats like .schdoc, .pcbdoc, .brd, .dsn, etc.</rdfs:comment>
+    </owl:Class>
+    
+    <owl:Class rdf:about="ecad:NeutralECADFile">
+        <rdfs:label>Neutral ECAD File</rdfs:label>
+        <rdfs:comment>Neutral or open formats: IPC-2581, ODB++, gerber, netlist test, etc.</rdfs:comment>
+    </owl:Class>
+    
+    <owl:Class rdf:about="ecad:Metadata">
+        <rdfs:label>ECAD Metadata</rdfs:label>
+        <rdfs:comment>General info like designer name, revision, date, project name.</rdfs:comment>
+    </owl:Class>
+    
+    <owl:Class rdf:about="ecad:ApplicableStandard">
+        <rdfs:label>ECAD Applicable Standard</rdfs:label>
+        <rdfs:comment>IPC or IEEE standards for layout, netlists, BOM, etc.</rdfs:comment>
+    </owl:Class>
+    
+    <owl:Class rdf:about="ecad:CriticalDataField">
+        <rdfs:label>ECAD Critical Data Field</rdfs:label>
+        <rdfs:comment>Key fields like BoardStackup, ComponentPlacement, Netlist, BOM, SPICE waveforms, etc.</rdfs:comment>
+    </owl:Class>
+    
+    <!-- Object Properties linking ECADExtractionOutput to each category -->
+    <owl:ObjectProperty rdf:about="ecad:hasProprietaryFile">
+        <rdfs:domain rdf:resource="ecad:ECADExtractionOutput"/>
+        <rdfs:range rdf:resource="ecad:ProprietaryECADFile"/>
+        <rdfs:comment>Links extraction output to proprietary file formats.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:about="ecad:hasNeutralFile">
+        <rdfs:domain rdf:resource="ecad:ECADExtractionOutput"/>
+        <rdfs:range rdf:resource="ecad:NeutralECADFile"/>
+        <rdfs:comment>Links extraction output to neutral or open ECAD formats.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:about="ecad:hasMetadata">
+        <rdfs:domain rdf:resource="ecad:ECADExtractionOutput"/>
+        <rdfs:range rdf:resource="ecad:Metadata"/>
+        <rdfs:comment>Associates general metadata with the ECAD output (designer, revision, etc.).</rdfs:comment>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:about="ecad:hasApplicableStandard">
+        <rdfs:domain rdf:resource="ecad:ECADExtractionOutput"/>
+        <rdfs:range rdf:resource="ecad:ApplicableStandard"/>
+        <rdfs:comment>Links to relevant standards (IPC-2581, IEEE 315, etc.).</rdfs:comment>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:about="ecad:hasCriticalDataField">
+        <rdfs:domain rdf:resource="ecad:ECADExtractionOutput"/>
+        <rdfs:range rdf:resource="ecad:CriticalDataField"/>
+        <rdfs:comment>References board stackup, BOM, netlists, SPICE waveforms, etc.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+    <!-- Example individuals (Optional demonstration) -->
+    
+    <!-- One ECADExtractionOutput instance referencing multiple categories -->
+    <ecad:ECADExtractionOutput rdf:about="ecad:ECADExtractionExample1">
+        <rdfs:label>ECAD Extraction Output Example 1</rdfs:label>
+        <rdfs:comment>Shows how an ECAD output might link to proprietary and neutral files, metadata, standards, etc.</rdfs:comment>
+        
+        <ecad:hasProprietaryFile rdf:resource="ecad:ProprietaryFile_schdoc"/>
+        <ecad:hasNeutralFile rdf:resource="ecad:NeutralFile_gerber"/>
+        <ecad:hasMetadata rdf:resource="ecad:Metadata_DesignInfo"/>
+        <ecad:hasApplicableStandard rdf:resource="ecad:Standard_IPC2581"/>
+        <ecad:hasCriticalDataField rdf:resource="ecad:DataField_BoardStackup"/>
+        <ecad:hasCriticalDataField rdf:resource="ecad:DataField_SPICEWaveforms"/>
+    </ecad:ECADExtractionOutput>
+    
+    <!-- Some sample individuals for each category -->
+    
+    <owl:NamedIndividual rdf:about="ecad:ProprietaryFile_schdoc">
+        <rdf:type rdf:resource="ecad:ProprietaryECADFile"/>
+        <rdfs:label>.schdoc (Altium schematic)</rdfs:label>
+    </owl:NamedIndividual>
+    
+    <owl:NamedIndividual rdf:about="ecad:NeutralFile_gerber">
+        <rdf:type rdf:resource="ecad:NeutralECADFile"/>
+        <rdfs:label>Gerber (RS-274X or X2)</rdfs:label>
+    </owl:NamedIndividual>
+    
+    <owl:NamedIndividual rdf:about="ecad:Metadata_DesignInfo">
+        <rdf:type rdf:resource="ecad:Metadata"/>
+        <rdfs:label>Designer: Alice, Revision: 3, Date: 2025-02-28</rdfs:label>
+    </owl:NamedIndividual>
+    
+    <owl:NamedIndividual rdf:about="ecad:Standard_IPC2581">
+        <rdf:type rdf:resource="ecad:ApplicableStandard"/>
+        <rdfs:label>IPC-2581 (Digital Product Model Exchange)</rdfs:label>
+    </owl:NamedIndividual>
+    
+    <owl:NamedIndividual rdf:about="ecad:DataField_BoardStackup">
+        <rdf:type rdf:resource="ecad:CriticalDataField"/>
+        <rdfs:label>Board Stackup Info (layers, dielectric materials, copper weight)</rdfs:label>
+    </owl:NamedIndividual>
+    
+    <owl:NamedIndividual rdf:about="ecad:DataField_SPICEWaveforms">
+        <rdf:type rdf:resource="ecad:CriticalDataField"/>
+        <rdfs:label>SPICE Waveforms (voltage/current, net-based waveforms, Bode plots)</rdfs:label>
+    </owl:NamedIndividual>
+
+</rdf:RDF>
