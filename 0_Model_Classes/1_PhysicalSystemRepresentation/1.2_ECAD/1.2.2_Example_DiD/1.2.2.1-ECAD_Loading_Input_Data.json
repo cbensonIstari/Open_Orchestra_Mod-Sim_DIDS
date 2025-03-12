@@ -1,0 +1,64 @@
+{
+  "ECAD_Loading_Input_Data": {
+    "Schematic_Files": {
+      "Proprietary_Formats": [
+        ".schdoc (Altium Designer)",
+        ".dsn (OrCAD Schematic)",
+        ".prj (Mentor Xpedition Project)",
+        ".opj (OrCAD Capture Project)",
+        ".kicad_sch (KiCad Schematic)"
+      ],
+      "Neutral_Formats": [
+        ".xml (Some schematic interchange exports)",
+        ".json (Custom or tool-specific structured schematics)"
+      ]
+    },
+    "PCB_Layout_Files": {
+      "Proprietary_Formats": [
+        ".pcbdoc (Altium PCB)",
+        ".brd (Cadence Allegro Board)",
+        ".pcb (Mentor Xpedition Layout)",
+        ".kicad_pcb (KiCad PCB)",
+        ".idb (Intermediate Database for Cadence Allegro)"
+      ],
+      "Neutral_Formats": [
+        ".ipc (IPC-2581, digital product model)",
+        ".odb++ (Comprehensive PCB manufacturing data)",
+        ".gerber (RS-274X or X2)",
+        ".dxf (2D reference geometry)"
+      ]
+    },
+    "Library_Files": [
+      ".lib (Symbol/footprint libraries in various ECAD tools)",
+      ".lia (Mentor Xpedition library container)",
+      ".dblib (Altium database library)"
+    ],
+    "Netlists": [
+      ".net (Generic netlist)",
+      ".ipc-d-356 (IPC netlist standard)",
+      ".bdf (Quartus Block Diagram File, if relevant)"
+    ],
+    "BOM_Files": [
+      ".xls/.xlsx (Excel-based Bill of Materials)",
+      ".csv (Comma-separated BOM export)",
+      ".xml (Structured BOM export)"
+    ],
+    "Mechanical_Integration": [
+      ".step (For MCAD-ECAD board outline collaboration)",
+      ".iges (Legacy 3D geometry)",
+      ".usdz (OpenUSD for digital twin or AR/VR integrations)"
+    ],
+    "Manufacturing_Data": [
+      ".drill (NC drill files)",
+      ".fab (Fabrication drawings, notes in PDF)",
+      ".pickplace/.pos (Pick-and-place machine files)",
+      ".panel (Panelization info if relevant)"
+    ],
+    "SPICE_Files": [
+      ".cir (SPICE circuit file)",
+      ".lib (SPICE model library)",
+      ".subckt (Subcircuit definitions)",
+      ".pspice (Vendor-specific extensions)"
+    ]
+  }
+}
