@@ -1,0 +1,72 @@
+{
+  "ECAD_Extraction_Output_Data": {
+    "Proprietary_ECAD_Files": [
+      ".schdoc (Altium Schematic)",
+      ".pcbdoc (Altium PCB)",
+      ".brd (Cadence Allegro Board)",
+      ".dsn (OrCAD Schematic)",
+      ".pcb (Mentor Xpedition Layout)",
+      ".kicad_sch / .kicad_pcb (KiCad schematic/board)"
+    ],
+    "Neutral_Files": [
+      ".ipc (IPC-2581 manufacturing data)",
+      ".odb++ (Complete PCB dataset)",
+      ".gerber (RS-274X, X2 for artwork)",
+      ".ipc-d-356 (Netlist test file)",
+      ".usdz (OpenUSD for 3D or AR/VR usage)"
+    ],
+    "Metadata": [
+      "Extracted string-based metadata (e.g., Designer, Revision, Date, Project Name)"
+    ],
+    "Applicable_Standards": {
+      "PCB_Manufacturing_Data": [
+        "IPC-2581",
+        "ODB++",
+        "Gerber RS-274X / X2"
+      ],
+      "Netlists": [
+        "IPC-D-356"
+      ],
+      "ECAD-MCAD_Collaboration": [
+        "IDF (Intermediate Data Format)",
+        "STEP (ISO 10303-21 for mechanical shape exchange)",
+        "OpenUSD"
+      ],
+      "Schematic_Symbols_and_Footprints": [
+        "IEEE 315 (Standard graphic symbols for circuits)",
+        "IPC-7351 (Land pattern design guidelines)"
+      ],
+      "BOM_Standards": [
+        "IPC-2578",
+        "ISO 8000",
+        "ANSI/ISO 9001"
+      ]
+    },
+    "Critical_Data_Fields": {
+      "Board_Stackup": [
+        "Number of layers, Dielectric materials, Copper weight"
+      ],
+      "Component_Placement": [
+        "Coordinates (X/Y), Rotation/orientation for each reference designator"
+      ],
+      "Netlist_Information": [
+        "Signal names, pin-to-pin connections"
+      ],
+      "Bill_of_Materials": [
+        "Detailed part listings (ref des, part number, quantity)"
+      ],
+      "Electrical_Constraints": [
+        "High-speed constraints, length matching, differential pair rules"
+      ],
+      "SPICE_Waveforms": [
+        "Voltage/current waveforms from circuit simulation",
+        "Fourier/Bode plots"
+      ],
+      "Manufacturing_Files": [
+        "Drill data (plated vs. non-plated holes)",
+        "Gerber layers (top/bottom, solder mask, silkscreen)",
+        "Assembly drawings (PDF or graphic with component outlines)"
+      ]
+    }
+  }
+}
