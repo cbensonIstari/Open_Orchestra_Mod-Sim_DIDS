@@ -2,6 +2,10 @@
 
 This folder houses all **ECAD-related model definitions** under the **Physical System Representation** class. ECAD tools focus on **electronic** aspects of a design (e.g., schematic capture, PCB layout, circuit simulation), complementing the mechanical aspects found in `1.1-CAD/`.
 
+
+![Physical Systems Representation Class](images/1_Physical_Systems_Representation_Class.jpg)
+> *Figure 1.* The Physical System Representation Class overview, which includes CAD (mechanical), ECAD (electronic) and PLM ModelTypes.
+
 ---
 
 ## Structure
