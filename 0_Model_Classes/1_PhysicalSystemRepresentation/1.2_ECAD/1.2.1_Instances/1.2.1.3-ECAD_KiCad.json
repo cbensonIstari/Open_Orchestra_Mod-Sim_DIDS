@@ -1,0 +1,29 @@
+{
+  "Tool": {
+    "Class": "Physical System Representation",
+    "Type": "ECAD",
+    "Instance": "KiCad",
+    "Vendor": "KiCad Community",
+    "Version": "7.0",
+    "POC": {
+      "Name": "Open Source Maintainers",
+      "Email": "kicad-dev@example.org"
+    }
+  },
+  "Licensing": {
+    "Type": "GPLv3",
+    "Server": null
+  },
+  "Access_Control": {
+    "IAM": "Local Accounts"
+  },
+  "Deployment": {
+    "Level": "Project",
+    "Type": "Desktop Install",
+    "InfoSec_Level": []
+  },
+  "Plugins": [
+    "Interactive Router",
+    "3D Viewer"
+  ]
+}
