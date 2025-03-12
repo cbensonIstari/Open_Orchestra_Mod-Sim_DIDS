@@ -1,0 +1,29 @@
+{
+  "Tool": {
+    "Class": "Physical System Representation",
+    "Type": "ECAD",
+    "Instance": "SPICE (NGSpice, LTspice, or PSpice)",
+    "Vendor": "Example Vendor",
+    "Version": "1.0",
+    "POC": {
+      "Name": "John Circuits",
+      "Email": "john.circuits@example.com"
+    }
+  },
+  "Licensing": {
+    "Type": "Free / Open Source / Commercial",
+    "Server": null
+  },
+  "Access_Control": {
+    "IAM": "Local Accounts"
+  },
+  "Deployment": {
+    "Level": "Project",
+    "Type": "Desktop Install / Cloud",
+    "InfoSec_Level": ["CUI"]
+  },
+  "Plugins": [
+    "Mixed-signal add-on",
+    "Transmission line models"
+  ]
+}
