@@ -1,0 +1,73 @@
+erDiagram
+    CADExtractionOutput ||--o{ ProprietaryCADFile : hasProprietaryFile
+    CADExtractionOutput ||--o{ NeutralFile : hasNeutralFile
+    CADExtractionOutput ||--o{ RASObjectCard : hasMetadata
+    CADExtractionOutput ||--o{ ApplicableStandard : hasApplicableStandard
+    CADExtractionOutput ||--o{ CriticalDataField : hasCriticalDataField
+
+    CADExtractionOutput {
+        string id PK "CADExtractionOutput_Example1"
+        string label "CAD Extraction Output Example 1"
+        string comment "Demonstration instance referencing proprietary and neutral files"
+    }
+
+    ProprietaryCADFile {
+        string id PK
+        string creoFile "part12345.prt"
+    }
+
+    NeutralFile {
+        string id PK
+        string step "ISO 10303 STEP"
+        string usdz "OpenUSD .usdz"
+    }
+
+    RASObjectCard {
+        string enclaveId "67ea60bb-4f00-8000-9a65-808df8edde4b"
+        string objectId "72af13aa-9a20-4001-8c33-f12da7e711f9"
+        string versionId "d0f51e31-7e09-4df4-9fd3-3c3f2814a884"
+
+        string name "WingBracketModel"
+        string version "3.2"
+        date date "2025-04-01"
+
+        string did "DI-MNT-90101A"
+        string didTitle "Physical System Representation / CAD Designs"
+        date didDate "2025-09-01"
+
+        string description "3D STEP model of a titanium UAV wing bracket, aligned with DI-MNT-90101A deliverable standards."
+
+        string classification "CUI"
+        string tags "NOFORN, ITAR, PROPRIETARY"
+        string authority "Capt Sarah Adams, OCA (USAF/AFRL) <sarah.adams.4@us.af.mil>"
+        date downgrade "2032-01-01"
+
+        string author "Lt. Marcus Lee, AFRL/RY <marcus.lee.7@us.af.mil>"
+        string owningEntity "USAF AFRL/RQ – Aerospace Systems Directorate"
+
+        string artifact "WingBracketModel.step"
+        string usage "Import into CAD software for geometry & PMI inspection"
+
+        string variability "MaterialOption: Ti-6Al-4V (others: 17-4PH, 7075)"
+
+        string related "WingAssemblyModel v1.0 — enclaveId: 314ce932-918e-4b91-b645-9922fdc66495, objectId: 23b8e2a4-1db3-4b33-a17e-08ed2dc23e10, versionId: 814e9157-cc4e-4469-a6ec-cf4ab707de5a"
+    }
+
+    ApplicableStandard {
+        string id PK
+        string stepStandard "ISO 10303 (STEP)"
+        string asmeStandard "ASME Y14.41 (3D Annotations)"
+    }
+
+    CriticalDataField {
+        string id PK
+        float mass "Total mass in kg"
+        float volume "Volume in cubic cm"
+        float density "Material density in g/cm^3"
+        string boundingBox "XYZ dimensions in mm"
+        string materialName "Ti-6Al-4V"
+        float yieldStrength "Yield strength in MPa"
+        float tensileStrength "Ultimate tensile strength in MPa"
+        float hardness "Material hardness (Rockwell, Brinell, etc.)"
+        array bom "List of components in the bill of materials"
+    }
