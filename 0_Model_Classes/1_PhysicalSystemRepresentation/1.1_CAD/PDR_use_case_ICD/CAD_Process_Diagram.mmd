@@ -1,0 +1,29 @@
+sequenceDiagram
+    participant Contractor
+    participant Government
+
+    Contractor->>Government: Confirm Functional Baseline Requirements
+    Government-->>Contractor: Approve Functional Baseline
+
+    Contractor->>Contractor: Develop Initial Conceptual Design
+    Contractor->>Contractor: Generate Preliminary CAD Models
+
+    Contractor->>Contractor: Conduct Internal Design Reviews
+    Contractor->>Contractor: Define & Document Interfaces
+
+    Contractor->>Contractor: Prepare CAD Package
+
+    Contractor->>Government: Deliver CAD Models (Proprietary format and PDF)
+
+    Government->>Government: Review CAD Models
+    Government->>Contractor: Provide Feedback
+
+    Contractor->>Contractor: Resolve Comments, Update Models
+
+    Contractor->>Government: Submit Updated CAD Models (if necessary)
+
+    Contractor->>Government: Present CAD at Preliminary Design Review (PDR)
+    Government-->>Contractor: Approve Preliminary Design
+
+    Contractor->>Contractor: Baseline Approved CAD Models
+    Contractor->>Contractor: Transition to Detailed Design
