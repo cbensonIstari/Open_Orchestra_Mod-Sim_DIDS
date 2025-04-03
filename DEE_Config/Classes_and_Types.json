@@ -32,6 +32,13 @@
       "Spreadsheets",
       "TaskManagement",
       "SharedDrives"
+    ],
+    "Data Operations": [
+      "Data Storage",   /// S3, blob, data lakes, data warhouses, TRMC CHEETAS -- QUESTION:  should this be broken out more deeply?
+      "Data Visualization",  ///  tableau, powerBI, Simcenter, 
+      "Data Analysis", /// Jupyter, R, Pandas, Ansys Ensight,
+      "Data Management", ///  OKTA, Zitadel, Hue, Apache Atlas, TRMC CHEETAS
+      "Data Engineering", /// Apache Airflow, Kafka, Nifi, TRMC TENA
     ]
   }
 }
