@@ -1,0 +1,30 @@
+{
+  "Tool": {
+    "Class": "Model-Based System Engineering",
+    "Type": "Architecture Tools",
+    "Instance": "Modelio",
+    "Vendor": "Modeliosoft (Open Source Edition)",
+    "Version": "5.5",
+    "POC": {
+      "Name": "Architect Dev",
+      "Email": "architect.dev@example.com"
+    }
+  },
+  "Licensing": {
+    "Type": "Open Source (GPL for the core)",
+    "Server": null
+  },
+  "Access_Control": {
+    "IAM": "Local Desktop"
+  },
+  "Deployment": {
+    "Level": "Project",
+    "Type": "Desktop Install",
+    "InfoSec_Level": []
+  },
+  "Plugins": [
+    "SysML Designer",
+    "BPMN Designer",
+    "UML2 Tools"
+  ]
+}
