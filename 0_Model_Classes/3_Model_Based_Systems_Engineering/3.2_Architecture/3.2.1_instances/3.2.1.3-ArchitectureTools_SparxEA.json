@@ -1,0 +1,29 @@
+{
+  "Tool": {
+    "Class": "Model-Based System Engineering",
+    "Type": "Architecture Tools",
+    "Instance": "Sparx Enterprise Architect",
+    "Vendor": "Sparx Systems",
+    "Version": "16.1",
+    "POC": {
+      "Name": "UML Expert",
+      "Email": "uml.expert@example.com"
+    }
+  },
+  "Licensing": {
+    "Type": "Named User",
+    "Server": null
+  },
+  "Access_Control": {
+    "IAM": "Local Accounts"
+  },
+  "Deployment": {
+    "Level": "Project",
+    "Type": "Desktop Install",
+    "InfoSec_Level": []
+  },
+  "Plugins": [
+    "SysML Add-In",
+    "BPMN Add-In"
+  ]
+}
