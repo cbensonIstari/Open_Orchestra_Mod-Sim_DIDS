@@ -1,0 +1,36 @@
+{
+  "Tool": {
+    "Class": "Model-Based System Engineering",
+    "Type": "Architecture Tools",
+    "Instance": "IBM Rhapsody",
+    "Vendor": "IBM",
+    "Version": "9.0",
+    "POC": {
+      "Name": "MBSE Specialist",
+      "Email": "mbse.specialist@example.com"
+    }
+  },
+  "Licensing": {
+    "Type": "Named User",
+    "Server": {
+      "Vendor": "IBM Rational License Server",
+      "Hostname": "rhapsody-license.corp.local",
+      "IP": "192.168.12.51",
+      "Port": "27010",
+      "Protocol": "TCP/IP"
+    }
+  },
+  "Access_Control": {
+    "IAM": "LDAP"
+  },
+  "Deployment": {
+    "Level": "Department",
+    "Type": "On-Premise",
+    "InfoSec_Level": ["CUI"]
+  },
+  "Plugins": [
+    "SysML Profile",
+    "Rhapsody Model Manager",
+    "AutoCode Generator"
+  ]
+}
