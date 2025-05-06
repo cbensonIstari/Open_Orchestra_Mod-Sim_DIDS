@@ -1,0 +1,68 @@
+{
+  "Architecture_Models_Extraction_Output_Data": {
+    "Proprietary_Formats": [
+      ".mdzip (Cameo)",
+      ".rpyx (IBM Rhapsody)",
+      ".eap/.qea (Sparx EA)",
+      ".uml (some UML proprietary format)",
+      ".sysml (various vendor-specific SysML extensions)"
+    ],
+    "Neutral_Formats": [
+      ".xmi (UML/SysML interchange)",
+      ".reqif (Requirements data)",
+      ".html/.pdf (Documentation/diagram reports)",
+      ".xml/.json (SysML v2 or partial exports)",
+      ".svg/.png (Individual diagrams for broader sharing)"
+    ],
+    "Metadata": [
+      "Model info: Name, Author, Version, Creation/Modified date"
+    ],
+    "Applicable_Standards": {
+      "Modeling_Languages": [
+        "UML 2.5 (ISO/IEC 19505-2)",
+        "SysML 1.6/1.7",
+        "SysML v2"
+      ],
+      "Architecture_Descriptions": [
+        "ISO/IEC/IEEE 42010",
+        "ArchiMate (The Open Group)"
+      ],
+      "Requirements_Interchange": [
+        "ReqIF",
+        "AP233 (STEP for systems engineering data)"
+      ],
+      "Interchange_Mechanisms": [
+        "OMG XMI",
+        "OpenUSD (less common, possible for 3D contexts)",
+        "BPMN 2.0 (business processes, if integrated)"
+      ]
+    },
+    "Critical_Data_Fields": {
+      "Model_Elements": [
+        "Blocks / Classes / Components",
+        "Interfaces / Ports / Flows",
+        "Activities / Use Cases / States"
+      ],
+      "Diagrams": [
+        "SysML BDD/IBD, Parametric diagrams",
+        "UML Class/Sequence/Activity/State Machine",
+        "Requirement diagrams"
+      ],
+      "Requirement_Traceability": [
+        "ReqIF or external linking to DOORS/Jama",
+        "Satisfy, Derive, Verify relationships"
+      ],
+      "Stereotypes_and_Profiles": [
+        "Custom stereotypes (e.g., <<SafetyCritical>>, <<ElectricalSystem>>)",
+        "Tagged values for domain attributes"
+      ],
+      "Parametric_Constraints": [
+        "Equation-based relationships (F = m * a), trade studies"
+      ],
+      "Simulation_and_Analysis_Artifacts": [
+        "Model execution scripts (Cameo Simulation Toolkit, Rhapsody simulation)",
+        "Constraint solver results"
+      ]
+    }
+  }
+}
