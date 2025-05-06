@@ -1,0 +1,36 @@
+{
+  "Tool": {
+    "Class": "Model-Based System Engineering",
+    "Type": "Architecture Tools",
+    "Instance": "Cameo Systems Modeler",
+    "Vendor": "Dassault Systèmes (No Magic)",
+    "Version": "2023x",
+    "POC": {
+      "Name": "SysML Lead",
+      "Email": "sysml.lead@example.com"
+    }
+  },
+  "Licensing": {
+    "Type": "Floating",
+    "Server": {
+      "Vendor": "Dassault License Server",
+      "Hostname": "cameo-license.corp.local",
+      "IP": "192.168.12.50",
+      "Port": "27000",
+      "Protocol": "TCP/IP"
+    }
+  },
+  "Access_Control": {
+    "IAM": "Active Directory"
+  },
+  "Deployment": {
+    "Level": "Program",
+    "Type": "Collaboration Database",
+    "InfoSec_Level": ["CUI", "ITAR"]
+  },
+  "Plugins": [
+    "SysML Plugin",
+    "UPDM/UAF Plugin",
+    "Teamwork Cloud Integration"
+  ]
+}
