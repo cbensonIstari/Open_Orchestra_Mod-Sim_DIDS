@@ -1,0 +1,37 @@
+{
+  "Architecture_Models_Loading_Input_Data": {
+    "Proprietary_Formats": {
+      "Cameo_and_MagicDraw": [
+        ".mdzip (Cameo/MagicDraw project)",
+        ".mdrar (MagicDraw archive)"
+      ],
+      "IBM_Rhapsody": [
+        ".rpy, .rpyx (Rhapsody projects)",
+        ".sbs (Subset of Rhapsody model)"
+      ],
+      "Sparx_Enterprise_Architect": [
+        ".eap, .feap (Legacy Jet database)",
+        ".qea, .qeax (SQLite-based repository)"
+      ],
+      "Other_Tools": [
+        ".uml (Proprietary UML exports)",
+        ".sysml (Tool-specific SysML extension)"
+      ]
+    },
+    "Neutral_Formats": [
+      ".xmi (OMG XML Metadata Interchange)",
+      ".uml2 (Alternate UML exchange)",
+      ".reqif (Requirements Interchange Format)",
+      ".xml/.json (SysML v2 or custom prototypes)"
+    ],
+    "Additional_Artifacts": [
+      "Profile/Library files (SysML profiles, custom stereotypes)",
+      "Configuration/Project Settings (Teamwork Cloud, repository info)",
+      "Scripts or Plugins (Groovy scripts, Java add-ins)"
+    ],
+    "External_References": [
+      "Linked Requirements (DOORS Next, Jama in .reqif)",
+      "Linked Diagrams (BPMN in .bpmn, textual docs in .docx/.xlsx)"
+    ]
+  }
+}
