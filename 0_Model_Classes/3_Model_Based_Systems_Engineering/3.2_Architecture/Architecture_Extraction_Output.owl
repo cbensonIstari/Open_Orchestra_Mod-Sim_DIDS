@@ -1,0 +1,232 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:arch="http://example.com/architectureExtraction#"
+    xml:base="http://example.com/architectureExtraction"
+    owl:versionInfo="2.0">
+
+  <!-- Ontology definition -->
+  <owl:Ontology rdf:about="">
+    <rdfs:label>Architecture Extraction Output Ontology</rdfs:label>
+    <rdfs:comment>
+      Represents UML/SysML model outputs (diagrams, requirement traceability, parametric constraints, stereotypes, etc.)
+      aligning with the JSON in 3.2.3-Architecture_Models_Extraction_Output_Data.json
+    </rdfs:comment>
+  </owl:Ontology>
+  
+  <!-- 
+    Classes 
+    Root: arch:ArchitectureExtractionOutput
+    Sub-categories for:
+      - ProprietaryModelFile
+      - NeutralFormat
+      - Metadata
+      - ApplicableStandard
+      - CriticalDataField
+         * ModelElement
+         * Diagram
+         * RequirementTrace
+         * StereotypeProfile
+         * ParametricConstraint
+         * SimulationArtifact
+  -->
+  
+  <owl:Class rdf:about="arch:ArchitectureExtractionOutput">
+    <rdfs:label>Architecture Extraction Output</rdfs:label>
+    <rdfs:comment>The root class for data extracted from an architecture modeling tool (Cameo, Rhapsody, etc.).</rdfs:comment>
+  </owl:Class>
+  
+  <owl:Class rdf:about="arch:ProprietaryModelFile">
+    <rdfs:label>Proprietary Model File</rdfs:label>
+    <rdfs:comment>Represents native file formats like .mdzip, .rpyx, .eap/.qea, .uml, etc.</rdfs:comment>
+  </owl:Class>
+  
+  <owl:Class rdf:about="arch:NeutralFormat">
+    <rdfs:label>Neutral Format</rdfs:label>
+    <rdfs:comment>Represents neutral file formats like XMI, UML2, ReqIF, or images of diagrams (SVG/PNG).</rdfs:comment>
+  </owl:Class>
+  
+  <owl:Class rdf:about="arch:Metadata">
+    <rdfs:label>Architecture Metadata</rdfs:label>
+    <rdfs:comment>General data like Model Name, Author, Version, Creation Date, etc.</rdfs:comment>
+  </owl:Class>
+  
+  <owl:Class rdf:about="arch:ApplicableStandard">
+    <rdfs:label>Applicable Standard</rdfs:label>
+    <rdfs:comment>Standards for UML, SysML, or architecture descriptions (e.g., ISO/IEC 42010, UML 2.5).</rdfs:comment>
+  </owl:Class>
+  
+  <owl:Class rdf:about="arch:CriticalDataField">
+    <rdfs:label>Critical Data Field</rdfs:label>
+    <rdfs:comment>Root for key fields like model elements, diagrams, requirements trace, parametrics, etc.</rdfs:comment>
+  </owl:Class>
+  
+  <!-- Subclasses of CriticalDataField for more specificity -->
+  
+  <owl:Class rdf:about="arch:ModelElement">
+    <rdfs:subClassOf rdf:resource="arch:CriticalDataField"/>
+    <rdfs:label>Model Element</rdfs:label>
+    <rdfs:comment>Represents blocks/classes/components, interfaces, ports, flows, states, etc.</rdfs:comment>
+  </owl:Class>
+  
+  <owl:Class rdf:about="arch:Diagram">
+    <rdfs:subClassOf rdf:resource="arch:CriticalDataField"/>
+    <rdfs:label>Diagram</rdfs:label>
+    <rdfs:comment>SysML BDD/IBD, UML class/sequence/activity/state machine diagrams, etc.</rdfs:comment>
+  </owl:Class>
+  
+  <owl:Class rdf:about="arch:RequirementTrace">
+    <rdfs:subClassOf rdf:resource="arch:CriticalDataField"/>
+    <rdfs:label>Requirement Trace</rdfs:label>
+    <rdfs:comment>Trace relationships from model elements to requirements (Satisfy, Derive, Verify, etc.).</rdfs:comment>
+  </owl:Class>
+  
+  <owl:Class rdf:about="arch:StereotypeProfile">
+    <rdfs:subClassOf rdf:resource="arch:CriticalDataField"/>
+    <rdfs:label>Stereotype or Profile</rdfs:label>
+    <rdfs:comment>Represents custom stereotypes (e.g., <<SafetyCritical>>), domain profiles, or tagged values.</rdfs:comment>
+  </owl:Class>
+  
+  <owl:Class rdf:about="arch:ParametricConstraint">
+    <rdfs:subClassOf rdf:resource="arch:CriticalDataField"/>
+    <rdfs:label>Parametric Constraint</rdfs:label>
+    <rdfs:comment>Equation-based or constraint blocks capturing system parameters (F = m*a, etc.).</rdfs:comment>
+  </owl:Class>
+  
+  <owl:Class rdf:about="arch:SimulationArtifact">
+    <rdfs:subClassOf rdf:resource="arch:CriticalDataField"/>
+    <rdfs:label>Simulation and Analysis Artifact</rdfs:label>
+    <rdfs:comment>Execution scripts, constraint solver results, or statechart simulation traces from a modeling tool.</rdfs:comment>
+  </owl:Class>
+  
+  <!-- Object Properties linking an ArchitectureExtractionOutput to each category -->
+  
+  <owl:ObjectProperty rdf:about="arch:hasProprietaryFile">
+    <rdfs:domain rdf:resource="arch:ArchitectureExtractionOutput"/>
+    <rdfs:range rdf:resource="arch:ProprietaryModelFile"/>
+    <rdfs:comment>Links extraction output to proprietary tool files.</rdfs:comment>
+  </owl:ObjectProperty>
+  
+  <owl:ObjectProperty rdf:about="arch:hasNeutralFormat">
+    <rdfs:domain rdf:resource="arch:ArchitectureExtractionOutput"/>
+    <rdfs:range rdf:resource="arch:NeutralFormat"/>
+    <rdfs:comment>Links extraction output to neutral or open formats (XMI, UML2, ReqIF, images).</rdfs:comment>
+  </owl:ObjectProperty>
+  
+  <owl:ObjectProperty rdf:about="arch:hasMetadata">
+    <rdfs:domain rdf:resource="arch:ArchitectureExtractionOutput"/>
+    <rdfs:range rdf:resource="arch:Metadata"/>
+    <rdfs:comment>Associates general metadata (model name, author, date) with the architecture output.</rdfs:comment>
+  </owl:ObjectProperty>
+  
+  <owl:ObjectProperty rdf:about="arch:hasApplicableStandard">
+    <rdfs:domain rdf:resource="arch:ArchitectureExtractionOutput"/>
+    <rdfs:range rdf:resource="arch:ApplicableStandard"/>
+    <rdfs:comment>Links to relevant UML/SysML or architecture standards (ISO/IEC 42010, UML 2.5, SysML 1.6, etc.).</rdfs:comment>
+  </owl:ObjectProperty>
+  
+  <owl:ObjectProperty rdf:about="arch:hasCriticalDataField">
+    <rdfs:domain rdf:resource="arch:ArchitectureExtractionOutput"/>
+    <rdfs:range rdf:resource="arch:CriticalDataField"/>
+    <rdfs:comment>References the crucial data fields: model elements, diagrams, requirement trace, stereotypes, parametrics, etc.</rdfs:comment>
+  </owl:ObjectProperty>
+  
+  <!-- Additional sub-properties for each sub-class of CriticalDataField (optional) -->
+  
+  <owl:ObjectProperty rdf:about="arch:hasModelElement">
+    <rdfs:subPropertyOf rdf:resource="arch:hasCriticalDataField"/>
+    <rdfs:domain rdf:resource="arch:ArchitectureExtractionOutput"/>
+    <rdfs:range rdf:resource="arch:ModelElement"/>
+    <rdfs:comment>Specifically for blocks/classes/interfaces (model elements).</rdfs:comment>
+  </owl:ObjectProperty>
+  
+  <owl:ObjectProperty rdf:about="arch:hasDiagram">
+    <rdfs:subPropertyOf rdf:resource="arch:hasCriticalDataField"/>
+    <rdfs:domain rdf:resource="arch:ArchitectureExtractionOutput"/>
+    <rdfs:range rdf:resource="arch:Diagram"/>
+    <rdfs:comment>Specifically for UML/SysML diagrams (class, BDD, IBD, etc.).</rdfs:comment>
+  </owl:ObjectProperty>
+  
+  <owl:ObjectProperty rdf:about="arch:hasRequirementTrace">
+    <rdfs:subPropertyOf rdf:resource="arch:hasCriticalDataField"/>
+    <rdfs:domain rdf:resource="arch:ArchitectureExtractionOutput"/>
+    <rdfs:range rdf:resource="arch:RequirementTrace"/>
+    <rdfs:comment>Links requirement trace objects (Satisfy, Derive, Verify relationships).</rdfs:comment>
+  </owl:ObjectProperty>
+  
+  <owl:ObjectProperty rdf:about="arch:hasStereotypeProfile">
+    <rdfs:subPropertyOf rdf:resource="arch:hasCriticalDataField"/>
+    <rdfs:domain rdf:resource="arch:ArchitectureExtractionOutput"/>
+    <rdfs:range rdf:resource="arch:StereotypeProfile"/>
+    <rdfs:comment>Specifically for custom stereotypes or profiles used in the model.</rdfs:comment>
+  </owl:ObjectProperty>
+  
+  <owl:ObjectProperty rdf:about="arch:hasParametricConstraint">
+    <rdfs:subPropertyOf rdf:resource="arch:hasCriticalDataField"/>
+    <rdfs:domain rdf:resource="arch:ArchitectureExtractionOutput"/>
+    <rdfs:range rdf:resource="arch:ParametricConstraint"/>
+    <rdfs:comment>Links parametric constraints or equations used in the model.</rdfs:comment>
+  </owl:ObjectProperty>
+  
+  <owl:ObjectProperty rdf:about="arch:hasSimulationArtifact">
+    <rdfs:subPropertyOf rdf:resource="arch:hasCriticalDataField"/>
+    <rdfs:domain rdf:resource="arch:ArchitectureExtractionOutput"/>
+    <rdfs:range rdf:resource="arch:SimulationArtifact"/>
+    <rdfs:comment>Links execution scripts, solver results, or simulation logs from the modeling tool.</rdfs:comment>
+  </owl:ObjectProperty>
+  
+  <!-- Example individuals (Optional demonstration) -->
+  
+  <arch:ArchitectureExtractionOutput rdf:about="arch:ArchExtractionExample1">
+    <rdfs:label>Architecture Extraction Output Example 1</rdfs:label>
+    <rdfs:comment>Demonstration instance referencing various diagrams, parametrics, and requirement traces</rdfs:comment>
+    
+    <arch:hasProprietaryFile rdf:resource="arch:ProprietaryFile_mdzip"/>
+    <arch:hasNeutralFormat rdf:resource="arch:NeutralFormat_xmi"/>
+    <arch:hasMetadata rdf:resource="arch:Metadata_AuthorDate"/>
+    <arch:hasApplicableStandard rdf:resource="arch:Standard_SysML16"/>
+    <arch:hasDiagram rdf:resource="arch:Diagram_BDDEngineModule"/>
+    <arch:hasRequirementTrace rdf:resource="arch:ReqTrace_SatisfyEngineReq"/>
+    <arch:hasParametricConstraint rdf:resource="arch:Parametric_SimpleEquations"/>
+  </arch:ArchitectureExtractionOutput>
+  
+  <!-- Sample individuals for demonstration -->
+  <owl:NamedIndividual rdf:about="arch:ProprietaryFile_mdzip">
+    <rdf:type rdf:resource="arch:ProprietaryModelFile"/>
+    <rdfs:label>.mdzip (Cameo Systems Modeler)</rdfs:label>
+  </owl:NamedIndividual>
+  
+  <owl:NamedIndividual rdf:about="arch:NeutralFormat_xmi">
+    <rdf:type rdf:resource="arch:NeutralFormat"/>
+    <rdfs:label>XMI export of the SysML model</rdfs:label>
+  </owl:NamedIndividual>
+  
+  <owl:NamedIndividual rdf:about="arch:Metadata_AuthorDate">
+    <rdf:type rdf:resource="arch:Metadata"/>
+    <rdfs:label>Author: Jane Systems, Created: 2025-03-15, Version: 2.1</rdfs:label>
+  </owl:NamedIndividual>
+  
+  <owl:NamedIndividual rdf:about="arch:Standard_SysML16">
+    <rdf:type rdf:resource="arch:ApplicableStandard"/>
+    <rdfs:label>OMG SysML 1.6</rdfs:label>
+  </owl:NamedIndividual>
+  
+  <owl:NamedIndividual rdf:about="arch:Diagram_BDDEngineModule">
+    <rdf:type rdf:resource="arch:Diagram"/>
+    <rdfs:label>SysML BDD showing the Engine Module block definition</rdfs:label>
+  </owl:NamedIndividual>
+  
+  <owl:NamedIndividual rdf:about="arch:ReqTrace_SatisfyEngineReq">
+    <rdf:type rdf:resource="arch:RequirementTrace"/>
+    <rdfs:label>Satisfy relationship from Engine Block to Engine Requirements in DOORS</rdfs:label>
+  </owl:NamedIndividual>
+  
+  <owl:NamedIndividual rdf:about="arch:Parametric_SimpleEquations">
+    <rdf:type rdf:resource="arch:ParametricConstraint"/>
+    <rdfs:label>F = m * a parametric constraint in a SysML parametric diagram</rdfs:label>
+  </owl:NamedIndividual>
+
+</rdf:RDF>
