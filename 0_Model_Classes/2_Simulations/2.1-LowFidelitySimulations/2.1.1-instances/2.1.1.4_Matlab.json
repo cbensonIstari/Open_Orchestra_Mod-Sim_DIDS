@@ -1,0 +1,35 @@
+{
+  "Tool": {
+    "Class": "Simulations",
+    "Type": "LowFidelitySimulations",
+    "Instance": "Matlab",
+    "Vendor": "MathWorks",
+    "Version": "R2023a",
+    "POC": {
+      "Name": "MathWorks Liaison",
+      "Email": "matlab.liaison@example.com"
+    }
+  },
+  "Licensing": {
+    "Type": "Concurrent",
+    "Server": {
+      "Vendor": "MathWorks License Manager",
+      "Hostname": "matlab-license.corp.local",
+      "IP": "192.168.20.100",
+      "Port": "27000",
+      "Protocol": "TCP/IP"
+    }
+  },
+  "Access_Control": {
+    "IAM": "LDAP"
+  },
+  "Deployment": {
+    "Level": "Department",
+    "Type": "On-Premise",
+    "InfoSec_Level": ["CUI"]
+  },
+  "Plugins": [
+    "Aerospace Toolbox",
+    "Optimization Toolbox"
+  ]
+}
