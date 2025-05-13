@@ -1,0 +1,40 @@
+{
+  "Tool": {
+    "Class": "Physical System Representation",
+    "Type": "PLM",
+    "Instance": "Upchain",
+    "Vendor": "Autodesk (Upchain)",
+    "Version": "SaaS Current",
+    "POC": {
+      "Name": "Upchain PLM Admin",
+      "Email": "upchain.admin@example.com"
+    }
+  },
+  "Licensing": {
+    "Type": "Subscription",
+    "Server": {
+      "Vendor": "Autodesk Upchain SaaS",
+      "Hostname": "upchain-license.cloud.autodesk.com",
+      "IP": null,
+      "Port": "443",
+      "Protocol": "HTTPS"
+    }
+  },
+  "Access_Control": {
+    "IAM": "SAML SSO"
+  },
+  "Deployment": {
+    "Level": "Department",
+    "Type": "Cloud",
+    "Cloud": {
+      "Type": "Public",
+      "Provider": "Autodesk Cloud"
+    },
+    "InfoSec_Level": []
+  },
+  "Plugins": [
+    "CAD Connector",
+    "Change Management",
+    "Supplier Collaboration"
+  ]
+}
