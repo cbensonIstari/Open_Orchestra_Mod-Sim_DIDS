@@ -1,0 +1,133 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:cfd="http://example.com/cfdExtraction#"
+    xml:base="http://example.com/cfdExtraction"
+    owl:versionInfo="1.0">
+
+  <owl:Ontology rdf:about="">
+    <rdfs:label>CFD Extraction Output Ontology</rdfs:label>
+    <rdfs:comment>Models typical output from CFD solvers: solution fields, residual logs, post-processed data, etc.</rdfs:comment>
+  </owl:Ontology>
+  
+  <!-- Classes -->
+  <owl:Class rdf:about="cfd:CFDExtractionOutput">
+    <rdfs:label>CFD Extraction Output</rdfs:label>
+    <rdfs:comment>Root concept for data extracted from CFD simulations.</rdfs:comment>
+  </owl:Class>
+  
+  <owl:Class rdf:about="cfd:ProprietaryCFDFile">
+    <rdfs:label>Proprietary CFD File</rdfs:label>
+    <rdfs:comment>Solver-specific formats like .cas/.dat, .sim, .foam logs, etc.</rdfs:comment>
+  </owl:Class>
+  
+  <owl:Class rdf:about="cfd:NeutralFile">
+    <rdfs:label>Neutral CFD File</rdfs:label>
+    <rdfs:comment>Generic data containers: .csv, .xlsx, .vtk, .hdf5, images, animations.</rdfs:comment>
+  </owl:Class>
+  
+  <owl:Class rdf:about="cfd:Metadata">
+    <rdfs:label>CFD Metadata</rdfs:label>
+    <rdfs:comment>Solver version, HPC job ID, date/time, user, case name, etc.</rdfs:comment>
+  </owl:Class>
+  
+  <owl:Class rdf:about="cfd:ApplicableStandard">
+    <rdfs:label>CFD Applicable Standard</rdfs:label>
+    <rdfs:comment>Mesh or data exchange standards (CGNS, Gmsh, XDMF/HDF5), process references (AS9100, etc.).</rdfs:comment>
+  </owl:Class>
+  
+  <owl:Class rdf:about="cfd:CriticalDataField">
+    <rdfs:label>Critical CFD Data Field</rdfs:label>
+    <rdfs:comment>Key fields: solution arrays, residual logs, post-processing, multi-phase details, mesh stats.</rdfs:comment>
+  </owl:Class>
+  
+  <!-- Subclasses for the data fields -->
+  
+  <owl:Class rdf:about="cfd:SolutionFields">
+    <rdfs:subClassOf rdf:resource="cfd:CriticalDataField"/>
+    <rdfs:label>Solution Fields</rdfs:label>
+  </owl:Class>
+  
+  <owl:Class rdf:about="cfd:ResidualLogs">
+    <rdfs:subClassOf rdf:resource="cfd:CriticalDataField"/>
+    <rdfs:label>Residual Logs</rdfs:label>
+  </owl:Class>
+  
+  <owl:Class rdf:about="cfd:PostProcessing">
+    <rdfs:subClassOf rdf:resource="cfd:CriticalDataField"/>
+    <rdfs:label>Post Processing Data</rdfs:label>
+  </owl:Class>
+  
+  <owl:Class rdf:about="cfd:MultiPhaseOrChemistry">
+    <rdfs:subClassOf rdf:resource="cfd:CriticalDataField"/>
+    <rdfs:label>Multi-Phase or Chemistry</rdfs:label>
+  </owl:Class>
+  
+  <owl:Class rdf:about="cfd:MeshAndGridStats">
+    <rdfs:subClassOf rdf:resource="cfd:CriticalDataField"/>
+    <rdfs:label>Mesh and Grid Stats</rdfs:label>
+  </owl:Class>
+  
+  <!-- Object Properties -->
+  
+  <owl:ObjectProperty rdf:about="cfd:hasProprietaryFile">
+    <rdfs:domain rdf:resource="cfd:CFDExtractionOutput"/>
+    <rdfs:range rdf:resource="cfd:ProprietaryCFDFile"/>
+  </owl:ObjectProperty>
+  
+  <owl:ObjectProperty rdf:about="cfd:hasNeutralFile">
+    <rdfs:domain rdf:resource="cfd:CFDExtractionOutput"/>
+    <rdfs:range rdf:resource="cfd:NeutralFile"/>
+  </owl:ObjectProperty>
+  
+  <owl:ObjectProperty rdf:about="cfd:hasMetadata">
+    <rdfs:domain rdf:resource="cfd:CFDExtractionOutput"/>
+    <rdfs:range rdf:resource="cfd:Metadata"/>
+  </owl:ObjectProperty>
+  
+  <owl:ObjectProperty rdf:about="cfd:hasApplicableStandard">
+    <rdfs:domain rdf:resource="cfd:CFDExtractionOutput"/>
+    <rdfs:range rdf:resource="cfd:ApplicableStandard"/>
+  </owl:ObjectProperty>
+  
+  <owl:ObjectProperty rdf:about="cfd:hasCriticalDataField">
+    <rdfs:domain rdf:resource="cfd:CFDExtractionOutput"/>
+    <rdfs:range rdf:resource="cfd:CriticalDataField"/>
+  </owl:ObjectProperty>
+  
+  <!-- Sub-properties for each specialized data field -->
+  
+  <owl:ObjectProperty rdf:about="cfd:hasSolutionFields">
+    <rdfs:subPropertyOf rdf:resource="cfd:hasCriticalDataField"/>
+    <rdfs:domain rdf:resource="cfd:CFDExtractionOutput"/>
+    <rdfs:range rdf:resource="cfd:SolutionFields"/>
+  </owl:ObjectProperty>
+  
+  <owl:ObjectProperty rdf:about="cfd:hasResidualLogs">
+    <rdfs:subPropertyOf rdf:resource="cfd:hasCriticalDataField"/>
+    <rdfs:domain rdf:resource="cfd:CFDExtractionOutput"/>
+    <rdfs:range rdf:resource="cfd:ResidualLogs"/>
+  </owl:ObjectProperty>
+  
+  <owl:ObjectProperty rdf:about="cfd:hasPostProcessing">
+    <rdfs:subPropertyOf rdf:resource="cfd:hasCriticalDataField"/>
+    <rdfs:domain rdf:resource="cfd:CFDExtractionOutput"/>
+    <rdfs:range rdf:resource="cfd:PostProcessing"/>
+  </owl:ObjectProperty>
+  
+  <owl:ObjectProperty rdf:about="cfd:hasMultiPhaseOrChemistry">
+    <rdfs:subPropertyOf rdf:resource="cfd:hasCriticalDataField"/>
+    <rdfs:domain rdf:resource="cfd:CFDExtractionOutput"/>
+    <rdfs:range rdf:resource="cfd:MultiPhaseOrChemistry"/>
+  </owl:ObjectProperty>
+  
+  <owl:ObjectProperty rdf:about="cfd:hasMeshAndGridStats">
+    <rdfs:subPropertyOf rdf:resource="cfd:hasCriticalDataField"/>
+    <rdfs:domain rdf:resource="cfd:CFDExtractionOutput"/>
+    <rdfs:range rdf:resource="cfd:MeshAndGridStats"/>
+  </owl:ObjectProperty>
+  
+</rdf:RDF>
