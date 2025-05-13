@@ -1,0 +1,35 @@
+{
+  "Tool": {
+    "Class": "Model-Based System Engineering",
+    "Type": "Requirements Tools",
+    "Instance": "DOORS Next",
+    "Vendor": "IBM",
+    "Version": "7.0",
+    "POC": {
+      "Name": "Requirements Manager",
+      "Email": "req.manager@example.com"
+    }
+  },
+  "Licensing": {
+    "Type": "Floating",
+    "Server": {
+      "Vendor": "IBM License Key Server",
+      "Hostname": "doors-next-license.corp.local",
+      "IP": "192.168.13.50",
+      "Port": "27000",
+      "Protocol": "TCP/IP"
+    }
+  },
+  "Access_Control": {
+    "IAM": "LDAP / SAML SSO"
+  },
+  "Deployment": {
+    "Level": "Enterprise",
+    "Type": "On-Premise",
+    "InfoSec_Level": ["CUI", "ITAR"]
+  },
+  "Plugins": [
+    "Configuration Management",
+    "Link Index Provider (OSLC integration)"
+  ]
+}
