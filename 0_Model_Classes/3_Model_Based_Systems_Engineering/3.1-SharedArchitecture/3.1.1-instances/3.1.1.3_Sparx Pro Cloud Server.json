@@ -1,0 +1,39 @@
+{
+  "Tool": {
+    "Class": "Model-Based System Engineering",
+    "Type": "Shared Architecture",
+    "Instance": "Sparx Pro Cloud Server",
+    "Vendor": "Sparx Systems",
+    "Version": "16.1",
+    "POC": {
+      "Name": "EA Cloud Admin",
+      "Email": "ea.cloudadmin@example.com"
+    }
+  },
+  "Licensing": {
+    "Type": "Floating",
+    "Server": {
+      "Vendor": "Sparx License Manager",
+      "Hostname": "sparx-procloud-license.corp.local",
+      "IP": "192.168.14.52",
+      "Port": "27010",
+      "Protocol": "TCP/IP"
+    }
+  },
+  "Access_Control": {
+    "IAM": "Local Accounts"
+  },
+  "Deployment": {
+    "Level": "Enterprise",
+    "Type": "Hybrid",
+    "Cloud": {
+      "Type": "Private",
+      "Provider": "Azure"
+    },
+    "InfoSec_Level": ["CUI"]
+  },
+  "Plugins": [
+    "Version Control Integration",
+    "Centralized Model DB"
+  ]
+}
