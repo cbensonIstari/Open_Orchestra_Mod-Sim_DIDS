@@ -1,0 +1,154 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:req="http://example.com/requirementsExtraction#"
+    xml:base="http://example.com/requirementsExtraction"
+    owl:versionInfo="1.0">
+    
+    <owl:Ontology rdf:about="">
+        <rdfs:label>Requirements Extraction Output Ontology</rdfs:label>
+        <rdfs:comment>Represents data extracted from a requirements management tool (DOORS Next, Jama, Polarion)</rdfs:comment>
+    </owl:Ontology>
+    
+    <!-- Classes -->
+    <owl:Class rdf:about="req:RequirementsExtractionOutput">
+      <rdfs:label>Requirements Extraction Output</rdfs:label>
+      <rdfs:comment>The root class for data extracted from a requirements tool (like DOORS Next, Jama, or Polarion).</rdfs:comment>
+    </owl:Class>
+    
+    <owl:Class rdf:about="req:ProprietaryFormat">
+      <rdfs:label>Proprietary Requirements Format</rdfs:label>
+      <rdfs:comment>Represents tool-specific archives or snapshots (.dwa, .rpy, DOORS modules, etc.)</rdfs:comment>
+    </owl:Class>
+    
+    <owl:Class rdf:about="req:NeutralFormat">
+      <rdfs:label>Neutral Requirements Format</rdfs:label>
+      <rdfs:comment>Includes .reqif, .csv, .xml, .json, or .html exports</rdfs:comment>
+    </owl:Class>
+    
+    <owl:Class rdf:about="req:Metadata">
+      <rdfs:label>Requirements Metadata</rdfs:label>
+      <rdfs:comment>Author, date, version, project name/ID, approval status</rdfs:comment>
+    </owl:Class>
+    
+    <owl:Class rdf:about="req:ApplicableStandard">
+      <rdfs:label>Applicable Standard</rdfs:label>
+      <rdfs:comment>Standards like IEEE 29148, OSLC, or ISO 9001</rdfs:comment>
+    </owl:Class>
+    
+    <owl:Class rdf:about="req:CriticalDataField">
+      <rdfs:label>Critical Data Field</rdfs:label>
+      <rdfs:comment>Key fields: requirement ID/text, attributes, traceability, verification activity, change history</rdfs:comment>
+    </owl:Class>
+    
+    <!-- Sub-classes for critical data fields -->
+    <owl:Class rdf:about="req:RequirementID">
+      <rdfs:subClassOf rdf:resource="req:CriticalDataField"/>
+      <rdfs:label>Requirement ID</rdfs:label>
+      <rdfs:comment>Unique identifier for the requirement, e.g. REQ-001</rdfs:comment>
+    </owl:Class>
+    
+    <owl:Class rdf:about="req:RequirementText">
+      <rdfs:subClassOf rdf:resource="req:CriticalDataField"/>
+      <rdfs:label>Requirement Text</rdfs:label>
+      <rdfs:comment>The formal statement of the requirement</rdfs:comment>
+    </owl:Class>
+    
+    <owl:Class rdf:about="req:RequirementAttributes">
+      <rdfs:subClassOf rdf:resource="req:CriticalDataField"/>
+      <rdfs:label>Requirement Attributes</rdfs:label>
+      <rdfs:comment>Priority, status, owner, category, etc.</rdfs:comment>
+    </owl:Class>
+    
+    <owl:Class rdf:about="req:TraceabilityLinks">
+      <rdfs:subClassOf rdf:resource="req:CriticalDataField"/>
+      <rdfs:label>Traceability Links</rdfs:label>
+      <rdfs:comment>Links to design elements (UML/SysML), test cases, or parent requirements</rdfs:comment>
+    </owl:Class>
+    
+    <owl:Class rdf:about="req:VerificationActivity">
+      <rdfs:subClassOf rdf:resource="req:CriticalDataField"/>
+      <rdfs:label>Verification Activity</rdfs:label>
+      <rdfs:comment>Method (Test, Analysis, etc.), references to test cases, status</rdfs:comment>
+    </owl:Class>
+    
+    <owl:Class rdf:about="req:ChangeHistory">
+      <rdfs:subClassOf rdf:resource="req:CriticalDataField"/>
+      <rdfs:label>Change History</rdfs:label>
+      <rdfs:comment>Version number, date/time of changes, author, revision comments</rdfs:comment>
+    </owl:Class>
+    
+    <!-- Object Properties -->
+    <owl:ObjectProperty rdf:about="req:hasProprietaryFormat">
+      <rdfs:domain rdf:resource="req:RequirementsExtractionOutput"/>
+      <rdfs:range rdf:resource="req:ProprietaryFormat"/>
+      <rdfs:comment>Links output to proprietary tool archives or snapshots</rdfs:comment>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:about="req:hasNeutralFormat">
+      <rdfs:domain rdf:resource="req:RequirementsExtractionOutput"/>
+      <rdfs:range rdf:resource="req:NeutralFormat"/>
+      <rdfs:comment>Links output to neutral or open formats (reqif, csv, xml, etc.)</rdfs:comment>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:about="req:hasMetadata">
+      <rdfs:domain rdf:resource="req:RequirementsExtractionOutput"/>
+      <rdfs:range rdf:resource="req:Metadata"/>
+      <rdfs:comment>Links to overall metadata for the requirement set</rdfs:comment>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:about="req:hasApplicableStandard">
+      <rdfs:domain rdf:resource="req:RequirementsExtractionOutput"/>
+      <rdfs:range rdf:resource="req:ApplicableStandard"/>
+      <rdfs:comment>Indicates relevant IEEE or ISO standards used</rdfs:comment>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:about="req:hasCriticalDataField">
+      <rdfs:domain rdf:resource="req:RequirementsExtractionOutput"/>
+      <rdfs:range rdf:resource="req:CriticalDataField"/>
+      <rdfs:comment>Associates the main requirement data fields: IDs, text, trace, etc.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+    <!-- Example sub-properties (optional) if you want direct linking to each data sub-class -->
+    <owl:ObjectProperty rdf:about="req:hasRequirementID">
+      <rdfs:subPropertyOf rdf:resource="req:hasCriticalDataField"/>
+      <rdfs:domain rdf:resource="req:RequirementsExtractionOutput"/>
+      <rdfs:range rdf:resource="req:RequirementID"/>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:about="req:hasRequirementText">
+      <rdfs:subPropertyOf rdf:resource="req:hasCriticalDataField"/>
+      <rdfs:domain rdf:resource="req:RequirementsExtractionOutput"/>
+      <rdfs:range rdf:resource="req:RequirementText"/>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:about="req:hasRequirementAttributes">
+      <rdfs:subPropertyOf rdf:resource="req:hasCriticalDataField"/>
+      <rdfs:domain rdf:resource="req:RequirementsExtractionOutput"/>
+      <rdfs:range rdf:resource="req:RequirementAttributes"/>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:about="req:hasTraceabilityLinks">
+      <rdfs:subPropertyOf rdf:resource="req:hasCriticalDataField"/>
+      <rdfs:domain rdf:resource="req:RequirementsExtractionOutput"/>
+      <rdfs:range rdf:resource="req:TraceabilityLinks"/>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:about="req:hasVerificationActivity">
+      <rdfs:subPropertyOf rdf:resource="req:hasCriticalDataField"/>
+      <rdfs:domain rdf:resource="req:RequirementsExtractionOutput"/>
+      <rdfs:range rdf:resource="req:VerificationActivity"/>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:about="req:hasChangeHistory">
+      <rdfs:subPropertyOf rdf:resource="req:hasCriticalDataField"/>
+      <rdfs:domain rdf:resource="req:RequirementsExtractionOutput"/>
+      <rdfs:range rdf:resource="req:ChangeHistory"/>
+    </owl:ObjectProperty>
+
+    <!-- Optionally define example individuals -->
+
+</rdf:RDF>
