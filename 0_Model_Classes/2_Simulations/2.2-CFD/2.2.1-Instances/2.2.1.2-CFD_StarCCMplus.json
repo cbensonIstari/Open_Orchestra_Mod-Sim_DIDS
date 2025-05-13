@@ -1,0 +1,41 @@
+{
+  "Tool": {
+    "File_Name": "2.2.1.2-CFD_StarCCMplus.json",
+    "Class": "Simulations",
+    "Type": "CFD",
+    "Instance": "Star-CCM+",
+    "Vendor": "Siemens Digital Industries Software",
+    "Version": "2306",
+    "POC": {
+      "Name": "StarCCM Admin",
+      "Email": "starccm.admin@example.com"
+    }
+  },
+  "Licensing": {
+    "Type": "Concurrent",
+    "Server": {
+      "Vendor": "Siemens License Manager",
+      "Hostname": "starccm-license.corp.local",
+      "IP": "192.168.30.51",
+      "Port": "28000",
+      "Protocol": "TCP/IP"
+    }
+  },
+  "Access_Control": {
+    "IAM": "LDAP"
+  },
+  "Deployment": {
+    "Level": "Enterprise",
+    "Type": "Hybrid",
+    "Cloud": {
+      "Type": "Private",
+      "Provider": "Azure"
+    },
+    "InfoSec_Level": ["CUI", "ITAR"]
+  },
+  "Plugins": [
+    "Battery Simulation",
+    "DEM Module",
+    "Vibro-Acoustics"
+  ]
+}
