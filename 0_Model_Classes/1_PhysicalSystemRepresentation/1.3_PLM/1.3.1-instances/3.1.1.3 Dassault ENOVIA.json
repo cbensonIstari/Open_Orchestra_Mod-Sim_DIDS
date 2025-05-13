@@ -1,0 +1,40 @@
+{
+  "Tool": {
+    "Class": "Physical System Representation",
+    "Type": "PLM",
+    "Instance": "Dassault ENOVIA",
+    "Vendor": "Dassault Systèmes",
+    "Version": "V6R2019",
+    "POC": {
+      "Name": "ENOVIA Admin",
+      "Email": "enovia.admin@example.com"
+    }
+  },
+  "Licensing": {
+    "Type": "Token",
+    "Server": {
+      "Vendor": "Dassault License Server",
+      "Hostname": "enovia-license.corp.local",
+      "IP": "192.168.15.52",
+      "Port": "27010",
+      "Protocol": "TCP/IP"
+    }
+  },
+  "Access_Control": {
+    "IAM": "LDAP"
+  },
+  "Deployment": {
+    "Level": "Enterprise",
+    "Type": "Cloud",
+    "Cloud": {
+      "Type": "Private",
+      "Provider": "Azure"
+    },
+    "InfoSec_Level": ["CUI"]
+  },
+  "Plugins": [
+    "Engineering Central",
+    "Program Central",
+    "Bill of Materials Management"
+  ]
+}
