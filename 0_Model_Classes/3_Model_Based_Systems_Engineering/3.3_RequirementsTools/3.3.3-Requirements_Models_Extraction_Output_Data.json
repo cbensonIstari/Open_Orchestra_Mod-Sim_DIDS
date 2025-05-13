@@ -1,0 +1,57 @@
+{
+  "Requirements_Models_Extraction_Output_Data": {
+    "Proprietary_Formats": [
+      "DOORS Next project archives",
+      ".reqif (Often used by DOORS Next, Jama, Polarion for round-trip)",
+      "Backup or snapshot files (tool-specific: .dwa, .rpy, etc.)"
+    ],
+    "Neutral_Formats": [
+      ".reqif (OMG Requirements Interchange Format)",
+      ".csv/.xlsx (Tabular export of requirements/attributes)",
+      ".xml/.json (Structured exports, partial or custom integration)",
+      ".pdf/.html (Document-style outputs for reviews)"
+    ],
+    "Metadata": [
+      "Author, Creation/Modified date, Project Name/ID, Version/Revision, Approval Status"
+    ],
+    "Applicable_Standards": {
+      "Requirements_Engineering": [
+        "IEEE 29148",
+        "ISO/IEC 15288",
+        "ISO/IEC/IEEE 12207"
+      ],
+      "Data_Exchange": [
+        "ReqIF",
+        "OSLC (Open Services for Lifecycle Collaboration)",
+        "SPARQL/RDF (Some tools adopt semantic web standards)"
+      ],
+      "Quality_and_Compliance": [
+        "ISO 9001",
+        "AS9100",
+        "CMMI"
+      ]
+    },
+    "Critical_Data_Fields": {
+      "Requirement_ID": [
+        "Unique identifier (SYS-REQ-001, etc.)"
+      ],
+      "Requirement_Text": [
+        "Formal statement of the requirement"
+      ],
+      "Attributes": [
+        "Priority, Status, Owner, Category (Functional, Safety, Performance)"
+      ],
+      "Traceability_Links": [
+        "Links to design elements (UML/SysML models, test cases)",
+        "Dependencies (Derived from REQ-001, parent of REQ-012, etc.)"
+      ],
+      "Verification_Activity": [
+        "Method (Test, Analysis, Inspection, Demonstration)",
+        "Test case references (TST-101, TST-102), Completion status (Passed/Failed)"
+      ],
+      "Change_History": [
+        "Version number, date/time of changes, change author, revision comments"
+      ]
+    }
+  }
+}
