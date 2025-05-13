@@ -1,0 +1,30 @@
+{
+  "Tool": {
+    "File_Name": "2.2.1.3-CFD_OpenFOAM.json",
+    "Class": "Simulations",
+    "Type": "CFD",
+    "Instance": "OpenFOAM",
+    "Vendor": "Open Source Community (OpenCFD)",
+    "Version": "10.0",
+    "POC": {
+      "Name": "OpenFOAM Dev",
+      "Email": "openfoam.dev@example.org"
+    }
+  },
+  "Licensing": {
+    "Type": "GPL v3",
+    "Server": null
+  },
+  "Access_Control": {
+    "IAM": "Local Accounts"
+  },
+  "Deployment": {
+    "Level": "Project",
+    "Type": "On-Premise",
+    "InfoSec_Level": []
+  },
+  "Plugins": [
+    "customSolvers",
+    "ParaView post-processing"
+  ]
+}
