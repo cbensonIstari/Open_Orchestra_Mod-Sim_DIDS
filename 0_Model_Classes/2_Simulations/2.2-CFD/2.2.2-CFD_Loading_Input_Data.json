@@ -1,0 +1,26 @@
+{
+  "CFD_Loading_Input_Data": {
+    "Geometry_and_Mesh": [
+      ".stl (Stereolithography for geometry)",
+      ".msh (Fluent or Gmsh mesh)",
+      ".ccm (Star-CCM+ mesh/db)",
+      ".foam (OpenFOAM structure directory)",
+      ".cas (Fluent case)",
+      "IGES/STEP for direct geometry import"
+    ],
+    "Boundary_Condition_Files": [
+      ".bc, .jou (Fluent journal, starccm+ macros, etc.)",
+      ".xml or .json for custom BC definitions"
+    ],
+    "Configuration_Parameters": [
+      ".prj or .cfg for solver settings (iterations, turbulence model)",
+      "Solver scripts (.py for SU2 or openfoam dictionaries system/*)",
+      ".mcr (ModelCenter param sets, if integrated)"
+    ],
+    "Reference_Data": [
+      "Material properties, fluid database (.mat, .csv)",
+      "Empirical data for correlation-based methods",
+      "Inlet profiles or external conditions"
+    ]
+  }
+}
