@@ -1,0 +1,36 @@
+{
+  "Tool": {
+    "Class": "Model-Based System Engineering",
+    "Type": "Requirements Tools",
+    "Instance": "Polarion ALM",
+    "Vendor": "Siemens",
+    "Version": "22 R2",
+    "POC": {
+      "Name": "ALM Specialist",
+      "Email": "alm.specialist@example.com"
+    }
+  },
+  "Licensing": {
+    "Type": "Floating",
+    "Server": {
+      "Vendor": "Polarion License Manager",
+      "Hostname": "polarion-license.corp.local",
+      "IP": "192.168.13.70",
+      "Port": "27000",
+      "Protocol": "TCP/IP"
+    }
+  },
+  "Access_Control": {
+    "IAM": "SAML SSO"
+  },
+  "Deployment": {
+    "Level": "Business Unit",
+    "Type": "On-Premise",
+    "InfoSec_Level": ["CUI"]
+  },
+  "Plugins": [
+    "Workflow Editor",
+    "Test Management Module",
+    "LiveDoc for Requirements"
+  ]
+}
