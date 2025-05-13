@@ -1,0 +1,61 @@
+{
+  "PLM_Models_Extraction_Output_Data": {
+    "Proprietary_Formats": [
+      ".plmxml (Teamcenter exports)",
+      ".tcxml (Teamcenter XML)",
+      "Windchill export bundles (.zip)",
+      "3DEXPERIENCE archives (.3dxml, .3dexperience)",
+      "Aras Innovator exports (.mf import/export format)",
+      "SAP PLM data extracts (transport requests, .csv/.xml from modules)"
+    ],
+    "Neutral_Formats": [
+      ".step (AP242 for 3D + metadata), .ap239 (PLCS)",
+      ".csv/.xlsx (BOM, part metadata, change logs)",
+      ".xml/.json (structured product/part data, custom integrations)",
+      ".pdf/.html (Reports, workflow docs, or system logs)"
+    ],
+    "Metadata": [
+      "Part Number/ID, Version/Revision, Lifecycle State, Owner/Author, Creation/Modified Dates"
+    ],
+    "Applicable_Standards": {
+      "PLM_Data_Exchange": [
+        "ISO 10303 AP242 (Managed model-based 3D data)",
+        "ISO 10303 AP239 (PLCS)",
+        "OSLC for cross-tool linking"
+      ],
+      "Process_and_Workflow": [
+        "ISO/IEC 15288 (System life cycle processes)",
+        "CMII/CM2 for configuration management best practices"
+      ],
+      "Quality_and_Configuration_Management": [
+        "ISO 9001",
+        "AS9100 (Aerospace quality)",
+        "CMMI (Capability Maturity Model Integration)"
+      ]
+    },
+    "Critical_Data_Fields": {
+      "Part_Structure_and_BOM": [
+        "Indented or flat BOM, quantity per assembly, part classification"
+      ],
+      "Change_Management": [
+        "ECR/ECO ID, reason for change, affected items, status (Open/Approved/Implemented)",
+        "Workflow steps (Review, Approval, Release)"
+      ],
+      "Document_and_File_References": [
+        "Linked CAD/ECAD files, supporting documents (PDF specs, test reports)"
+      ],
+      "Lifecycle_States": [
+        "In Work, Under Review, Released, Obsolete",
+        "Effective date or release date, approval history"
+      ],
+      "Configuration_Options": [
+        "Variants, optional parts (color variants, region-specific config)",
+        "Effectivity (serial number range, date-based applicability)"
+      ],
+      "Workflow_History": [
+        "Who changed what, when (user, timestamp, description)",
+        "Sign-offs or approvals with digital signatures/IDs"
+      ]
+    }
+  }
+}
