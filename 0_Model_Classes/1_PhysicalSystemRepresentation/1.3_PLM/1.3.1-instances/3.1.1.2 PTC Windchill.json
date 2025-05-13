@@ -1,0 +1,36 @@
+{
+  "Tool": {
+    "Class": "Physical System Representation",
+    "Type": "PLM",
+    "Instance": "PTC Windchill",
+    "Vendor": "PTC",
+    "Version": "12.1",
+    "POC": {
+      "Name": "Windchill Admin",
+      "Email": "wc.admin@example.com"
+    }
+  },
+  "Licensing": {
+    "Type": "Floating",
+    "Server": {
+      "Vendor": "PTC License Server",
+      "Hostname": "windchill-license.corp.local",
+      "IP": "192.168.15.51",
+      "Port": "27000",
+      "Protocol": "TCP/IP"
+    }
+  },
+  "Access_Control": {
+    "IAM": "Active Directory"
+  },
+  "Deployment": {
+    "Level": "Business Unit",
+    "Type": "On-Premise",
+    "InfoSec_Level": ["CUI"]
+  },
+  "Plugins": [
+    "ProjectLink",
+    "Change Management",
+    "BOM Transformation"
+  ]
+}
