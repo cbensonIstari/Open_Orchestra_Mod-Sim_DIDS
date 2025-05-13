@@ -1,0 +1,29 @@
+{
+  "Tool": {
+    "Class": "Model-Based System Engineering",
+    "Type": "Shared Architecture",
+    "Instance": "Capella Team",
+    "Vendor": "Thales / Capella Community",
+    "Version": "1.5",
+    "POC": {
+      "Name": "Capella Admin",
+      "Email": "capella.admin@example.com"
+    }
+  },
+  "Licensing": {
+    "Type": "Open Source (EPL) / Commercial Add-ons",
+    "Server": null
+  },
+  "Access_Control": {
+    "IAM": "Local Accounts"
+  },
+  "Deployment": {
+    "Level": "Project",
+    "Type": "Desktop Install / Collaboration Server",
+    "InfoSec_Level": ["CUI"]
+  },
+  "Plugins": [
+    "Team for Capella Collaboration",
+    "Requirement VP"
+  ]
+}
