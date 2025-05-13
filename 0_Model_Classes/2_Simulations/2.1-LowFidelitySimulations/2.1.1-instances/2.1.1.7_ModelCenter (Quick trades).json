@@ -1,0 +1,35 @@
+{
+  "Tool": {
+    "Class": "Simulations",
+    "Type": "LowFidelitySimulations",
+    "Instance": "ModelCenter",
+    "Vendor": "Phoenix Integration",
+    "Version": "2023.1",
+    "POC": {
+      "Name": "Integration Specialist",
+      "Email": "integration.spec@example.com"
+    }
+  },
+  "Licensing": {
+    "Type": "Floating",
+    "Server": {
+      "Vendor": "Phoenix ModelCenter License",
+      "Hostname": "modelcenter-license.corp.local",
+      "IP": "192.168.20.102",
+      "Port": "27000",
+      "Protocol": "TCP/IP"
+    }
+  },
+  "Access_Control": {
+    "IAM": "LDAP"
+  },
+  "Deployment": {
+    "Level": "Department",
+    "Type": "On-Premise",
+    "InfoSec_Level": ["CUI"]
+  },
+  "Plugins": [
+    "Workflow Builder",
+    "Integration with Excel/Matlab"
+  ]
+}
