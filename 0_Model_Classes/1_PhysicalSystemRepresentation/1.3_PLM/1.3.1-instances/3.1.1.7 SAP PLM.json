@@ -1,0 +1,40 @@
+{
+  "Tool": {
+    "Class": "Physical System Representation",
+    "Type": "PLM",
+    "Instance": "SAP PLM",
+    "Vendor": "SAP",
+    "Version": "ECC 6.0 / S4HANA",
+    "POC": {
+      "Name": "SAP PLM Admin",
+      "Email": "sap.plmadmin@example.com"
+    }
+  },
+  "Licensing": {
+    "Type": "Subscription",
+    "Server": {
+      "Vendor": "SAP License Service",
+      "Hostname": "sap-plm-license.corp.local",
+      "IP": "192.168.15.56",
+      "Port": "443",
+      "Protocol": "HTTPS"
+    }
+  },
+  "Access_Control": {
+    "IAM": "SAP NetWeaver"
+  },
+  "Deployment": {
+    "Level": "Enterprise",
+    "Type": "Hybrid",
+    "Cloud": {
+      "Type": "Public",
+      "Provider": "SAP Cloud"
+    },
+    "InfoSec_Level": ["CUI", "ITAR"]
+  },
+  "Plugins": [
+    "Document Management System",
+    "Engineering Change Management",
+    "Material Master Integration"
+  ]
+}
