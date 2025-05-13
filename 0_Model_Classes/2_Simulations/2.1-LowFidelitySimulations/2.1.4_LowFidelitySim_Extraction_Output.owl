@@ -1,0 +1,123 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:lfsim="http://example.com/lowFidelitySim#"
+    xml:base="http://example.com/lowFidelitySim"
+    owl:versionInfo="1.0">
+
+  <owl:Ontology rdf:about="">
+    <rdfs:label>Low-Fidelity Simulation Extraction Output Ontology</rdfs:label>
+    <rdfs:comment>Represents quick param analyses, geometry-based or script-based results from low-fidelity simulations (OpenVSP, Matlab, Python, etc.).</rdfs:comment>
+  </owl:Ontology>
+  
+  <!-- Classes -->
+  <owl:Class rdf:about="lfsim:LowFidelitySimExtractionOutput">
+    <rdfs:label>Low-Fidelity Simulation Extraction Output</rdfs:label>
+    <rdfs:comment>Root concept for data extracted from these quick conceptual tools.</rdfs:comment>
+  </owl:Class>
+  
+  <owl:Class rdf:about="lfsim:ProprietarySimResult">
+    <rdfs:label>Proprietary Simulation Result</rdfs:label>
+    <rdfs:comment>Represents tool-specific result formats (Matlab .mat, Simulink logs, ModelCenter archives).</rdfs:comment>
+  </owl:Class>
+  
+  <owl:Class rdf:about="lfsim:NeutralSimFile">
+    <rdfs:label>Neutral Simulation File</rdfs:label>
+    <rdfs:comment>.csv, .xlsx, .json, .xml for tabular or structured results, plus .png/.pdf plots.</rdfs:comment>
+  </owl:Class>
+  
+  <owl:Class rdf:about="lfsim:Metadata">
+    <rdfs:label>Simulation Metadata</rdfs:label>
+    <rdfs:comment>Analyst name, scenario, date/time, version info, etc.</rdfs:comment>
+  </owl:Class>
+  
+  <owl:Class rdf:about="lfsim:ApplicableStandard">
+    <rdfs:label>Applicable Standard</rdfs:label>
+    <rdfs:comment>References to CSV-based norms or FMI if partial usage, or process standards (CMMI, ISO 15288, etc.).</rdfs:comment>
+  </owl:Class>
+  
+  <owl:Class rdf:about="lfsim:CriticalDataField">
+    <rdfs:label>Critical Data Field</rdfs:label>
+    <rdfs:comment>Key fields: AeroCoefficients, PerformanceEstimates, TradeStudyOutputs, ScriptLogs.</rdfs:comment>
+  </owl:Class>
+  
+  <!-- Subclasses of CriticalDataField -->
+  <owl:Class rdf:about="lfsim:AeroCoefficients">
+    <rdfs:subClassOf rdf:resource="lfsim:CriticalDataField"/>
+    <rdfs:label>Aero Coefficients</rdfs:label>
+  </owl:Class>
+  
+  <owl:Class rdf:about="lfsim:PerformanceEstimates">
+    <rdfs:subClassOf rdf:resource="lfsim:CriticalDataField"/>
+    <rdfs:label>Performance Estimates</rdfs:label>
+  </owl:Class>
+  
+  <owl:Class rdf:about="lfsim:TradeStudyOutputs">
+    <rdfs:subClassOf rdf:resource="lfsim:CriticalDataField"/>
+    <rdfs:label>Trade Study Outputs</rdfs:label>
+  </owl:Class>
+  
+  <owl:Class rdf:about="lfsim:ScriptLogs">
+    <rdfs:subClassOf rdf:resource="lfsim:CriticalDataField"/>
+    <rdfs:label>Script Logs</rdfs:label>
+  </owl:Class>
+  
+  <!-- Object Properties -->
+  
+  <owl:ObjectProperty rdf:about="lfsim:hasProprietaryResult">
+    <rdfs:domain rdf:resource="lfsim:LowFidelitySimExtractionOutput"/>
+    <rdfs:range rdf:resource="lfsim:ProprietarySimResult"/>
+  </owl:ObjectProperty>
+  
+  <owl:ObjectProperty rdf:about="lfsim:hasNeutralFile">
+    <rdfs:domain rdf:resource="lfsim:LowFidelitySimExtractionOutput"/>
+    <rdfs:range rdf:resource="lfsim:NeutralSimFile"/>
+  </owl:ObjectProperty>
+  
+  <owl:ObjectProperty rdf:about="lfsim:hasMetadata">
+    <rdfs:domain rdf:resource="lfsim:LowFidelitySimExtractionOutput"/>
+    <rdfs:range rdf:resource="lfsim:Metadata"/>
+  </owl:ObjectProperty>
+  
+  <owl:ObjectProperty rdf:about="lfsim:hasApplicableStandard">
+    <rdfs:domain rdf:resource="lfsim:LowFidelitySimExtractionOutput"/>
+    <rdfs:range rdf:resource="lfsim:ApplicableStandard"/>
+  </owl:ObjectProperty>
+  
+  <owl:ObjectProperty rdf:about="lfsim:hasCriticalDataField">
+    <rdfs:domain rdf:resource="lfsim:LowFidelitySimExtractionOutput"/>
+    <rdfs:range rdf:resource="lfsim:CriticalDataField"/>
+  </owl:ObjectProperty>
+  
+  <!-- Sub-properties for each sub-class if desired -->
+  
+  <owl:ObjectProperty rdf:about="lfsim:hasAeroCoefficients">
+    <rdfs:subPropertyOf rdf:resource="lfsim:hasCriticalDataField"/>
+    <rdfs:domain rdf:resource="lfsim:LowFidelitySimExtractionOutput"/>
+    <rdfs:range rdf:resource="lfsim:AeroCoefficients"/>
+  </owl:ObjectProperty>
+  
+  <owl:ObjectProperty rdf:about="lfsim:hasPerformanceEstimates">
+    <rdfs:subPropertyOf rdf:resource="lfsim:hasCriticalDataField"/>
+    <rdfs:domain rdf:resource="lfsim:LowFidelitySimExtractionOutput"/>
+    <rdfs:range rdf:resource="lfsim:PerformanceEstimates"/>
+  </owl:ObjectProperty>
+  
+  <owl:ObjectProperty rdf:about="lfsim:hasTradeStudyOutputs">
+    <rdfs:subPropertyOf rdf:resource="lfsim:hasCriticalDataField"/>
+    <rdfs:domain rdf:resource="lfsim:LowFidelitySimExtractionOutput"/>
+    <rdfs:range rdf:resource="lfsim:TradeStudyOutputs"/>
+  </owl:ObjectProperty>
+  
+  <owl:ObjectProperty rdf:about="lfsim:hasScriptLogs">
+    <rdfs:subPropertyOf rdf:resource="lfsim:hasCriticalDataField"/>
+    <rdfs:domain rdf:resource="lfsim:LowFidelitySimExtractionOutput"/>
+    <rdfs:range rdf:resource="lfsim:ScriptLogs"/>
+  </owl:ObjectProperty>
+
+  <!-- (Optional) Example individuals -->
+
+</rdf:RDF>
