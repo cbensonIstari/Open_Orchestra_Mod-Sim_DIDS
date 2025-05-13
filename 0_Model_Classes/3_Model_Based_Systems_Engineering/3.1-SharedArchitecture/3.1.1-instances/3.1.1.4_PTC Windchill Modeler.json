@@ -1,0 +1,35 @@
+{
+  "Tool": {
+    "Class": "Model-Based System Engineering",
+    "Type": "Shared Architecture",
+    "Instance": "PTC Windchill Modeler",
+    "Vendor": "PTC",
+    "Version": "9.1",
+    "POC": {
+      "Name": "Windchill Modeler Admin",
+      "Email": "wc.modeler.admin@example.com"
+    }
+  },
+  "Licensing": {
+    "Type": "Floating",
+    "Server": {
+      "Vendor": "PTC License Server",
+      "Hostname": "windchill-modeler-license.corp.local",
+      "IP": "192.168.14.53",
+      "Port": "27000",
+      "Protocol": "TCP/IP"
+    }
+  },
+  "Access_Control": {
+    "IAM": "Active Directory"
+  },
+  "Deployment": {
+    "Level": "Business Unit",
+    "Type": "On-Premise",
+    "InfoSec_Level": ["CUI"]
+  },
+  "Plugins": [
+    "Integrity Modeler Integration",
+    "SysML Profile"
+  ]
+}
