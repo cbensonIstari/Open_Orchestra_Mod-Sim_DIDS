@@ -1,0 +1,157 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:plm="http://example.com/plmExtraction#"
+    xml:base="http://example.com/plmExtraction"
+    owl:versionInfo="2.0">
+
+  <owl:Ontology rdf:about="">
+    <rdfs:label>PLM Extraction Output Ontology</rdfs:label>
+    <rdfs:comment>Captures BOM, part structure, lifecycle states, change mgmt from PLM systems.</rdfs:comment>
+  </owl:Ontology>
+  
+  <!-- Classes -->
+  <owl:Class rdf:about="plm:PLMExtractionOutput">
+    <rdfs:label>PLM Extraction Output</rdfs:label>
+    <rdfs:comment>Root concept for data extracted from PLM tools (Teamcenter, Windchill, etc.).</rdfs:comment>
+  </owl:Class>
+  
+  <owl:Class rdf:about="plm:ProprietaryPLMFile">
+    <rdfs:label>Proprietary PLM File</rdfs:label>
+    <rdfs:comment>Represents native PLM export formats (.plmxml, .tcxml, .zip bundles, etc.).</rdfs:comment>
+  </owl:Class>
+  
+  <owl:Class rdf:about="plm:NeutralPLMFormat">
+    <rdfs:label>Neutral PLM Format</rdfs:label>
+    <rdfs:comment>Represents neutral or open interchange (STEP AP242, AP239 PLCS, .csv, .xml, etc.).</rdfs:comment>
+  </owl:Class>
+  
+  <owl:Class rdf:about="plm:Metadata">
+    <rdfs:label>PLM Metadata</rdfs:label>
+    <rdfs:comment>General info like part ID, revision, lifecycle state, creation date, etc.</rdfs:comment>
+  </owl:Class>
+  
+  <owl:Class rdf:about="plm:ApplicableStandard">
+    <rdfs:label>Applicable Standard</rdfs:label>
+    <rdfs:comment>References to ISO 10303 AP242, AP239, OSLC, or QMS standards like ISO 9001, AS9100.</rdfs:comment>
+  </owl:Class>
+  
+  <owl:Class rdf:about="plm:CriticalDataField">
+    <rdfs:label>Critical Data Field</rdfs:label>
+    <rdfs:comment>Key fields: BOM, change management, doc references, lifecycle states, config options, workflow history.</rdfs:comment>
+  </owl:Class>
+  
+  <!-- Subclasses of CriticalDataField -->
+  
+  <owl:Class rdf:about="plm:PartStructureBOM">
+    <rdfs:subClassOf rdf:resource="plm:CriticalDataField"/>
+    <rdfs:label>Part Structure and BOM</rdfs:label>
+    <rdfs:comment>Indented BOM, quantity per assembly, part classification/category.</rdfs:comment>
+  </owl:Class>
+  
+  <owl:Class rdf:about="plm:ChangeManagement">
+    <rdfs:subClassOf rdf:resource="plm:CriticalDataField"/>
+    <rdfs:label>Change Management</rdfs:label>
+    <rdfs:comment>ECR/ECO ID, reason for change, workflow steps, statuses.</rdfs:comment>
+  </owl:Class>
+  
+  <owl:Class rdf:about="plm:DocumentFileReference">
+    <rdfs:subClassOf rdf:resource="plm:CriticalDataField"/>
+    <rdfs:label>Document and File References</rdfs:label>
+    <rdfs:comment>Linked CAD/ECAD files, supporting specs, test reports, etc.</rdfs:comment>
+  </owl:Class>
+  
+  <owl:Class rdf:about="plm:LifecycleStates">
+    <rdfs:subClassOf rdf:resource="plm:CriticalDataField"/>
+    <rdfs:label>Lifecycle States</rdfs:label>
+    <rdfs:comment>In Work, Under Review, Released, Obsolete, plus effectivity dates or approval history.</rdfs:comment>
+  </owl:Class>
+  
+  <owl:Class rdf:about="plm:ConfigurationOptions">
+    <rdfs:subClassOf rdf:resource="plm:CriticalDataField"/>
+    <rdfs:label>Configuration Options</rdfs:label>
+    <rdfs:comment>Variants, optional parts, effectivity (by SN or date), region-specific configs.</rdfs:comment>
+  </owl:Class>
+  
+  <owl:Class rdf:about="plm:WorkflowHistory">
+    <rdfs:subClassOf rdf:resource="plm:CriticalDataField"/>
+    <rdfs:label>Workflow History</rdfs:label>
+    <rdfs:comment>Who changed what, sign-offs, approvals, digital signatures, revision logs.</rdfs:comment>
+  </owl:Class>
+  
+  <!-- Object Properties linking plm:PLMExtractionOutput to each category -->
+  
+  <owl:ObjectProperty rdf:about="plm:hasProprietaryFile">
+    <rdfs:domain rdf:resource="plm:PLMExtractionOutput"/>
+    <rdfs:range rdf:resource="plm:ProprietaryPLMFile"/>
+    <rdfs:comment>Links extraction output to native PLM exports like .plmxml or .tcxml</rdfs:comment>
+  </owl:ObjectProperty>
+  
+  <owl:ObjectProperty rdf:about="plm:hasNeutralFormat">
+    <rdfs:domain rdf:resource="plm:PLMExtractionOutput"/>
+    <rdfs:range rdf:resource="plm:NeutralPLMFormat"/>
+    <rdfs:comment>Links extraction output to neutral or open formats (STEP AP242, AP239, .csv, etc.)</rdfs:comment>
+  </owl:ObjectProperty>
+  
+  <owl:ObjectProperty rdf:about="plm:hasMetadata">
+    <rdfs:domain rdf:resource="plm:PLMExtractionOutput"/>
+    <rdfs:range rdf:resource="plm:Metadata"/>
+    <rdfs:comment>Links to overall part metadata (ID, revision, lifecycle state, etc.).</rdfs:comment>
+  </owl:ObjectProperty>
+  
+  <owl:ObjectProperty rdf:about="plm:hasApplicableStandard">
+    <rdfs:domain rdf:resource="plm:PLMExtractionOutput"/>
+    <rdfs:range rdf:resource="plm:ApplicableStandard"/>
+    <rdfs:comment>Indicates relevant PLM or process standards used (AP242, CM2, ISO 9001...)</rdfs:comment>
+  </owl:ObjectProperty>
+  
+  <owl:ObjectProperty rdf:about="plm:hasCriticalDataField">
+    <rdfs:domain rdf:resource="plm:PLMExtractionOutput"/>
+    <rdfs:range rdf:resource="plm:CriticalDataField"/>
+    <rdfs:comment>Associates main data fields: BOM, changes, doc references, lifecycle states.</rdfs:comment>
+  </owl:ObjectProperty>
+  
+  <!-- Optional sub-properties for each sub-class of CriticalDataField -->
+  
+  <owl:ObjectProperty rdf:about="plm:hasPartStructureBOM">
+    <rdfs:subPropertyOf rdf:resource="plm:hasCriticalDataField"/>
+    <rdfs:domain rdf:resource="plm:PLMExtractionOutput"/>
+    <rdfs:range rdf:resource="plm:PartStructureBOM"/>
+  </owl:ObjectProperty>
+  
+  <owl:ObjectProperty rdf:about="plm:hasChangeManagement">
+    <rdfs:subPropertyOf rdf:resource="plm:hasCriticalDataField"/>
+    <rdfs:domain rdf:resource="plm:PLMExtractionOutput"/>
+    <rdfs:range rdf:resource="plm:ChangeManagement"/>
+  </owl:ObjectProperty>
+  
+  <owl:ObjectProperty rdf:about="plm:hasDocumentReference">
+    <rdfs:subPropertyOf rdf:resource="plm:hasCriticalDataField"/>
+    <rdfs:domain rdf:resource="plm:PLMExtractionOutput"/>
+    <rdfs:range rdf:resource="plm:DocumentFileReference"/>
+  </owl:ObjectProperty>
+  
+  <owl:ObjectProperty rdf:about="plm:hasLifecycleStates">
+    <rdfs:subPropertyOf rdf:resource="plm:hasCriticalDataField"/>
+    <rdfs:domain rdf:resource="plm:PLMExtractionOutput"/>
+    <rdfs:range rdf:resource="plm:LifecycleStates"/>
+  </owl:ObjectProperty>
+  
+  <owl:ObjectProperty rdf:about="plm:hasConfigurationOptions">
+    <rdfs:subPropertyOf rdf:resource="plm:hasCriticalDataField"/>
+    <rdfs:domain rdf:resource="plm:PLMExtractionOutput"/>
+    <rdfs:range rdf:resource="plm:ConfigurationOptions"/>
+  </owl:ObjectProperty>
+  
+  <owl:ObjectProperty rdf:about="plm:hasWorkflowHistory">
+    <rdfs:subPropertyOf rdf:resource="plm:hasCriticalDataField"/>
+    <rdfs:domain rdf:resource="plm:PLMExtractionOutput"/>
+    <rdfs:range rdf:resource="plm:WorkflowHistory"/>
+  </owl:ObjectProperty>
+  
+  <!-- Example individuals (optional) -->
+
+</rdf:RDF>
