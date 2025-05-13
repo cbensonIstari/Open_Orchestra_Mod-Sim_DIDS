@@ -1,0 +1,41 @@
+{
+  "Tool": {
+    "File_Name": "2.2.1.5-CFD_AutodeskCFD.json",
+    "Class": "Simulations",
+    "Type": "CFD",
+    "Instance": "Autodesk CFD",
+    "Vendor": "Autodesk",
+    "Version": "2023",
+    "POC": {
+      "Name": "Autodesk CFD Admin",
+      "Email": "autodesk.cfd@example.com"
+    }
+  },
+  "Licensing": {
+    "Type": "Subscription",
+    "Server": {
+      "Vendor": "Autodesk License Service",
+      "Hostname": "autodesk-license.corp.local",
+      "IP": null,
+      "Port": "443",
+      "Protocol": "HTTPS"
+    }
+  },
+  "Access_Control": {
+    "IAM": "Azure AD"
+  },
+  "Deployment": {
+    "Level": "Project",
+    "Type": "Cloud",
+    "Cloud": {
+      "Type": "Public",
+      "Provider": "Autodesk"
+    },
+    "InfoSec_Level": []
+  },
+  "Plugins": [
+    "Thermal Module",
+    "Electronics Cooling",
+    "Cloud Solve"
+  ]
+}
