@@ -1,0 +1,39 @@
+{
+  "Tool": {
+    "Class": "Simulations",
+    "Type": "LowFidelitySimulations",
+    "Instance": "Excel",
+    "Vendor": "Microsoft / In-house",
+    "Version": "365 or 2019",
+    "POC": {
+      "Name": "Concept Analyst",
+      "Email": "concept.analyst@example.com"
+    }
+  },
+  "Licensing": {
+    "Type": "Subscription",
+    "Server": {
+      "Vendor": "Office 365",
+      "Hostname": "office365.microsoft.com",
+      "IP": null,
+      "Port": "443",
+      "Protocol": "HTTPS"
+    }
+  },
+  "Access_Control": {
+    "IAM": "Azure AD"
+  },
+  "Deployment": {
+    "Level": "Department",
+    "Type": "Cloud",
+    "Cloud": {
+      "Type": "Public",
+      "Provider": "Microsoft"
+    },
+    "InfoSec_Level": ["CUI"]
+  },
+  "Plugins": [
+    "Solver Add-in",
+    "Data Analysis ToolPak"
+  ]
+}
