@@ -1,0 +1,25 @@
+{
+  "LowFidelitySim_Loading_Input_Data": {
+    "Geometry_Based": [
+      ".vsp (OpenVSP geometry file)",
+      ".stp/.iges (Simplified geometry for quick analyses)",
+      ".wpa (AVL geometry config) or .avl"
+    ],
+    "Param_Scripts": [
+      ".m (Matlab script)",
+      ".py (Python param script)",
+      ".slx (Basic Simulink model)",
+      ".xls/.xlsx (Excel-based param model)"
+    ],
+    "Configuration_Files": [
+      "XML or JSON config for trade studies (ModelCenter workflow definitions)",
+      ".cfg (In-house param config files)",
+      ".yaml (Python-based scenario definitions)"
+    ],
+    "Reference_Data": [
+      "Aerodynamic coefficient tables (legacy .txt/.csv)",
+      "Engine/fuel data for quick performance approximation",
+      "Material property tables for simplified calculations"
+    ]
+  }
+}
