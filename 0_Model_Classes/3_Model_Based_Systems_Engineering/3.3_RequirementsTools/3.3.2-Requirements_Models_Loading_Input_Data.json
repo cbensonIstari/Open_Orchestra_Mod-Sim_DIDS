@@ -1,0 +1,33 @@
+{
+  "Requirements_Models_Loading_Input_Data": {
+    "Proprietary_Formats": {
+      "DOORS_Next": [
+        "Project archives (Jazz-based repository)",
+        ".mod (Legacy DOORS module, if relevant)",
+        ".reqif (Import mechanism)"
+      ],
+      "Jama_Connect": [
+        ".reqif (Round-trip import/export)",
+        ".csv/.xlsx (Spreadsheet import)"
+      ],
+      "Polarion": [
+        ".reqif",
+        ".csv/.xlsx (Tabular import)"
+      ]
+    },
+    "Neutral_Formats": [
+      ".reqif (Requirements Interchange Format)",
+      ".csv/.xlsx (Generic tabular import)",
+      ".xml/.json (Custom or advanced integration formats)"
+    ],
+    "Additional_Artifacts": [
+      "Requirements templates (boilerplate text, standard headings)",
+      "Glossaries or domain dictionaries",
+      "Traceability matrices (imported from spreadsheets or specialized tools)"
+    ],
+    "Linked_Documents": [
+      ".pdf/.docx/.pptx (Supporting specs, design docs, presentations)",
+      "Images/diagrams (.png, .svg for annotated requirements references)"
+    ]
+  }
+}
