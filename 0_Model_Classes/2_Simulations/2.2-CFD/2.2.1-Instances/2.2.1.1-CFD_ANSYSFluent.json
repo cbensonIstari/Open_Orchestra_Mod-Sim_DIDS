@@ -1,0 +1,37 @@
+{
+  "Tool": {
+    "File_Name": "2.2.1.1-CFD_ANSYSFluent.json",
+    "Class": "Simulations",
+    "Type": "CFD",
+    "Instance": "ANSYS Fluent",
+    "Vendor": "ANSYS",
+    "Version": "2023 R1",
+    "POC": {
+      "Name": "CFD Specialist",
+      "Email": "cfd.specialist@example.com"
+    }
+  },
+  "Licensing": {
+    "Type": "Floating",
+    "Server": {
+      "Vendor": "ANSYS License Manager",
+      "Hostname": "ansys-license.corp.local",
+      "IP": "192.168.30.50",
+      "Port": "2325",
+      "Protocol": "TCP/IP"
+    }
+  },
+  "Access_Control": {
+    "IAM": "Active Directory"
+  },
+  "Deployment": {
+    "Level": "Department",
+    "Type": "On-Premise",
+    "InfoSec_Level": ["CUI"]
+  },
+  "Plugins": [
+    "HPC Module",
+    "Adjoint Solver",
+    "Acoustics Module"
+  ]
+}
