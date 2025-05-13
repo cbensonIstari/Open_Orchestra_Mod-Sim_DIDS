@@ -1,0 +1,40 @@
+{
+  "PLM_Models_Loading_Input_Data": {
+    "Proprietary_Formats": {
+      "Siemens_Teamcenter": [
+        ".plmxml (Teamcenter interchange)",
+        ".tcxml (Teamcenter XML)",
+        "Database exports (Teamcenter repository dump)"
+      ],
+      "PTC_Windchill": [
+        ".zip archives with Windchill export bundles",
+        "Windchill-specific database snapshots"
+      ],
+      "Dassault_ENOVIA_or_3DEXPERIENCE": [
+        "3DEXPERIENCE export packages (.3dxml, .3dexperience)",
+        "ENOVIA .exp or DB-driven vault exports"
+      ],
+      "Other_PLM_Systems": [
+        ".xml/.json custom exports",
+        "Database dumps (SQL scripts, backups) capturing PLM data structures"
+      ]
+    },
+    "Neutral_Formats": [
+      ".step (ISO 10303 AP242 for managed model-based data)",
+      ".ap239 (PLCS for product lifecycle support)",
+      ".csv/.xlsx (Tabular BOM or metadata import)",
+      ".xml/.json (Custom schemas for product data interchange)"
+    ],
+    "Additional_Artifacts": [
+      "ECR/ECO definitions (Engineering Change Requests/Orders)",
+      "Workflows or process definitions (state machines, approvals)",
+      "Documents linked in PLM (e.g., specs, office files, PDFs)",
+      "Classification libraries (standard part families, library parts)"
+    ],
+    "Linked_Systems": [
+      "ERP/MRP integrations (SAP, Oracle EBS, etc.)",
+      "MES references (Manufacturing Execution System)",
+      "Supplier portals for external collaboration"
+    ]
+  }
+}
