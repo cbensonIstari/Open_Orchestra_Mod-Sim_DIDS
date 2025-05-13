@@ -1,0 +1,39 @@
+{
+  "Tool": {
+    "Class": "Physical System Representation",
+    "Type": "PLM",
+    "Instance": "Propel PLM",
+    "Vendor": "Propel",
+    "Version": "SaaS Current",
+    "POC": {
+      "Name": "Propel Admin",
+      "Email": "propel.admin@example.com"
+    }
+  },
+  "Licensing": {
+    "Type": "Subscription",
+    "Server": {
+      "Vendor": "Propel SaaS",
+      "Hostname": "propel-license.cloud.com",
+      "IP": null,
+      "Port": "443",
+      "Protocol": "HTTPS"
+    }
+  },
+  "Access_Control": {
+    "IAM": "Salesforce Identity"
+  },
+  "Deployment": {
+    "Level": "Project",
+    "Type": "Cloud",
+    "Cloud": {
+      "Type": "Public",
+      "Provider": "Salesforce Platform"
+    },
+    "InfoSec_Level": []
+  },
+  "Plugins": [
+    "QMS (Quality Management System)",
+    "Supplier Collaboration"
+  ]
+}
