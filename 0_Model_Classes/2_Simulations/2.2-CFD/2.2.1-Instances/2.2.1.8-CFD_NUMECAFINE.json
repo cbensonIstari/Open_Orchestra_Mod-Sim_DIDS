@@ -1,0 +1,37 @@
+{
+  "Tool": {
+    "File_Name": "2.2.1.8-CFD_NUMECAFINE.json",
+    "Class": "Simulations",
+    "Type": "CFD",
+    "Instance": "NUMECA FINE",
+    "Vendor": "NUMECA International",
+    "Version": "2023",
+    "POC": {
+      "Name": "NUMECA FINE Admin",
+      "Email": "numeca.admin@example.com"
+    }
+  },
+  "Licensing": {
+    "Type": "Node-Locked",
+    "Server": {
+      "Vendor": "NUMECA License Service",
+      "Hostname": "numeca-license.corp.local",
+      "IP": "192.168.30.55",
+      "Port": "27000",
+      "Protocol": "TCP/IP"
+    }
+  },
+  "Access_Control": {
+    "IAM": "LDAP"
+  },
+  "Deployment": {
+    "Level": "Department",
+    "Type": "On-Premise",
+    "InfoSec_Level": ["CUI"]
+  },
+  "Plugins": [
+    "AutoGrid5 (Mesh)",
+    "FINE/Turbo",
+    "FINE/Open"
+  ]
+}
