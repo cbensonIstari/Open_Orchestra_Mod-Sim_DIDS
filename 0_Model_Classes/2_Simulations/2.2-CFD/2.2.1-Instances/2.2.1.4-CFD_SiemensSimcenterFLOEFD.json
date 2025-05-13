@@ -1,0 +1,36 @@
+{
+  "Tool": {
+    "File_Name": "2.2.1.4-CFD_SiemensSimcenterFLOEFD.json",
+    "Class": "Simulations",
+    "Type": "CFD",
+    "Instance": "Siemens Simcenter FLOEFD",
+    "Vendor": "Siemens",
+    "Version": "2023.1",
+    "POC": {
+      "Name": "FLOEFD Lead",
+      "Email": "floefd.lead@example.com"
+    }
+  },
+  "Licensing": {
+    "Type": "Node-Locked",
+    "Server": {
+      "Vendor": "Siemens License Manager",
+      "Hostname": "floefd-license.corp.local",
+      "IP": "192.168.30.52",
+      "Port": "27000",
+      "Protocol": "TCP/IP"
+    }
+  },
+  "Access_Control": {
+    "IAM": "Active Directory"
+  },
+  "Deployment": {
+    "Level": "Department",
+    "Type": "Desktop Install",
+    "InfoSec_Level": ["CUI"]
+  },
+  "Plugins": [
+    "CAD Embedding (NX, CATIA, CREO)",
+    "Conjugate Heat Transfer"
+  ]
+}
