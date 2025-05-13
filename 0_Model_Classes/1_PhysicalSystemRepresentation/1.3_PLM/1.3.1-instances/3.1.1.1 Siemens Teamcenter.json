@@ -1,0 +1,36 @@
+{
+  "Tool": {
+    "Class": "Physical System Representation",
+    "Type": "PLM",
+    "Instance": "Siemens Teamcenter",
+    "Vendor": "Siemens",
+    "Version": "2023.2",
+    "POC": {
+      "Name": "Teamcenter Admin",
+      "Email": "teamcenter.admin@example.com"
+    }
+  },
+  "Licensing": {
+    "Type": "Concurrent",
+    "Server": {
+      "Vendor": "Siemens License Manager",
+      "Hostname": "teamcenter-license.corp.local",
+      "IP": "192.168.15.50",
+      "Port": "28000",
+      "Protocol": "TCP/IP"
+    }
+  },
+  "Access_Control": {
+    "IAM": "LDAP"
+  },
+  "Deployment": {
+    "Level": "Enterprise",
+    "Type": "On-Premise",
+    "InfoSec_Level": ["CUI", "ITAR"]
+  },
+  "Plugins": [
+    "Change Management Module",
+    "Workflow Designer",
+    "BOM Management"
+  ]
+}
