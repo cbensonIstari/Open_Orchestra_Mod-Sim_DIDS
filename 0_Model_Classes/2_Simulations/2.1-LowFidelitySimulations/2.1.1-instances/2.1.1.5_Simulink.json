@@ -1,0 +1,35 @@
+{
+  "Tool": {
+    "Class": "Simulations",
+    "Type": "LowFidelitySimulations",
+    "Instance": "Simulink",
+    "Vendor": "MathWorks",
+    "Version": "R2023a",
+    "POC": {
+      "Name": "Control Systems Engineer",
+      "Email": "controls.eng@example.com"
+    }
+  },
+  "Licensing": {
+    "Type": "Concurrent",
+    "Server": {
+      "Vendor": "MathWorks License Manager",
+      "Hostname": "matlab-license.corp.local",
+      "IP": "192.168.20.101",
+      "Port": "27000",
+      "Protocol": "TCP/IP"
+    }
+  },
+  "Access_Control": {
+    "IAM": "LDAP"
+  },
+  "Deployment": {
+    "Level": "Project",
+    "Type": "On-Premise",
+    "InfoSec_Level": ["CUI"]
+  },
+  "Plugins": [
+    "Simscape",
+    "Control System Toolbox"
+  ]
+}
