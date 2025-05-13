@@ -1,0 +1,40 @@
+{
+  "Tool": {
+    "Class": "Physical System Representation",
+    "Type": "PLM",
+    "Instance": "Autodesk Fusion Lifecycle",
+    "Vendor": "Autodesk",
+    "Version": "2023",
+    "POC": {
+      "Name": "Fusion Lifecycle Admin",
+      "Email": "fusion.admin@example.com"
+    }
+  },
+  "Licensing": {
+    "Type": "Subscription",
+    "Server": {
+      "Vendor": "Autodesk License Service",
+      "Hostname": "fusion-lifecycle-license.corp.local",
+      "IP": "192.168.15.57",
+      "Port": "443",
+      "Protocol": "HTTPS"
+    }
+  },
+  "Access_Control": {
+    "IAM": "Azure AD"
+  },
+  "Deployment": {
+    "Level": "Business Unit",
+    "Type": "Cloud",
+    "Cloud": {
+      "Type": "Public",
+      "Provider": "Autodesk Cloud"
+    },
+    "InfoSec_Level": []
+  },
+  "Plugins": [
+    "Workflow Automation",
+    "Item & BOM Management",
+    "Supplier Collaboration"
+  ]
+}
