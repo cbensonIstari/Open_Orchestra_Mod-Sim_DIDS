@@ -1,0 +1,37 @@
+{
+  "Tool": {
+    "File_Name": "2.2.1.10-CFD_CFD++.json",
+    "Class": "Simulations",
+    "Type": "CFD",
+    "Instance": "CFD++",
+    "Vendor": "Metacomp Technologies",
+    "Version": "19.1",
+    "POC": {
+      "Name": "CFD++ Admin",
+      "Email": "cfdplusplus.admin@example.com"
+    }
+  },
+  "Licensing": {
+    "Type": "Floating",
+    "Server": {
+      "Vendor": "Metacomp License Manager",
+      "Hostname": "cfdplusplus-license.corp.local",
+      "IP": "192.168.30.56",
+      "Port": "27005",
+      "Protocol": "TCP/IP"
+    }
+  },
+  "Access_Control": {
+    "IAM": "LDAP"
+  },
+  "Deployment": {
+    "Level": "Department",
+    "Type": "On-Premise",
+    "InfoSec_Level": ["CUI"]
+  },
+  "Plugins": [
+    "High-speed Aerodynamics",
+    "Multi-phase Flow",
+    "Pre/Post GUI"
+  ]
+}
