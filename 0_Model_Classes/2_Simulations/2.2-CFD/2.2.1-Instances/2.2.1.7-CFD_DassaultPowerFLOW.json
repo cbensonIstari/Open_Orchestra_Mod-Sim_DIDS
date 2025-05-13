@@ -1,0 +1,41 @@
+{
+  "Tool": {
+    "File_Name": "2.2.1.7-CFD_DassaultPowerFLOW.json",
+    "Class": "Simulations",
+    "Type": "CFD",
+    "Instance": "Dassault PowerFLOW",
+    "Vendor": "Dassault Systèmes",
+    "Version": "2023x",
+    "POC": {
+      "Name": "PowerFLOW Specialist",
+      "Email": "powerflow.specialist@example.com"
+    }
+  },
+  "Licensing": {
+    "Type": "Floating",
+    "Server": {
+      "Vendor": "DS License Server",
+      "Hostname": "powerflow-license.corp.local",
+      "IP": "192.168.30.54",
+      "Port": "27000",
+      "Protocol": "TCP/IP"
+    }
+  },
+  "Access_Control": {
+    "IAM": "Active Directory"
+  },
+  "Deployment": {
+    "Level": "Enterprise",
+    "Type": "Cloud",
+    "Cloud": {
+      "Type": "Private",
+      "Provider": "Azure"
+    },
+    "InfoSec_Level": ["CUI"]
+  },
+  "Plugins": [
+    "Lattice-Boltzmann Solver",
+    "Aeroacoustics",
+    "Thermal Comfort"
+  ]
+}
