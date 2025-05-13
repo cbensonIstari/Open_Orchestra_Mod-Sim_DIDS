@@ -1,0 +1,29 @@
+{
+  "Tool": {
+    "Class": "Simulations",
+    "Type": "LowFidelitySimulations",
+    "Instance": "OpenVSP",
+    "Vendor": "NASA / Open Source Community",
+    "Version": "3.30",
+    "POC": {
+      "Name": "Aero Concept Designer",
+      "Email": "aero.concept@example.com"
+    }
+  },
+  "Licensing": {
+    "Type": "Open Source",
+    "Server": null
+  },
+  "Access_Control": {
+    "IAM": "Local Accounts"
+  },
+  "Deployment": {
+    "Level": "Project",
+    "Type": "Desktop Install",
+    "InfoSec_Level": []
+  },
+  "Plugins": [
+    "Wave Drag Estimation",
+    "Mach Sweep Manager"
+  ]
+}
