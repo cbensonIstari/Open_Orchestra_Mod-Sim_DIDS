@@ -1,0 +1,35 @@
+{
+  "Tool": {
+    "Class": "Model-Based System Engineering",
+    "Type": "Shared Architecture",
+    "Instance": "IBM Rhapsody Model Manager",
+    "Vendor": "IBM",
+    "Version": "7.0",
+    "POC": {
+      "Name": "Rhapsody Admin",
+      "Email": "rhap.admin@example.com"
+    }
+  },
+  "Licensing": {
+    "Type": "Named User",
+    "Server": {
+      "Vendor": "IBM ELM License Server",
+      "Hostname": "rhap-modelmgr-license.corp.local",
+      "IP": "192.168.14.51",
+      "Port": "27000",
+      "Protocol": "TCP/IP"
+    }
+  },
+  "Access_Control": {
+    "IAM": "LDAP / SSO"
+  },
+  "Deployment": {
+    "Level": "Department",
+    "Type": "On-Premise",
+    "InfoSec_Level": ["CUI"]
+  },
+  "Plugins": [
+    "Git Integration for Rhapsody",
+    "OSLC Linking with DOORS Next"
+  ]
+}
