@@ -1,0 +1,40 @@
+{
+  "Tool": {
+    "Class": "Physical System Representation",
+    "Type": "PLM",
+    "Instance": "Dassault 3DEXPERIENCE",
+    "Vendor": "Dassault Systèmes",
+    "Version": "R2023x",
+    "POC": {
+      "Name": "3DX Admin",
+      "Email": "3dx.admin@example.com"
+    }
+  },
+  "Licensing": {
+    "Type": "Concurrent",
+    "Server": {
+      "Vendor": "DS License Server",
+      "Hostname": "3dx-license.corp.local",
+      "IP": "192.168.15.53",
+      "Port": "27000",
+      "Protocol": "TCP/IP"
+    }
+  },
+  "Access_Control": {
+    "IAM": "Active Directory"
+  },
+  "Deployment": {
+    "Level": "Department",
+    "Type": "Cloud",
+    "Cloud": {
+      "Type": "Public",
+      "Provider": "AWS"
+    },
+    "InfoSec_Level": ["CUI"]
+  },
+  "Plugins": [
+    "Collaborative Lifecycle",
+    "Change Action Manager",
+    "3D Innovator"
+  ]
+}
