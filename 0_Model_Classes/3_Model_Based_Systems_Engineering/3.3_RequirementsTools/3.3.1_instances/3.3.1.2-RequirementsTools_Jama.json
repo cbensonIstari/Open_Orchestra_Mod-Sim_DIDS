@@ -1,0 +1,40 @@
+{
+  "Tool": {
+    "Class": "Model-Based System Engineering",
+    "Type": "Requirements Tools",
+    "Instance": "Jama Connect",
+    "Vendor": "Jama Software",
+    "Version": "8.62",
+    "POC": {
+      "Name": "Project Coordinator",
+      "Email": "project.coord@example.com"
+    }
+  },
+  "Licensing": {
+    "Type": "Named User",
+    "Server": {
+      "Vendor": "Jama License Server",
+      "Hostname": "jama-license.corp.local",
+      "IP": "192.168.13.60",
+      "Port": "443",
+      "Protocol": "HTTPS"
+    }
+  },
+  "Access_Control": {
+    "IAM": "Azure AD"
+  },
+  "Deployment": {
+    "Level": "Department",
+    "Type": "Cloud",
+    "Cloud": {
+      "Type": "Public",
+      "Provider": "AWS"
+    },
+    "InfoSec_Level": ["CUI"]
+  },
+  "Plugins": [
+    "ReqIF Import/Export",
+    "Review Center",
+    "REST API Integration"
+  ]
+}
