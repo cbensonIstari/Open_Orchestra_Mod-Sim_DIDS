@@ -1,0 +1,26 @@
+{
+  "Tool": {
+    "Class": "Simulations",
+    "Type": "LowFidelitySimulations",
+    "Instance": "AVL",
+    "Vendor": "MIT (Mark Drela)",
+    "Version": "2.9",
+    "POC": {
+      "Name": "Aero Stability Lead",
+      "Email": "aero.stab@example.com"
+    }
+  },
+  "Licensing": {
+    "Type": "Open Source",
+    "Server": null
+  },
+  "Access_Control": {
+    "IAM": "Local Accounts"
+  },
+  "Deployment": {
+    "Level": "Project",
+    "Type": "Desktop Install",
+    "InfoSec_Level": []
+  },
+  "Plugins": []
+}
