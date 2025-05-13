@@ -1,0 +1,30 @@
+{
+  "Tool": {
+    "Class": "Simulations",
+    "Type": "LowFidelitySimulations",
+    "Instance": "PythonParametric",
+    "Vendor": "Open Source Community / In-House Scripts",
+    "Version": "3.x",
+    "POC": {
+      "Name": "Python Analyst",
+      "Email": "py.analyst@example.com"
+    }
+  },
+  "Licensing": {
+    "Type": "Open Source (Python)",
+    "Server": null
+  },
+  "Access_Control": {
+    "IAM": "Local Accounts"
+  },
+  "Deployment": {
+    "Level": "Project",
+    "Type": "Desktop Install",
+    "InfoSec_Level": []
+  },
+  "Plugins": [
+    "NumPy",
+    "SciPy",
+    "Matplotlib"
+  ]
+}
