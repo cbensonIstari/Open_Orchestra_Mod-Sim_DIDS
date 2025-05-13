@@ -1,0 +1,30 @@
+{
+  "Tool": {
+    "File_Name": "2.2.1.9-CFD_SU2.json",
+    "Class": "Simulations",
+    "Type": "CFD",
+    "Instance": "SU2",
+    "Vendor": "Open Source (Stanford University origin)",
+    "Version": "7.5.0",
+    "POC": {
+      "Name": "SU2 Aero Dev",
+      "Email": "su2.dev@example.org"
+    }
+  },
+  "Licensing": {
+    "Type": "LGPL v2.1",
+    "Server": null
+  },
+  "Access_Control": {
+    "IAM": "Local Accounts"
+  },
+  "Deployment": {
+    "Level": "Project",
+    "Type": "On-Premise",
+    "InfoSec_Level": []
+  },
+  "Plugins": [
+    "Adjoint solver",
+    "Shape optimization"
+  ]
+}
