@@ -1,0 +1,54 @@
+{
+  "CFD_Extraction_Output_Data": {
+    "Proprietary_Files": [
+      ".dat / .res (ANSYS Fluent data/res files)",
+      ".sim (Star-CCM+ file)",
+      ".foam logs (OpenFOAM result sets)",
+      ".mphbin (COMSOL binaries)",
+      ".cc (CFD++ result container)"
+    ],
+    "Neutral_Files": [
+      ".csv/.xlsx (Extracted field data: pressure, velocity, temperature)",
+      ".vtk / .vtu (Paraview/VTK post-processing)",
+      ".hdf5 (generic HPC or high-level data containers)",
+      ".png/.jpg/.mp4 (visualization or animation captures)"
+    ],
+    "Metadata": [
+      "Solver info (version, compile date), HPC job ID, user, date/time, case name"
+    ],
+    "Applicable_Standards": {
+      "Mesh_Exchange": [
+        "CGNS (CFD General Notation System)",
+        "Gmsh format"
+      ],
+      "Data_Exchange": [
+        "VTK/Paraview standard",
+        "XDMF/HDF5"
+      ],
+      "Process_and_Quality": [
+        "AS9100 if aerospace usage",
+        "CMMI references for process improvement"
+      ]
+    },
+    "Critical_Data_Fields": {
+      "Solution_Fields": [
+        "Pressure, velocity, temperature arrays",
+        "Scalar fields (turbulence, volume fraction, etc.)"
+      ],
+      "Residual_Logs": [
+        "Convergence history (residual vs iteration/time)",
+        "CPU/wall time usage"
+      ],
+      "Post_Processing": [
+        "Streamlines, iso-surfaces, cut-planes, forces & moments",
+        "Quantities of interest (lift, drag, heat flux, etc.)"
+      ],
+      "Multi_Phase_or_Chemistry": [
+        "Volume fraction fields, reaction rates if relevant"
+      ],
+      "Mesh_and_Grid_Stats": [
+        "Cell count, skewness, y+ distributions, mesh quality metrics"
+      ]
+    }
+  }
+}
