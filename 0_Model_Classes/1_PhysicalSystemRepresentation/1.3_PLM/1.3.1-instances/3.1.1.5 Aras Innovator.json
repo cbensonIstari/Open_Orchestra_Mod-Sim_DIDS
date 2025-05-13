@@ -1,0 +1,36 @@
+{
+  "Tool": {
+    "Class": "Physical System Representation",
+    "Type": "PLM",
+    "Instance": "Aras Innovator",
+    "Vendor": "Aras",
+    "Version": "12.0",
+    "POC": {
+      "Name": "Aras Innovator Admin",
+      "Email": "aras.admin@example.com"
+    }
+  },
+  "Licensing": {
+    "Type": "Subscription",
+    "Server": {
+      "Vendor": "Aras License Service",
+      "Hostname": "aras-license.corp.local",
+      "IP": "192.168.15.54",
+      "Port": "443",
+      "Protocol": "HTTPS"
+    }
+  },
+  "Access_Control": {
+    "IAM": "LDAP"
+  },
+  "Deployment": {
+    "Level": "Project",
+    "Type": "On-Premise",
+    "InfoSec_Level": []
+  },
+  "Plugins": [
+    "Requirements Engineering",
+    "Quality Management",
+    "Program Management"
+  ]
+}
