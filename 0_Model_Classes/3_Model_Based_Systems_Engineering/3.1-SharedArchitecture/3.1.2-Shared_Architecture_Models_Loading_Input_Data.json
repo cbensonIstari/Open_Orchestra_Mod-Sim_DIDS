@@ -1,0 +1,32 @@
+{
+  "Shared_Architecture_Models_Loading_Input_Data": {
+    "Proprietary_Formats": {
+      "Teamwork_Cloud": [
+        "Native repository-based model storage (TWC database)",
+        ".mdzip (Offline import/export)",
+        "Branch/Tag snapshots (TWC revision numbers)"
+      ],
+      "IBM_Rhapsody_Model_Manager": [
+        "Project archives (Jazz-based repository)",
+        ".rpyx (Offline Rhapsody model export)",
+        "Branching config or subset .sbs"
+      ]
+    },
+    "Neutral_Formats": [
+      ".xmi (OMG XMI for UML/SysML interchange)",
+      ".uml2 (Alternate UML model format)",
+      ".json (Prototype SysML v2 or custom transformations)",
+      ".reqif (If capturing external requirements from DOORS/Jama, etc.)"
+    ],
+    "Collaboration_Artifacts": [
+      "User/Team Management (roles, permissions, user groups)",
+      "Branch/Tag settings (feature-branch, release-1.2)",
+      "Project-level configuration (repository location, access control lists)"
+    ],
+    "Linked_Resources": [
+      "External references (requirements in DOORS Next, Jama, etc.)",
+      "Model libraries or profiles (SysML, custom stereotypes)",
+      "Doc/wikis (Confluence, SharePoint) describing architecture usage"
+    ]
+  }
+}
