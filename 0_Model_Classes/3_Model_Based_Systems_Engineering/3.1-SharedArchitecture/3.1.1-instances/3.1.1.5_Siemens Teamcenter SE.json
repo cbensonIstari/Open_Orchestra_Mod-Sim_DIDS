@@ -1,0 +1,40 @@
+{
+  "Tool": {
+    "Class": "Model-Based System Engineering",
+    "Type": "Shared Architecture",
+    "Instance": "Siemens Teamcenter SE",
+    "Vendor": "Siemens",
+    "Version": "2023.2",
+    "POC": {
+      "Name": "Teamcenter SE Lead",
+      "Email": "tc.se.lead@example.com"
+    }
+  },
+  "Licensing": {
+    "Type": "Concurrent",
+    "Server": {
+      "Vendor": "Siemens License Manager",
+      "Hostname": "teamcenter-se-license.corp.local",
+      "IP": "192.168.14.54",
+      "Port": "28000",
+      "Protocol": "TCP/IP"
+    }
+  },
+  "Access_Control": {
+    "IAM": "LDAP"
+  },
+  "Deployment": {
+    "Level": "Enterprise",
+    "Type": "Hybrid",
+    "Cloud": {
+      "Type": "Private",
+      "Provider": "AWS"
+    },
+    "InfoSec_Level": ["CUI", "ITAR"]
+  },
+  "Plugins": [
+    "ALM Integration",
+    "SysML / UML Add-in",
+    "PLM-MBSE Bridge"
+  ]
+}
