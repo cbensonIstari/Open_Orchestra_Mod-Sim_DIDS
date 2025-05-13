@@ -1,0 +1,181 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:sha="http://example.com/sharedArchitecture#"
+    xml:base="http://example.com/sharedArchitecture"
+    owl:versionInfo="1.0">
+
+  <!-- Ontology Definition -->
+  <owl:Ontology rdf:about="">
+    <rdfs:label>Shared Architecture Extraction Output Ontology</rdfs:label>
+    <rdfs:comment>Represents collaborative repository data (branch info, merges, user logs) extracted from TWC/IBM Model Manager.</rdfs:comment>
+  </owl:Ontology>
+  
+  <!-- Classes -->
+  <owl:Class rdf:about="sha:SharedArchitectureExtractionOutput">
+    <rdfs:label>Shared Architecture Extraction Output</rdfs:label>
+    <rdfs:comment>The root concept for data extracted from multi-user architecture platforms (Teamwork Cloud, etc.).</rdfs:comment>
+  </owl:Class>
+  
+  <owl:Class rdf:about="sha:ProprietaryRepoSnapshot">
+    <rdfs:label>Proprietary Repository Snapshot</rdfs:label>
+    <rdfs:comment>Native repository export from TWC or Jazz-based Rhapsody Model Manager.</rdfs:comment>
+  </owl:Class>
+  
+  <owl:Class rdf:about="sha:NeutralFormat">
+    <rdfs:label>Neutral Format</rdfs:label>
+    <rdfs:comment>Common interchange forms: XMI, UML2, JSON, .reqif for requirements integration.</rdfs:comment>
+  </owl:Class>
+  
+  <owl:Class rdf:about="sha:Metadata">
+    <rdfs:label>Collaboration Metadata</rdfs:label>
+    <rdfs:comment>Project name, branch ID, revision ID, lead modeler, timestamps.</rdfs:comment>
+  </owl:Class>
+  
+  <owl:Class rdf:about="sha:ApplicableStandard">
+    <rdfs:label>Applicable Standard</rdfs:label>
+    <rdfs:comment>Standards for version control, architecture modeling, data exchange, etc.</rdfs:comment>
+  </owl:Class>
+  
+  <owl:Class rdf:about="sha:CriticalDataField">
+    <rdfs:label>Critical Data Field</rdfs:label>
+    <rdfs:comment>Key fields: version/branch info, model elements, collaboration logs, permissions, traceability links.</rdfs:comment>
+  </owl:Class>
+  
+  <!-- Subclasses for each critical data field chunk -->
+  <owl:Class rdf:about="sha:VersionBranchInfo">
+    <rdfs:subClassOf rdf:resource="sha:CriticalDataField"/>
+    <rdfs:label>Version and Branch Information</rdfs:label>
+  </owl:Class>
+  
+  <owl:Class rdf:about="sha:ModelElement">
+    <rdfs:subClassOf rdf:resource="sha:CriticalDataField"/>
+    <rdfs:label>Model Elements</rdfs:label>
+  </owl:Class>
+  
+  <owl:Class rdf:about="sha:CollaborationLog">
+    <rdfs:subClassOf rdf:resource="sha:CriticalDataField"/>
+    <rdfs:label>Collaboration Log</rdfs:label>
+    <rdfs:comment>User actions (create/update/delete), merges, conflict resolutions, etc.</rdfs:comment>
+  </owl:Class>
+  
+  <owl:Class rdf:about="sha:AccessControlPermissions">
+    <rdfs:subClassOf rdf:resource="sha:CriticalDataField"/>
+    <rdfs:label>Access Control and Permissions</rdfs:label>
+  </owl:Class>
+  
+  <owl:Class rdf:about="sha:TraceabilityLinks">
+    <rdfs:subClassOf rdf:resource="sha:CriticalDataField"/>
+    <rdfs:label>Traceability Links</rdfs:label>
+    <rdfs:comment>Links to external requirements, test cases, or other TWC projects.</rdfs:comment>
+  </owl:Class>
+  
+  <!-- Object Properties to link an instance of SharedArchitectureExtractionOutput with each category. -->
+  
+  <owl:ObjectProperty rdf:about="sha:hasProprietaryRepoSnapshot">
+    <rdfs:domain rdf:resource="sha:SharedArchitectureExtractionOutput"/>
+    <rdfs:range rdf:resource="sha:ProprietaryRepoSnapshot"/>
+  </owl:ObjectProperty>
+  
+  <owl:ObjectProperty rdf:about="sha:hasNeutralFormat">
+    <rdfs:domain rdf:resource="sha:SharedArchitectureExtractionOutput"/>
+    <rdfs:range rdf:resource="sha:NeutralFormat"/>
+  </owl:ObjectProperty>
+  
+  <owl:ObjectProperty rdf:about="sha:hasMetadata">
+    <rdfs:domain rdf:resource="sha:SharedArchitectureExtractionOutput"/>
+    <rdfs:range rdf:resource="sha:Metadata"/>
+  </owl:ObjectProperty>
+  
+  <owl:ObjectProperty rdf:about="sha:hasApplicableStandard">
+    <rdfs:domain rdf:resource="sha:SharedArchitectureExtractionOutput"/>
+    <rdfs:range rdf:resource="sha:ApplicableStandard"/>
+  </owl:ObjectProperty>
+  
+  <owl:ObjectProperty rdf:about="sha:hasCriticalDataField">
+    <rdfs:domain rdf:resource="sha:SharedArchitectureExtractionOutput"/>
+    <rdfs:range rdf:resource="sha:CriticalDataField"/>
+  </owl:ObjectProperty>
+  
+  <!-- Sub-properties for each sub-class of CriticalDataField if desired. -->
+  
+  <owl:ObjectProperty rdf:about="sha:hasVersionBranchInfo">
+    <rdfs:subPropertyOf rdf:resource="sha:hasCriticalDataField"/>
+    <rdfs:domain rdf:resource="sha:SharedArchitectureExtractionOutput"/>
+    <rdfs:range rdf:resource="sha:VersionBranchInfo"/>
+  </owl:ObjectProperty>
+  
+  <owl:ObjectProperty rdf:about="sha:hasModelElement">
+    <rdfs:subPropertyOf rdf:resource="sha:hasCriticalDataField"/>
+    <rdfs:domain rdf:resource="sha:SharedArchitectureExtractionOutput"/>
+    <rdfs:range rdf:resource="sha:ModelElement"/>
+  </owl:ObjectProperty>
+  
+  <owl:ObjectProperty rdf:about="sha:hasCollaborationLog">
+    <rdfs:subPropertyOf rdf:resource="sha:hasCriticalDataField"/>
+    <rdfs:domain rdf:resource="sha:SharedArchitectureExtractionOutput"/>
+    <rdfs:range rdf:resource="sha:CollaborationLog"/>
+  </owl:ObjectProperty>
+  
+  <owl:ObjectProperty rdf:about="sha:hasAccessControl">
+    <rdfs:subPropertyOf rdf:resource="sha:hasCriticalDataField"/>
+    <rdfs:domain rdf:resource="sha:SharedArchitectureExtractionOutput"/>
+    <rdfs:range rdf:resource="sha:AccessControlPermissions"/>
+  </owl:ObjectProperty>
+  
+  <owl:ObjectProperty rdf:about="sha:hasTraceabilityLinks">
+    <rdfs:subPropertyOf rdf:resource="sha:hasCriticalDataField"/>
+    <rdfs:domain rdf:resource="sha:SharedArchitectureExtractionOutput"/>
+    <rdfs:range rdf:resource="sha:TraceabilityLinks"/>
+  </owl:ObjectProperty>
+
+  <!-- Example individuals (optional demonstration) -->
+  
+  <sha:SharedArchitectureExtractionOutput rdf:about="sha:SharedArchExtractionExample1">
+    <rdfs:label>Shared Architecture Extraction Output Example 1</rdfs:label>
+    <rdfs:comment>Illustrates a TWC snapshot with branch info, user logs, etc.</rdfs:comment>
+    
+    <sha:hasProprietaryRepoSnapshot rdf:resource="sha:RepoSnapshot_TWC"/>
+    <sha:hasNeutralFormat rdf:resource="sha:NeutralFile_xmi"/>
+    <sha:hasMetadata rdf:resource="sha:Metadata_ProjectABranch"/>
+    <sha:hasApplicableStandard rdf:resource="sha:Standard_SCM"/>
+    <sha:hasVersionBranchInfo rdf:resource="sha:VersionBranch_MainFeature"/>
+    <sha:hasCollaborationLog rdf:resource="sha:CollabLog_MergeOps"/>
+  </sha:SharedArchitectureExtractionOutput>
+  
+  <!-- Sample individuals -->
+  
+  <owl:NamedIndividual rdf:about="sha:RepoSnapshot_TWC">
+    <rdf:type rdf:resource="sha:ProprietaryRepoSnapshot"/>
+    <rdfs:label>Teamwork Cloud Snapshot (revision 412, branch feature/propulsion)</rdfs:label>
+  </owl:NamedIndividual>
+  
+  <owl:NamedIndividual rdf:about="sha:NeutralFile_xmi">
+    <rdf:type rdf:resource="sha:NeutralFormat"/>
+    <rdfs:label>XMI export of the shared model</rdfs:label>
+  </owl:NamedIndividual>
+  
+  <owl:NamedIndividual rdf:about="sha:Metadata_ProjectABranch">
+    <rdf:type rdf:resource="sha:Metadata"/>
+    <rdfs:label>Project: Avionics Model, Branch: main, Created by: John S, Date: 2025-04-01</rdfs:label>
+  </owl:NamedIndividual>
+  
+  <owl:NamedIndividual rdf:about="sha:Standard_SCM">
+    <rdf:type rdf:resource="sha:ApplicableStandard"/>
+    <rdfs:label>ISO/IEC 15940 (software configuration management references)</rdfs:label>
+  </owl:NamedIndividual>
+  
+  <owl:NamedIndividual rdf:about="sha:VersionBranch_MainFeature">
+    <rdf:type rdf:resource="sha:VersionBranchInfo"/>
+    <rdfs:label>Branch Name: feature/propulsion, Revision ID: 412, Merge: pending to main</rdfs:label>
+  </owl:NamedIndividual>
+  
+  <owl:NamedIndividual rdf:about="sha:CollabLog_MergeOps">
+    <rdf:type rdf:resource="sha:CollaborationLog"/>
+    <rdfs:label>Merge operation from feature/propulsion to main, 2 conflicts resolved</rdfs:label>
+  </owl:NamedIndividual>
+
+</rdf:RDF>
