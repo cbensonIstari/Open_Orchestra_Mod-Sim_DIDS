@@ -1,0 +1,45 @@
+{
+  "LowFidelitySim_Extraction_Output_Data": {
+    "Proprietary_Simulation_Results": [
+      ".mat (Matlab workspace results)",
+      ".slx state logs (Simulink run data)",
+      ".modcenter (ModelCenter workflow result archives)"
+    ],
+    "Neutral_Files": [
+      ".csv/.xlsx (Tabular result exports)",
+      ".json/.xml (Structured results)",
+      ".png/.pdf (Plots or simple reports)"
+    ],
+    "Metadata": [
+      "Simulation name, analyst, date/time, version, scenario description"
+    ],
+    "Applicable_Standards": {
+      "Simulation_Interchange": [
+        "FMU/FMI (Functional Mock-up Interface) if partial usage",
+        "CSV for simple tabular exchanges"
+      ],
+      "Parametric_BestPractices": [
+        "CMMI references for process improvement",
+        "ISO 15288 if used for lifecycle alignment"
+      ]
+    },
+    "Critical_Data_Fields": {
+      "AeroCoefficients": [
+        "Lift coefficient (CL), drag coefficient (CD)",
+        "Moment coefficients, stability derivatives"
+      ],
+      "PerformanceEstimates": [
+        "Range, endurance, fuel burn (if param studied)",
+        "Initial sizing (weight, wing area, thrust needed)"
+      ],
+      "TradeStudyOutputs": [
+        "Design variable sweeps, objective function values",
+        "Pareto front coordinates or final selected design"
+      ],
+      "ScriptLogs": [
+        "Matlab command window logs, Python console output",
+        "Error/warning messages"
+      ]
+    }
+  }
+}
