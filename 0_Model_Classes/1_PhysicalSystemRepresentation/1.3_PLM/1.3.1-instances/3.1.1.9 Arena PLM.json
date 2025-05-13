@@ -1,0 +1,40 @@
+{
+  "Tool": {
+    "Class": "Physical System Representation",
+    "Type": "PLM",
+    "Instance": "Arena PLM",
+    "Vendor": "PTC (acquired from Arena Solutions)",
+    "Version": "SaaS Current",
+    "POC": {
+      "Name": "Arena PLM Admin",
+      "Email": "arena.admin@example.com"
+    }
+  },
+  "Licensing": {
+    "Type": "Named User",
+    "Server": {
+      "Vendor": "PTC SaaS",
+      "Hostname": "arena-plm-license.cloud.ptc.com",
+      "IP": null,
+      "Port": "443",
+      "Protocol": "HTTPS"
+    }
+  },
+  "Access_Control": {
+    "IAM": "SAML SSO"
+  },
+  "Deployment": {
+    "Level": "Department",
+    "Type": "Cloud",
+    "Cloud": {
+      "Type": "Public",
+      "Provider": "PTC SaaS"
+    },
+    "InfoSec_Level": []
+  },
+  "Plugins": [
+    "Quality Management",
+    "Change Requests/Orders",
+    "Supplier Portal"
+  ]
+}
