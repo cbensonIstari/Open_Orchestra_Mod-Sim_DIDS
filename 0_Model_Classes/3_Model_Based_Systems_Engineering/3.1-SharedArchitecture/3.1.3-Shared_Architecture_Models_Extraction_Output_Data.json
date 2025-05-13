@@ -1,0 +1,57 @@
+{
+  "Shared_Architecture_Models_Extraction_Output_Data": {
+    "Proprietary_Formats": [
+      "TWC-specific snapshot or project export (revision logs, user actions)",
+      ".mdzip (Offline cameo/collab snapshot)",
+      ".rpyx (Rhapsody exchange if integrated with Jazz Model Manager)"
+    ],
+    "Neutral_Formats": [
+      ".xmi (UML/SysML interchange)",
+      ".uml2 (Alternate model exports)",
+      ".json (SysML v2 or partial transformations)",
+      ".reqif (If capturing requirements from integrated environment)"
+    ],
+    "Metadata": [
+      "Project/Repository Name, Branch/Revision, Owner/Lead Modeler, Timestamps"
+    ],
+    "Applicable_Standards": {
+      "Collaboration_and_Version_Control": [
+        "Git-like branching concepts in TWC/Jazz",
+        "ISO/IEC 15940 (SCM references)"
+      ],
+      "Architecture_Modeling": [
+        "UML 2.5, SysML 1.x, SysML v2",
+        "ISO/IEC/IEEE 42010",
+        "UAF (if cameo-based frameworks used)"
+      ],
+      "Data_Exchange_and_Traceability": [
+        "OMG XMI",
+        "OSLC (Open Services for Lifecycle Collaboration)",
+        "ReqIF for requirements"
+      ],
+      "Process_Management": [
+        "CMMI references for process improvement",
+        "ISO/IEC 15288 for system life cycle processes"
+      ]
+    },
+    "Critical_Data_Fields": {
+      "Version_and_Branch_Information": [
+        "Branch name, Revision ID, Merge details"
+      ],
+      "Model_Elements": [
+        "UML/SysML diagrams, parametric models, stereotypes, profiles"
+      ],
+      "Collaboration_Logs": [
+        "User actions (create/update/delete), discussion threads, merges"
+      ],
+      "Access_Control_and_Permissions": [
+        "Role-based access (Architect, Reviewer, Contributor)",
+        "Locking status of model parts"
+      ],
+      "Traceability_Links": [
+        "Links to external requirements or test cases via OSLC/REST",
+        "Derived or validated relationships across multiple TWC projects"
+      ]
+    }
+  }
+}
