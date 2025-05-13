@@ -1,0 +1,33 @@
+{
+  "Tool": {
+    "Class": "Model-Based System Engineering",
+    "Type": "Shared Architecture",
+    "Instance": "Eclipse Papyrus CDO",
+    "Vendor": "Eclipse Foundation / Community",
+    "Version": "6.0",
+    "POC": {
+      "Name": "Papyrus Collaboration",
+      "Email": "papyrus.collab@example.org"
+    }
+  },
+  "Licensing": {
+    "Type": "Open Source (EPL)",
+    "Server": null
+  },
+  "Access_Control": {
+    "IAM": "Local Accounts / SSO"
+  },
+  "Deployment": {
+    "Level": "Project",
+    "Type": "Cloud",
+    "Cloud": {
+      "Type": "Public",
+      "Provider": "Azure"
+    },
+    "InfoSec_Level": []
+  },
+  "Plugins": [
+    "CDO Model Repository",
+    "SysML 1.6 Support"
+  ]
+}
