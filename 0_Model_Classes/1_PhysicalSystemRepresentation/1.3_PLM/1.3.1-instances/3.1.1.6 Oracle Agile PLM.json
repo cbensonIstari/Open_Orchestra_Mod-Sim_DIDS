@@ -1,0 +1,40 @@
+{
+  "Tool": {
+    "Class": "Physical System Representation",
+    "Type": "PLM",
+    "Instance": "Oracle Agile PLM",
+    "Vendor": "Oracle",
+    "Version": "9.3",
+    "POC": {
+      "Name": "Agile PLM Admin",
+      "Email": "agile.admin@example.com"
+    }
+  },
+  "Licensing": {
+    "Type": "Named User",
+    "Server": {
+      "Vendor": "Oracle License Server",
+      "Hostname": "agile-license.corp.local",
+      "IP": "192.168.15.55",
+      "Port": "443",
+      "Protocol": "HTTPS"
+    }
+  },
+  "Access_Control": {
+    "IAM": "SAML SSO"
+  },
+  "Deployment": {
+    "Level": "Department",
+    "Type": "Cloud",
+    "Cloud": {
+      "Type": "Private",
+      "Provider": "Oracle Cloud"
+    },
+    "InfoSec_Level": ["CUI"]
+  },
+  "Plugins": [
+    "Product Collaboration",
+    "Cost Management",
+    "Engineering Collaboration"
+  ]
+}
