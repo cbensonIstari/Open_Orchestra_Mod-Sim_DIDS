@@ -1,0 +1,29 @@
+{
+  "Tool": {
+    "File_Name": "2.3.1.3-FEA_Calculix.json",
+    "Class": "Simulations",
+    "Type": "FEA",
+    "Instance": "CalculiX",
+    "Vendor": "Open Source Community",
+    "Version": "2.17",
+    "POC": {
+      "Name": "CalculiX Maintainer",
+      "Email": "calculix.maint@example.org"
+    }
+  },
+  "Licensing": {
+    "Type": "GPL",
+    "Server": null
+  },
+  "Access_Control": {
+    "IAM": "Local Accounts"
+  },
+  "Deployment": {
+    "Level": "Project",
+    "Type": "Desktop Install",
+    "InfoSec_Level": []
+  },
+  "Plugins": [
+    "CGX Pre/Post"
+  ]
+}
