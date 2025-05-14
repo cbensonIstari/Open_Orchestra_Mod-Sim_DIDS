@@ -1,0 +1,40 @@
+{
+  "Tool": {
+    "File_Name": "2.3.1.9-FEA_AutodeskNastran.json",
+    "Class": "Simulations",
+    "Type": "FEA",
+    "Instance": "Autodesk Nastran",
+    "Vendor": "Autodesk",
+    "Version": "2023",
+    "POC": {
+      "Name": "Autodesk FEA Admin",
+      "Email": "autodesk.fea@example.com"
+    }
+  },
+  "Licensing": {
+    "Type": "Subscription",
+    "Server": {
+      "Vendor": "Autodesk License Service",
+      "Hostname": "autodesk-license.corp.local",
+      "IP": null,
+      "Port": "443",
+      "Protocol": "HTTPS"
+    }
+  },
+  "Access_Control": {
+    "IAM": "Azure AD"
+  },
+  "Deployment": {
+    "Level": "Department",
+    "Type": "Cloud",
+    "Cloud": {
+      "Type": "Public",
+      "Provider": "Autodesk"
+    },
+    "InfoSec_Level": []
+  },
+  "Plugins": [
+    "Linear Statics",
+    "Modal Analysis"
+  ]
+}
