@@ -1,0 +1,36 @@
+{
+  "Tool": {
+    "File_Name": "2.3.1.8-FEA_COMSOLStructural.json",
+    "Class": "Simulations",
+    "Type": "FEA",
+    "Instance": "COMSOL Multiphysics Structural Module",
+    "Vendor": "COMSOL",
+    "Version": "6.1",
+    "POC": {
+      "Name": "COMSOL Eng",
+      "Email": "comsol.eng@example.com"
+    }
+  },
+  "Licensing": {
+    "Type": "Concurrent",
+    "Server": {
+      "Vendor": "COMSOL License Manager",
+      "Hostname": "comsol-license.corp.local",
+      "IP": "192.168.40.56",
+      "Port": "1718",
+      "Protocol": "TCP/IP"
+    }
+  },
+  "Access_Control": {
+    "IAM": "LDAP"
+  },
+  "Deployment": {
+    "Level": "Project",
+    "Type": "On-Premise",
+    "InfoSec_Level": ["CUI"]
+  },
+  "Plugins": [
+    "Structural Mechanics",
+    "Multiphysics Coupling"
+  ]
+}
