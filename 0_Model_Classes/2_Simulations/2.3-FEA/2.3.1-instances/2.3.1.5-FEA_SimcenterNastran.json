@@ -1,0 +1,41 @@
+{
+  "Tool": {
+    "File_Name": "2.3.1.5-FEA_SimcenterNastran.json",
+    "Class": "Simulations",
+    "Type": "FEA",
+    "Instance": "Siemens Simcenter Nastran",
+    "Vendor": "Siemens",
+    "Version": "2023",
+    "POC": {
+      "Name": "Simcenter FEA Admin",
+      "Email": "simcenter.fea@example.com"
+    }
+  },
+  "Licensing": {
+    "Type": "Concurrent",
+    "Server": {
+      "Vendor": "Siemens License Manager",
+      "Hostname": "simcenter-nastran-license.corp.local",
+      "IP": "192.168.40.53",
+      "Port": "28000",
+      "Protocol": "TCP/IP"
+    }
+  },
+  "Access_Control": {
+    "IAM": "LDAP"
+  },
+  "Deployment": {
+    "Level": "Enterprise",
+    "Type": "Hybrid",
+    "Cloud": {
+      "Type": "Private",
+      "Provider": "Azure"
+    },
+    "InfoSec_Level": ["CUI", "ITAR"]
+  },
+  "Plugins": [
+    "Dynamics Module",
+    "Rotor Dynamics",
+    "Aeroelasticity"
+  ]
+}
