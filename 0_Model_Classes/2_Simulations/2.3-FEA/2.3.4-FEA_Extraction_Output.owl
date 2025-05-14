@@ -1,0 +1,141 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:fea="http://example.com/feaExtraction#"
+    xml:base="http://example.com/feaExtraction"
+    owl:versionInfo="1.0">
+
+  <owl:Ontology rdf:about="">
+    <rdfs:label>FEA Extraction Output Ontology</rdfs:label>
+    <rdfs:comment>Represents data from structural/thermal/vibration FEA solvers: stress/strain, displacements, mode shapes, etc.</rdfs:comment>
+  </owl:Ontology>
+  
+  <!-- Classes -->
+  <owl:Class rdf:about="fea:FEAExtractionOutput">
+    <rdfs:label>FEA Extraction Output</rdfs:label>
+    <rdfs:comment>Root class for result data from an FEA solver run.</rdfs:comment>
+  </owl:Class>
+  
+  <owl:Class rdf:about="fea:ProprietaryFEAFile">
+    <rdfs:label>Proprietary FEA File</rdfs:label>
+    <rdfs:comment>Tool-specific files: .op2, .odb, .rst, .dyn, etc.</rdfs:comment>
+  </owl:Class>
+  
+  <owl:Class rdf:about="fea:NeutralFile">
+    <rdfs:label>Neutral FEA File</rdfs:label>
+    <rdfs:comment>.csv, .vtk, .hdf5, images/animations for post-processing data.</rdfs:comment>
+  </owl:Class>
+  
+  <owl:Class rdf:about="fea:Metadata">
+    <rdfs:label>FEA Metadata</rdfs:label>
+    <rdfs:comment>Solver version, HPC job info, analysis type, date/time, etc.</rdfs:comment>
+  </owl:Class>
+  
+  <owl:Class rdf:about="fea:ApplicableStandard">
+    <rdfs:label>FEA Applicable Standard</rdfs:label>
+    <rdfs:comment>Codes or process guidelines (ISO 9001, CGNS for partial data, etc.).</rdfs:comment>
+  </owl:Class>
+  
+  <owl:Class rdf:about="fea:CriticalDataField">
+    <rdfs:label>FEA Critical Data Field</rdfs:label>
+    <rdfs:comment>Key solution sets: stress/strain fields, displacements, mode shapes, thermal results, contact, nonlinear data.</rdfs:comment>
+  </owl:Class>
+  
+  <!-- Subclasses for data fields -->
+  <owl:Class rdf:about="fea:StressStrainFields">
+    <rdfs:subClassOf rdf:resource="fea:CriticalDataField"/>
+    <rdfs:label>Stress/Strain Fields</rdfs:label>
+  </owl:Class>
+  
+  <owl:Class rdf:about="fea:DisplacementDeflection">
+    <rdfs:subClassOf rdf:resource="fea:CriticalDataField"/>
+    <rdfs:label>Displacement and Deflection</rdfs:label>
+  </owl:Class>
+  
+  <owl:Class rdf:about="fea:ModeShapesEigenvalues">
+    <rdfs:subClassOf rdf:resource="fea:CriticalDataField"/>
+    <rdfs:label>Mode Shapes and Eigenvalues</rdfs:label>
+  </owl:Class>
+  
+  <owl:Class rdf:about="fea:ThermalResults">
+    <rdfs:subClassOf rdf:resource="fea:CriticalDataField"/>
+    <rdfs:label>Thermal Results</rdfs:label>
+  </owl:Class>
+  
+  <owl:Class rdf:about="fea:ContactInterfaces">
+    <rdfs:subClassOf rdf:resource="fea:CriticalDataField"/>
+    <rdfs:label>Contact and Interfaces</rdfs:label>
+  </owl:Class>
+  
+  <owl:Class rdf:about="fea:NonlinearResults">
+    <rdfs:subClassOf rdf:resource="fea:CriticalDataField"/>
+    <rdfs:label>Nonlinear Results</rdfs:label>
+  </owl:Class>
+  
+  <!-- Object Properties -->
+  <owl:ObjectProperty rdf:about="fea:hasProprietaryFile">
+    <rdfs:domain rdf:resource="fea:FEAExtractionOutput"/>
+    <rdfs:range rdf:resource="fea:ProprietaryFEAFile"/>
+  </owl:ObjectProperty>
+  
+  <owl:ObjectProperty rdf:about="fea:hasNeutralFile">
+    <rdfs:domain rdf:resource="fea:FEAExtractionOutput"/>
+    <rdfs:range rdf:resource="fea:NeutralFile"/>
+  </owl:ObjectProperty>
+  
+  <owl:ObjectProperty rdf:about="fea:hasMetadata">
+    <rdfs:domain rdf:resource="fea:FEAExtractionOutput"/>
+    <rdfs:range rdf:resource="fea:Metadata"/>
+  </owl:ObjectProperty>
+  
+  <owl:ObjectProperty rdf:about="fea:hasApplicableStandard">
+    <rdfs:domain rdf:resource="fea:FEAExtractionOutput"/>
+    <rdfs:range rdf:resource="fea:ApplicableStandard"/>
+  </owl:ObjectProperty>
+  
+  <owl:ObjectProperty rdf:about="fea:hasCriticalDataField">
+    <rdfs:domain rdf:resource="fea:FEAExtractionOutput"/>
+    <rdfs:range rdf:resource="fea:CriticalDataField"/>
+  </owl:ObjectProperty>
+  
+  <!-- Sub-properties for specialized data fields -->
+  <owl:ObjectProperty rdf:about="fea:hasStressStrainFields">
+    <rdfs:subPropertyOf rdf:resource="fea:hasCriticalDataField"/>
+    <rdfs:domain rdf:resource="fea:FEAExtractionOutput"/>
+    <rdfs:range rdf:resource="fea:StressStrainFields"/>
+  </owl:ObjectProperty>
+  
+  <owl:ObjectProperty rdf:about="fea:hasDisplacementDeflection">
+    <rdfs:subPropertyOf rdf:resource="fea:hasCriticalDataField"/>
+    <rdfs:domain rdf:resource="fea:FEAExtractionOutput"/>
+    <rdfs:range rdf:resource="fea:DisplacementDeflection"/>
+  </owl:ObjectProperty>
+  
+  <owl:ObjectProperty rdf:about="fea:hasModeShapesEigenvalues">
+    <rdfs:subPropertyOf rdf:resource="fea:hasCriticalDataField"/>
+    <rdfs:domain rdf:resource="fea:FEAExtractionOutput"/>
+    <rdfs:range rdf:resource="fea:ModeShapesEigenvalues"/>
+  </owl:ObjectProperty>
+  
+  <owl:ObjectProperty rdf:about="fea:hasThermalResults">
+    <rdfs:subPropertyOf rdf:resource="fea:hasCriticalDataField"/>
+    <rdfs:domain rdf:resource="fea:FEAExtractionOutput"/>
+    <rdfs:range rdf:resource="fea:ThermalResults"/>
+  </owl:ObjectProperty>
+  
+  <owl:ObjectProperty rdf:about="fea:hasContactInterfaces">
+    <rdfs:subPropertyOf rdf:resource="fea:hasCriticalDataField"/>
+    <rdfs:domain rdf:resource="fea:FEAExtractionOutput"/>
+    <rdfs:range rdf:resource="fea:ContactInterfaces"/>
+  </owl:ObjectProperty>
+  
+  <owl:ObjectProperty rdf:about="fea:hasNonlinearResults">
+    <rdfs:subPropertyOf rdf:resource="fea:hasCriticalDataField"/>
+    <rdfs:domain rdf:resource="fea:FEAExtractionOutput"/>
+    <rdfs:range rdf:resource="fea:NonlinearResults"/>
+  </owl:ObjectProperty>
+
+</rdf:RDF>
