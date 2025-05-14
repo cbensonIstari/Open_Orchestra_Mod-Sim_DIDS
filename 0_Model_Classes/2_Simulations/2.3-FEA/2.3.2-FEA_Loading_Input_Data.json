@@ -1,0 +1,28 @@
+{
+  "FEA_Loading_Input_Data": {
+    "Geometry_and_Meshing": [
+      ".bdf / .dat / .inp (Nastran/Abaqus input decks)",
+      ".cdb (ANSYS Mechanical input file)",
+      ".fem / .sim (NX Nastran, Simcenter)",
+      "IGES/STEP if direct geometry import for embedded meshing"
+    ],
+    "Material_Properties": [
+      ".mat (Material property library, custom text formats)",
+      "XML/JSON-based property definitions",
+      "Vendor data sheets for advanced composites or metals"
+    ],
+    "Boundary_Conditions": [
+      ".ccl (ANSYS APDL commands?), .mdl (LS-DYNA?), .bat (ABAQUS param sets)",
+      "GUI-based bc definitions stored in .db files"
+    ],
+    "Solver_Settings": [
+      "Solver decks specifying analysis type (Linear, Nonlinear, Modal, Buckling)",
+      "Convergence criteria, HPC parallel settings"
+    ],
+    "Reference_Data": [
+      "Experimental test results for correlation",
+      "Legacy input decks or partial solutions for reanalysis",
+      "Standards or code references (ASME, AISC, etc.)"
+    ]
+  }
+}
