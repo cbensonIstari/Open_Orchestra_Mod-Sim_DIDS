@@ -1,0 +1,41 @@
+{
+  "Tool": {
+    "File_Name": "2.3.1.2-FEA_Abaqus.json",
+    "Class": "Simulations",
+    "Type": "FEA",
+    "Instance": "Abaqus",
+    "Vendor": "Dassault Systèmes SIMULIA",
+    "Version": "2023",
+    "POC": {
+      "Name": "Abaqus Specialist",
+      "Email": "abaqus.specialist@example.com"
+    }
+  },
+  "Licensing": {
+    "Type": "Concurrent",
+    "Server": {
+      "Vendor": "SIMULIA License Server",
+      "Hostname": "abaqus-license.corp.local",
+      "IP": "192.168.40.51",
+      "Port": "27010",
+      "Protocol": "TCP/IP"
+    }
+  },
+  "Access_Control": {
+    "IAM": "LDAP"
+  },
+  "Deployment": {
+    "Level": "Department",
+    "Type": "Hybrid",
+    "Cloud": {
+      "Type": "Private",
+      "Provider": "AWS"
+    },
+    "InfoSec_Level": ["CUI", "ITAR"]
+  },
+  "Plugins": [
+    "Explicit Solver",
+    "CFD Coupling",
+    "Topology Optimization"
+  ]
+}
