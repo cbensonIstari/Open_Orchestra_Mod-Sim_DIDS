@@ -1,0 +1,51 @@
+{
+  "FEA_Extraction_Output_Data": {
+    "Proprietary_Files": [
+      ".op2 (Nastran results)",
+      ".odb (Abaqus output database)",
+      ".rst (ANSYS result file)",
+      ".ptf / .pch (NX Nastran punch files)",
+      ".dyn (LS-DYNA d3plot, etc.)"
+    ],
+    "Neutral_Files": [
+      ".csv/.xlsx (Stress/strain data, nodal displacements)",
+      ".vtk / .vtu (ParaView post-processing)",
+      ".hdf5 (Generic HPC or universal data container)",
+      ".png/.jpg (Contour plots), .avi (animations)"
+    ],
+    "Metadata": [
+      "Solver version, user, HPC job ID, date/time, run duration",
+      "Analysis type (static, dynamic, nonlinear), model name"
+    ],
+    "Applicable_Standards": {
+      "Mesh_and_Result_Interchange": [
+        "CGNS if extended to structural? (less common for FEA)",
+        "VTK standard for post-proc"
+      ],
+      "Process_and_Quality": [
+        "ISO 9001, AS9100 for aerospace QA",
+        "CMMI references for solver usage"
+      ]
+    },
+    "Critical_Data_Fields": {
+      "Stress_Strain_Fields": [
+        "Element/nodal stress, strain, von Mises, principal stresses"
+      ],
+      "Displacement_and_Deflection": [
+        "Nodal translations, rotations, overall deflection"
+      ],
+      "Mode_Shapes_and_Eigenvalues": [
+        "Frequencies, damping factors, eigenvectors"
+      ],
+      "Thermal_Results": [
+        "Temperature distribution, conduction results, thermal stress"
+      ],
+      "Contact_and_Interfaces": [
+        "Contact pressure, gap info, friction models"
+      ],
+      "Nonlinear_Results": [
+        "Plastic strain, large displacement logs, solver iteration info"
+      ]
+    }
+  }
+}
