@@ -1,0 +1,36 @@
+{
+  "Tool": {
+    "File_Name": "2.3.1.6-FEA_AltairOptiStruct.json",
+    "Class": "Simulations",
+    "Type": "FEA",
+    "Instance": "Altair OptiStruct",
+    "Vendor": "Altair",
+    "Version": "2023",
+    "POC": {
+      "Name": "OptiStruct Specialist",
+      "Email": "optistruct.spec@example.com"
+    }
+  },
+  "Licensing": {
+    "Type": "Floating",
+    "Server": {
+      "Vendor": "Altair License Manager",
+      "Hostname": "altair-license.corp.local",
+      "IP": "192.168.40.54",
+      "Port": "6200",
+      "Protocol": "TCP/IP"
+    }
+  },
+  "Access_Control": {
+    "IAM": "LDAP"
+  },
+  "Deployment": {
+    "Level": "Business Unit",
+    "Type": "On-Premise",
+    "InfoSec_Level": ["CUI"]
+  },
+  "Plugins": [
+    "Topology Optimization",
+    "Fatigue Analysis"
+  ]
+}
