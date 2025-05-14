@@ -1,0 +1,36 @@
+{
+  "Tool": {
+    "File_Name": "2.3.1.10-FEA_SAP2000.json",
+    "Class": "Simulations",
+    "Type": "FEA",
+    "Instance": "SAP2000",
+    "Vendor": "Computers and Structures, Inc.",
+    "Version": "23",
+    "POC": {
+      "Name": "Structural Engineer",
+      "Email": "sap2000.eng@example.com"
+    }
+  },
+  "Licensing": {
+    "Type": "Node-Locked",
+    "Server": {
+      "Vendor": "CSI License Service",
+      "Hostname": "sap2000-license.corp.local",
+      "IP": "192.168.40.57",
+      "Port": "27000",
+      "Protocol": "TCP/IP"
+    }
+  },
+  "Access_Control": {
+    "IAM": "Local Accounts"
+  },
+  "Deployment": {
+    "Level": "Project",
+    "Type": "On-Premise",
+    "InfoSec_Level": []
+  },
+  "Plugins": [
+    "Concrete/Steel Design Codes",
+    "Vibration Analysis"
+  ]
+}
