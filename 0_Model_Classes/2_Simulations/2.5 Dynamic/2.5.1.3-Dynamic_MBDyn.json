@@ -1,0 +1,29 @@
+{
+  "Tool": {
+    "File_Name": "2.5.1.3-Dynamic_MBDyn.json",
+    "Class": "Simulations",
+    "Type": "Dynamic",
+    "Instance": "MBDyn",
+    "Vendor": "Open Source Community",
+    "Version": "1.7.3",
+    "POC": {
+      "Name": "MBDyn Maintainer",
+      "Email": "mbdyn.maint@example.org"
+    }
+  },
+  "Licensing": {
+    "Type": "GPL",
+    "Server": null
+  },
+  "Access_Control": {
+    "IAM": "Local Accounts"
+  },
+  "Deployment": {
+    "Level": "Project",
+    "Type": "Desktop Install",
+    "InfoSec_Level": []
+  },
+  "Plugins": [
+    "In-house solver scripts"
+  ]
+}
