@@ -1,0 +1,43 @@
+{
+  "MissionModels_Extraction_Output_Data": {
+    "Proprietary_Files": [
+      ".afslog (AFSIM logs), .scn (OneSAF scenario run), .stk scenario results",
+      ".alsim (AnyLogic?), .exd (ExtendSim) or custom db
+    ],
+    "Neutral_Files": [
+      ".csv/.xlsx (engagement logs, timestamps, success/fail metrics)",
+      ".json/.xml for scenario states, .mp4 for scenario replays"
+    ],
+    "Metadata": [
+      "Solver version, HPC job ID, user, date/time, mission scenario name",
+      "Analysis type (Monte Carlo, single-run deterministic, agent-based, etc.)"
+    ],
+    "Applicable_Standards": {
+      "Scenario_Exchange": [
+        "MSDL (Military Scenario Definition Language), if used",
+        "Some IEEE standards for distributed simulation (HLA, DIS)"
+      ],
+      "Process_Quality": [
+        "ISO 9001, AS9100 if relevant",
+        "CMMI references for scenario-based testing"
+      ]
+    },
+    "Critical_Data_Fields": {
+      "Entity_Engagements": [
+        "Kills, losses, detection events, sensor acquisitions"
+      ],
+      "Time_Based_Events": [
+        "Event logs with timestamps, triggers, or mission phase transitions"
+      ],
+      "Resource_Usage": [
+        "Fuel consumption, ammo usage, comm bandwidth"
+      ],
+      "Performance_Metrics": [
+        "Mission success probability, LOS coverage, area coverage"
+      ],
+      "System_Interactions": [
+        "Data links, agent messages, synergy between platforms"
+      ]
+    }
+  }
+}
