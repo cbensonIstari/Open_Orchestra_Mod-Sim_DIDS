@@ -1,0 +1,30 @@
+{
+  "Tool": {
+    "File_Name": "2.6.1.5-MissionModels_OneSAF.json",
+    "Class": "Simulations",
+    "Type": "MissionModels",
+    "Instance": "OneSAF",
+    "Vendor": "US Army PEO STRI / In-house dev",
+    "Version": "5.2",
+    "POC": {
+      "Name": "OneSAF Maintainer",
+      "Email": "onesaf.maint@example.mil"
+    }
+  },
+  "Licensing": {
+    "Type": "Government Use",
+    "Server": null
+  },
+  "Access_Control": {
+    "IAM": "Active Directory"
+  },
+  "Deployment": {
+    "Level": "Enterprise",
+    "Type": "On-Premise",
+    "InfoSec_Level": ["SECRET", "CUI"]
+  },
+  "Plugins": [
+    "Direct Fire Module",
+    "Terrain Server Interface"
+  ]
+}
