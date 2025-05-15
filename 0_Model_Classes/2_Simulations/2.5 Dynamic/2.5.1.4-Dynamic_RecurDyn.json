@@ -1,0 +1,36 @@
+{
+  "Tool": {
+    "File_Name": "2.5.1.4-Dynamic_RecurDyn.json",
+    "Class": "Simulations",
+    "Type": "Dynamic",
+    "Instance": "RecurDyn",
+    "Vendor": "FunctionBay",
+    "Version": "2023",
+    "POC": {
+      "Name": "RecurDyn Admin",
+      "Email": "recurdyn.admin@example.com"
+    }
+  },
+  "Licensing": {
+    "Type": "Floating",
+    "Server": {
+      "Vendor": "FunctionBay License Manager",
+      "Hostname": "recurdyn-license.corp.local",
+      "IP": "192.168.45.52",
+      "Port": "27000",
+      "Protocol": "TCP/IP"
+    }
+  },
+  "Access_Control": {
+    "IAM": "LDAP"
+  },
+  "Deployment": {
+    "Level": "Department",
+    "Type": "On-Premise",
+    "InfoSec_Level": ["CUI"]
+  },
+  "Plugins": [
+    "MFBD (Flexible bodies)",
+    "Particleworks Coupling"
+  ]
+}
