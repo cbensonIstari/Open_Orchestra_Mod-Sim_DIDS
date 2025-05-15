@@ -1,0 +1,36 @@
+{
+  "Tool": {
+    "File_Name": "2.4.1.7-EM_KeysightADS.json",
+    "Class": "Simulations",
+    "Type": "EM",
+    "Instance": "Keysight ADS",
+    "Vendor": "Keysight Technologies",
+    "Version": "2023",
+    "POC": {
+      "Name": "Keysight ADS Specialist",
+      "Email": "keysight.ads@example.com"
+    }
+  },
+  "Licensing": {
+    "Type": "Named User",
+    "Server": {
+      "Vendor": "Keysight License Manager",
+      "Hostname": "keysight-license.corp.local",
+      "IP": "192.168.35.55",
+      "Port": "27000",
+      "Protocol": "TCP/IP"
+    }
+  },
+  "Access_Control": {
+    "IAM": "SAML SSO"
+  },
+  "Deployment": {
+    "Level": "Project",
+    "Type": "On-Premise",
+    "InfoSec_Level": []
+  },
+  "Plugins": [
+    "Momentum (Planar EM Solver)",
+    "Circuit Co-Simulation"
+  ]
+}
