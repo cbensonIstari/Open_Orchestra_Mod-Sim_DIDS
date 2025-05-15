@@ -1,0 +1,36 @@
+{
+  "Tool": {
+    "File_Name": "2.6.1.3-MissionModels_ExtendSim.json",
+    "Class": "Simulations",
+    "Type": "MissionModels",
+    "Instance": "ExtendSim",
+    "Vendor": "Imagine That Inc.",
+    "Version": "10.0",
+    "POC": {
+      "Name": "ExtendSim Specialist",
+      "Email": "extendsim.spec@example.com"
+    }
+  },
+  "Licensing": {
+    "Type": "Named User",
+    "Server": {
+      "Vendor": "ExtendSim License Manager",
+      "Hostname": "extend-license.corp.local",
+      "IP": null,
+      "Port": "443",
+      "Protocol": "HTTPS"
+    }
+  },
+  "Access_Control": {
+    "IAM": "SAML SSO"
+  },
+  "Deployment": {
+    "Level": "Project",
+    "Type": "On-Premise",
+    "InfoSec_Level": []
+  },
+  "Plugins": [
+    "Discrete Event Blocks",
+    "Value Stream Mapping"
+  ]
+}
