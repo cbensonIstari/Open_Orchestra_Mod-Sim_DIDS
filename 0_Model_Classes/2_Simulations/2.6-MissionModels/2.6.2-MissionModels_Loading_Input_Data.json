@@ -1,0 +1,25 @@
+{
+  "MissionModels_Loading_Input_Data": {
+    "Scenario_Definitions": [
+      "Terrain data (DEM, shapefiles, or proprietary .ter)",
+      "Force structures (friendly, neutral, threat), .xml / .json",
+      "Time-based events (waypoints, triggers, comm links)"
+    ],
+    "Entity_and_Asset_Models": [
+      "Platform performance data, speed, sensors, weapons",
+      "In-house derived or vendor data sheets"
+    ],
+    "Environment_and_Weather": [
+      "Wind, temperature, cloud cover if relevant",
+      "Space environment for orbital scenarios (STK ephemeris)"
+    ],
+    "Solver_Settings": [
+      "Time-step, HPC parallel or cluster config",
+      "Discretization approach (Monte Carlo vs. deterministic)"
+    ],
+    "Reference_Data": [
+      "Experiment logs or operational data for correlation",
+      "Legacy scenario partial results or test campaigns"
+    ]
+  }
+}
