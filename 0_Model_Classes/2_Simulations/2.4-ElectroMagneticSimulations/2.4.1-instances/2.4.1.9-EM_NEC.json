@@ -1,0 +1,29 @@
+{
+  "Tool": {
+    "File_Name": "2.4.1.9-EM_NEC.json",
+    "Class": "Simulations",
+    "Type": "EM",
+    "Instance": "NEC (Numerical Electromagnetics Code)",
+    "Vendor": "Open Source / Public domain (Lawrence Livermore)",
+    "Version": "5.0",
+    "POC": {
+      "Name": "NEC Maintainer",
+      "Email": "nec.maint@example.org"
+    }
+  },
+  "Licensing": {
+    "Type": "Public Domain",
+    "Server": null
+  },
+  "Access_Control": {
+    "IAM": "Local Accounts"
+  },
+  "Deployment": {
+    "Level": "Project",
+    "Type": "Desktop Install",
+    "InfoSec_Level": []
+  },
+  "Plugins": [
+    "Antenna Geometry Pre/Post"
+  ]
+}
