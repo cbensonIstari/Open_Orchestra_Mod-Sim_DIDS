@@ -1,0 +1,36 @@
+{
+  "Tool": {
+    "File_Name": "2.4.1.10-EM_Sonnet.json",
+    "Class": "Simulations",
+    "Type": "EM",
+    "Instance": "Sonnet",
+    "Vendor": "Sonnet Software",
+    "Version": "17.52",
+    "POC": {
+      "Name": "Sonnet Specialist",
+      "Email": "sonnet.spec@example.com"
+    }
+  },
+  "Licensing": {
+    "Type": "Node-Locked",
+    "Server": {
+      "Vendor": "Sonnet License Service",
+      "Hostname": "sonnet-license.corp.local",
+      "IP": "192.168.35.57",
+      "Port": "27000",
+      "Protocol": "TCP/IP"
+    }
+  },
+  "Access_Control": {
+    "IAM": "SAML SSO"
+  },
+  "Deployment": {
+    "Level": "Business Unit",
+    "Type": "On-Premise",
+    "InfoSec_Level": []
+  },
+  "Plugins": [
+    "Planar EM Analysis",
+    "Advanced De-embedding"
+  ]
+}
