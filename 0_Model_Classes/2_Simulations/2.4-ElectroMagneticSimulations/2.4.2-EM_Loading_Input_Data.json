@@ -1,0 +1,25 @@
+{
+  "EM_Loading_Input_Data": {
+    "Geometry_Files": [
+      ".step / .iges (CAD geometry import)",
+      ".cst / .hfss / .ads / .son (Vendor-proprietary geometry/projects)",
+      ".geo / .msh (OpenEMS or custom meshing for FDTD)"
+    ],
+    "Material_and_BC_Definitions": [
+      "Material property libs (permittivity, conductivity, dielectric constants)",
+      "Boundary condition specs for waveports, scattering boundaries, radiation"
+    ],
+    "Excitation_Parameters": [
+      "Frequency sweeps, multi-port definitions, waveguide feeds",
+      "Pulse definitions for time-domain solvers (FDTD, TLM)"
+    ],
+    "Solver_Settings": [
+      "Meshing parameters (mesh density, refinement boxes)",
+      "Convergence criteria, HPC parallel or GPU settings"
+    ],
+    "Reference_Data": [
+      "Measured S-parameters, antenna patterns, or RCS data for correlation",
+      "Legacy result sets or partial solutions from earlier versions"
+    ]
+  }
+}
