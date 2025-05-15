@@ -1,0 +1,30 @@
+{
+  "Tool": {
+    "File_Name": "2.4.1.3-EM_OpenEMS.json",
+    "Class": "Simulations",
+    "Type": "EM",
+    "Instance": "OpenEMS",
+    "Vendor": "Open Source Community",
+    "Version": "1.0",
+    "POC": {
+      "Name": "OpenEMS Dev",
+      "Email": "openems.dev@example.org"
+    }
+  },
+  "Licensing": {
+    "Type": "GPL",
+    "Server": null
+  },
+  "Access_Control": {
+    "IAM": "Local Accounts"
+  },
+  "Deployment": {
+    "Level": "Project",
+    "Type": "Desktop Install",
+    "InfoSec_Level": []
+  },
+  "Plugins": [
+    "MATLAB/Octave scripts",
+    "Paraview post-processing"
+  ]
+}
