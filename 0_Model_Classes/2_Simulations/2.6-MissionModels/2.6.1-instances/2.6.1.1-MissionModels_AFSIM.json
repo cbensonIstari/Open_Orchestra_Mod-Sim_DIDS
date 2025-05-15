@@ -1,0 +1,30 @@
+{
+  "Tool": {
+    "File_Name": "2.6.1.1-MissionModels_AFSIM.json",
+    "Class": "Simulations",
+    "Type": "MissionModels",
+    "Instance": "AFSIM",
+    "Vendor": "US Air Force / Gov (in-house dev)",
+    "Version": "Release 3.2",
+    "POC": {
+      "Name": "AFSIM Coordinator",
+      "Email": "afsim.coord@example.mil"
+    }
+  },
+  "Licensing": {
+    "Type": "Government Use",
+    "Server": null
+  },
+  "Access_Control": {
+    "IAM": "Active Directory"
+  },
+  "Deployment": {
+    "Level": "Enterprise",
+    "Type": "On-Premise",
+    "InfoSec_Level": ["SECRET", "CUI"]
+  },
+  "Plugins": [
+    "Multi-Domain Module",
+    "EW Module"
+  ]
+}
