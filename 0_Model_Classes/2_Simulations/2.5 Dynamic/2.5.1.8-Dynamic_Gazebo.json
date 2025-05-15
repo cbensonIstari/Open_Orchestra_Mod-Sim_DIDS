@@ -1,0 +1,30 @@
+{
+  "Tool": {
+    "File_Name": "2.5.1.8-Dynamic_Gazebo.json",
+    "Class": "Simulations",
+    "Type": "Dynamic",
+    "Instance": "Gazebo",
+    "Vendor": "Open Source (OSRF)",
+    "Version": "11.0",
+    "POC": {
+      "Name": "Gazebo Maintainer",
+      "Email": "gazebo.maint@example.org"
+    }
+  },
+  "Licensing": {
+    "Type": "Apache 2.0",
+    "Server": null
+  },
+  "Access_Control": {
+    "IAM": "Local Accounts / GitHub Auth"
+  },
+  "Deployment": {
+    "Level": "Project",
+    "Type": "Desktop Install",
+    "InfoSec_Level": []
+  },
+  "Plugins": [
+    "ROS Integration",
+    "Sensor Models (cameras, LiDAR)"
+  ]
+}
