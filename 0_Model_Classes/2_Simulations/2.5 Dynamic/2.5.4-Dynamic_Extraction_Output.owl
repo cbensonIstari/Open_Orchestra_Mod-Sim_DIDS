@@ -1,0 +1,130 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:dyn="http://example.com/dynamicExtraction#"
+    xml:base="http://example.com/dynamicExtraction"
+    owl:versionInfo="1.0">
+
+  <owl:Ontology rdf:about="">
+    <rdfs:label>Dynamic Extraction Output Ontology</rdfs:label>
+    <rdfs:comment>Models typical data from motion/rbd (rigid-body) simulations: time histories, reaction forces, animations.</rdfs:comment>
+  </owl:Ontology>
+  
+  <!-- Classes -->
+  <owl:Class rdf:about="dyn:DynamicExtractionOutput">
+    <rdfs:label>Dynamic Extraction Output</rdfs:label>
+    <rdfs:comment>Root concept for data extracted from a mechanical system dynamics solver.</rdfs:comment>
+  </owl:Class>
+  
+  <owl:Class rdf:about="dyn:ProprietaryDynamicFile">
+    <rdfs:label>Proprietary Dynamic File</rdfs:label>
+    <rdfs:comment>Native result archives: .admres, .rdyn, .sim, .mbd, etc.</rdfs:comment>
+  </owl:Class>
+  
+  <owl:Class rdf:about="dyn:NeutralFile">
+    <rdfs:label>Neutral Dynamic File</rdfs:label>
+    <rdfs:comment>.csv, .json, .xml, or .mp4 for generic result sets or animations.</rdfs:comment>
+  </owl:Class>
+  
+  <owl:Class rdf:about="dyn:Metadata">
+    <rdfs:label>Dynamic Metadata</rdfs:label>
+    <rdfs:comment>Solver version, HPC job details, user, date/time, scenario name, etc.</rdfs:comment>
+  </owl:Class>
+  
+  <owl:Class rdf:about="dyn:ApplicableStandard">
+    <rdfs:label>Dynamic Applicable Standard</rdfs:label>
+    <rdfs:comment>Any relevant data exchange or QA standards (FMI, ISO 9001, etc.).</rdfs:comment>
+  </owl:Class>
+  
+  <owl:Class rdf:about="dyn:CriticalDataField">
+    <rdfs:label>Dynamic Critical Data Field</rdfs:label>
+    <rdfs:comment>Key solution sets: time history of states, joint reaction forces, energy usage, collision/contact results.</rdfs:comment>
+  </owl:Class>
+  
+  <!-- Subclasses for data fields -->
+  <owl:Class rdf:about="dyn:TimeHistoryOfStates">
+    <rdfs:subClassOf rdf:resource="dyn:CriticalDataField"/>
+    <rdfs:label>Time History of States</rdfs:label>
+  </owl:Class>
+  
+  <owl:Class rdf:about="dyn:JointReactionForces">
+    <rdfs:subClassOf rdf:resource="dyn:CriticalDataField"/>
+    <rdfs:label>Joint Reaction Forces</rdfs:label>
+  </owl:Class>
+  
+  <owl:Class rdf:about="dyn:EnergyPowerConsumption">
+    <rdfs:subClassOf rdf:resource="dyn:CriticalDataField"/>
+    <rdfs:label>Energy and Power Consumption</rdfs:label>
+  </owl:Class>
+  
+  <owl:Class rdf:about="dyn:CollisionContactResults">
+    <rdfs:subClassOf rdf:resource="dyn:CriticalDataField"/>
+    <rdfs:label>Collision and Contact Results</rdfs:label>
+  </owl:Class>
+  
+  <owl:Class rdf:about="dyn:AnimationKeyFrames">
+    <rdfs:subClassOf rdf:resource="dyn:CriticalDataField"/>
+    <rdfs:label>Animation and KeyFrames</rdfs:label>
+  </owl:Class>
+  
+  <!-- Object Properties -->
+  <owl:ObjectProperty rdf:about="dyn:hasProprietaryFile">
+    <rdfs:domain rdf:resource="dyn:DynamicExtractionOutput"/>
+    <rdfs:range rdf:resource="dyn:ProprietaryDynamicFile"/>
+  </owl:ObjectProperty>
+  
+  <owl:ObjectProperty rdf:about="dyn:hasNeutralFile">
+    <rdfs:domain rdf:resource="dyn:DynamicExtractionOutput"/>
+    <rdfs:range rdf:resource="dyn:NeutralFile"/>
+  </owl:ObjectProperty>
+  
+  <owl:ObjectProperty rdf:about="dyn:hasMetadata">
+    <rdfs:domain rdf:resource="dyn:DynamicExtractionOutput"/>
+    <rdfs:range rdf:resource="dyn:Metadata"/>
+  </owl:ObjectProperty>
+  
+  <owl:ObjectProperty rdf:about="dyn:hasApplicableStandard">
+    <rdfs:domain rdf:resource="dyn:DynamicExtractionOutput"/>
+    <rdfs:range rdf:resource="dyn:ApplicableStandard"/>
+  </owl:ObjectProperty>
+  
+  <owl:ObjectProperty rdf:about="dyn:hasCriticalDataField">
+    <rdfs:domain rdf:resource="dyn:DynamicExtractionOutput"/>
+    <rdfs:range rdf:resource="dyn:CriticalDataField"/>
+  </owl:ObjectProperty>
+  
+  <!-- Sub-properties for each specialized data field -->
+  <owl:ObjectProperty rdf:about="dyn:hasTimeHistoryOfStates">
+    <rdfs:subPropertyOf rdf:resource="dyn:hasCriticalDataField"/>
+    <rdfs:domain rdf:resource="dyn:DynamicExtractionOutput"/>
+    <rdfs:range rdf:resource="dyn:TimeHistoryOfStates"/>
+  </owl:ObjectProperty>
+  
+  <owl:ObjectProperty rdf:about="dyn:hasJointReactionForces">
+    <rdfs:subPropertyOf rdf:resource="dyn:hasCriticalDataField"/>
+    <rdfs:domain rdf:resource="dyn:DynamicExtractionOutput"/>
+    <rdfs:range rdf:resource="dyn:JointReactionForces"/>
+  </owl:ObjectProperty>
+  
+  <owl:ObjectProperty rdf:about="dyn:hasEnergyPowerConsumption">
+    <rdfs:subPropertyOf rdf:resource="dyn:hasCriticalDataField"/>
+    <rdfs:domain rdf:resource="dyn:DynamicExtractionOutput"/>
+    <rdfs:range rdf:resource="dyn:EnergyPowerConsumption"/>
+  </owl:ObjectProperty>
+  
+  <owl:ObjectProperty rdf:about="dyn:hasCollisionContactResults">
+    <rdfs:subPropertyOf rdf:resource="dyn:hasCriticalDataField"/>
+    <rdfs:domain rdf:resource="dyn:DynamicExtractionOutput"/>
+    <rdfs:range rdf:resource="dyn:CollisionContactResults"/>
+  </owl:ObjectProperty>
+  
+  <owl:ObjectProperty rdf:about="dyn:hasAnimationKeyFrames">
+    <rdfs:subPropertyOf rdf:resource="dyn:hasCriticalDataField"/>
+    <rdfs:domain rdf:resource="dyn:DynamicExtractionOutput"/>
+    <rdfs:range rdf:resource="dyn:AnimationKeyFrames"/>
+  </owl:ObjectProperty>
+
+</rdf:RDF>
