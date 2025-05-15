@@ -1,0 +1,36 @@
+{
+  "Tool": {
+    "File_Name": "2.4.1.8-EM_RemcomXFdtd.json",
+    "Class": "Simulations",
+    "Type": "EM",
+    "Instance": "Remcom XFdtd",
+    "Vendor": "Remcom",
+    "Version": "7.8",
+    "POC": {
+      "Name": "XFdtd Admin",
+      "Email": "xf.sim@example.com"
+    }
+  },
+  "Licensing": {
+    "Type": "Floating",
+    "Server": {
+      "Vendor": "Remcom License Service",
+      "Hostname": "remcom-license.corp.local",
+      "IP": "192.168.35.56",
+      "Port": "29000",
+      "Protocol": "TCP/IP"
+    }
+  },
+  "Access_Control": {
+    "IAM": "LDAP"
+  },
+  "Deployment": {
+    "Level": "Department",
+    "Type": "On-Premise",
+    "InfoSec_Level": ["CUI"]
+  },
+  "Plugins": [
+    "FDTD Solver",
+    "Near-Far Field Transform"
+  ]
+}
