@@ -1,0 +1,37 @@
+{
+  "Tool": {
+    "File_Name": "2.5.1.1-Dynamic_MSCADAMS.json",
+    "Class": "Simulations",
+    "Type": "Dynamic",
+    "Instance": "MSC ADAMS",
+    "Vendor": "MSC Software",
+    "Version": "2023.0",
+    "POC": {
+      "Name": "ADAMS Admin",
+      "Email": "adams.admin@example.com"
+    }
+  },
+  "Licensing": {
+    "Type": "Floating",
+    "Server": {
+      "Vendor": "MSC License Manager",
+      "Hostname": "msc-license.corp.local",
+      "IP": "192.168.45.50",
+      "Port": "27000",
+      "Protocol": "TCP/IP"
+    }
+  },
+  "Access_Control": {
+    "IAM": "LDAP"
+  },
+  "Deployment": {
+    "Level": "Department",
+    "Type": "On-Premise",
+    "InfoSec_Level": ["CUI"]
+  },
+  "Plugins": [
+    "Linear Analysis",
+    "Controls Toolkit",
+    "Adams/Car"
+  ]
+}
