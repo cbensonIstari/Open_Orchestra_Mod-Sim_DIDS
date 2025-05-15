@@ -1,0 +1,30 @@
+{
+  "Tool": {
+    "File_Name": "2.5.1.7-Dynamic_Chrono.json",
+    "Class": "Simulations",
+    "Type": "Dynamic",
+    "Instance": "Project Chrono",
+    "Vendor": "Open Source / University of Wisconsin",
+    "Version": "7.0",
+    "POC": {
+      "Name": "Chrono Dev",
+      "Email": "chrono.dev@example.org"
+    }
+  },
+  "Licensing": {
+    "Type": "BSD 3-Clause",
+    "Server": null
+  },
+  "Access_Control": {
+    "IAM": "Local Accounts"
+  },
+  "Deployment": {
+    "Level": "Project",
+    "Type": "Desktop Install",
+    "InfoSec_Level": []
+  },
+  "Plugins": [
+    "Chrono::Vehicle",
+    "Chrono::FSI"
+  ]
+}
