@@ -1,0 +1,36 @@
+{
+  "Tool": {
+    "File_Name": "2.4.1.5-EM_COMSOLMultiphysicsEM.json",
+    "Class": "Simulations",
+    "Type": "EM",
+    "Instance": "COMSOL Multiphysics EM Module",
+    "Vendor": "COMSOL",
+    "Version": "6.1",
+    "POC": {
+      "Name": "COMSOL EM Specialist",
+      "Email": "comsol.em@example.com"
+    }
+  },
+  "Licensing": {
+    "Type": "Concurrent",
+    "Server": {
+      "Vendor": "COMSOL License Manager",
+      "Hostname": "comsol-license.corp.local",
+      "IP": "192.168.35.53",
+      "Port": "1718",
+      "Protocol": "TCP/IP"
+    }
+  },
+  "Access_Control": {
+    "IAM": "LDAP"
+  },
+  "Deployment": {
+    "Level": "Project",
+    "Type": "On-Premise",
+    "InfoSec_Level": ["CUI"]
+  },
+  "Plugins": [
+    "RF Module",
+    "Wave Optics Module"
+  ]
+}
