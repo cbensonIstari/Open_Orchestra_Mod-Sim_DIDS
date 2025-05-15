@@ -1,0 +1,40 @@
+{
+  "Tool": {
+    "File_Name": "2.5.1.5-Dynamic_SimcenterMotion.json",
+    "Class": "Simulations",
+    "Type": "Dynamic",
+    "Instance": "Siemens Simcenter Motion",
+    "Vendor": "Siemens",
+    "Version": "2023.2",
+    "POC": {
+      "Name": "Simcenter Motion Admin",
+      "Email": "simc.motion@example.com"
+    }
+  },
+  "Licensing": {
+    "Type": "Concurrent",
+    "Server": {
+      "Vendor": "Siemens License Manager",
+      "Hostname": "siemens-motion-license.corp.local",
+      "IP": "192.168.45.53",
+      "Port": "28000",
+      "Protocol": "TCP/IP"
+    }
+  },
+  "Access_Control": {
+    "IAM": "Active Directory"
+  },
+  "Deployment": {
+    "Level": "Enterprise",
+    "Type": "Hybrid",
+    "Cloud": {
+      "Type": "Private",
+      "Provider": "Azure"
+    },
+    "InfoSec_Level": ["CUI", "ITAR"]
+  },
+  "Plugins": [
+    "Flexible Body Interface",
+    "Gear & Contact Toolkit"
+  ]
+}
