@@ -1,0 +1,25 @@
+{
+  "Dynamic_Loading_Input_Data": {
+    "Geometry_or_Body_Definitions": [
+      "CAD-derived part shapes with mass/inertia calculations",
+      ".xml / .json for link definitions in robotics (Gazebo, URDF/SDF)",
+      ".adm / .m (.mdl) for ADAMS or Simulink-based definitions"
+    ],
+    "Joint_and_Constraint_Data": [
+      "Revolute, Prismatic, Spherical joints",
+      "Gear constraints, Couplers, End-effectors"
+    ],
+    "Force_Torque_Actuators": [
+      "Motors, hydraulic cylinders, spring-dampers",
+      "In-house actuator models, torque curves"
+    ],
+    "Solver_Settings": [
+      "Time step size, integration method (Euler, RK4, variable-step)",
+      "Simulation horizon, HPC parallel config"
+    ],
+    "Reference_Data": [
+      "Experimental test logs for correlation",
+      "Legacy motion analysis or partial results"
+    ]
+  }
+}
