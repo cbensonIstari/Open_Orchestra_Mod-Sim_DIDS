@@ -1,0 +1,44 @@
+{
+  "Dynamic_Extraction_Output_Data": {
+    "Proprietary_Files": [
+      ".admres (ADAMS results)",
+      ".rdyn (RecurDyn result set)",
+      ".sim (Simscape session?), .mbd (Simcenter?), etc."
+    ],
+    "Neutral_Files": [
+      ".csv/.xlsx (motion profiles, state histories)",
+      ".json/.xml for post-processed dynamic states, .mp4 (animation videos)"
+    ],
+    "Metadata": [
+      "Solver version, HPC job ID, user, date/time, scenario name",
+      "Analysis type (transient, static eq, dynamic eq, co-simulation, etc.)"
+    ],
+    "Applicable_Standards": {
+      "Motion_Data_Exchange": [
+        "Functional Mock-up Interface (FMI/FMU) partial usage",
+        "Some Modelica-based standards"
+      ],
+      "Process_Quality": [
+        "ISO 9001, AS9100 if relevant for QA",
+        "CMMI references for solver usage"
+      ]
+    },
+    "Critical_Data_Fields": {
+      "Time_History_of_States": [
+        "Angular/linear velocities, accelerations, positions over time"
+      ],
+      "Joint_Reaction_Forces": [
+        "Force/moment at each joint or constraint interface"
+      ],
+      "Energy_and_Power_Consumption": [
+        "Actuator power, total system energy, efficiency"
+      ],
+      "Collision_and_Contact_Results": [
+        "Contact force events, friction data, bounding volumes"
+      ],
+      "Animation_and_KeyFrames": [
+        "Generated frames for visual playback of motion"
+      ]
+    }
+  }
+}
