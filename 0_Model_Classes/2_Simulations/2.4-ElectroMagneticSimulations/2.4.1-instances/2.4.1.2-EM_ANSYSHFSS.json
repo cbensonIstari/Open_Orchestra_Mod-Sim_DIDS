@@ -1,0 +1,40 @@
+{
+  "Tool": {
+    "File_Name": "2.4.1.2-EM_ANSYSHFSS.json",
+    "Class": "Simulations",
+    "Type": "EM",
+    "Instance": "ANSYS HFSS",
+    "Vendor": "ANSYS",
+    "Version": "2023 R1",
+    "POC": {
+      "Name": "HFSS Specialist",
+      "Email": "hfss.spec@example.com"
+    }
+  },
+  "Licensing": {
+    "Type": "Floating",
+    "Server": {
+      "Vendor": "ANSYS License Manager",
+      "Hostname": "ansys-license.corp.local",
+      "IP": "192.168.35.51",
+      "Port": "2325",
+      "Protocol": "TCP/IP"
+    }
+  },
+  "Access_Control": {
+    "IAM": "LDAP"
+  },
+  "Deployment": {
+    "Level": "Enterprise",
+    "Type": "Hybrid",
+    "Cloud": {
+      "Type": "Private",
+      "Provider": "Azure"
+    },
+    "InfoSec_Level": ["CUI"]
+  },
+  "Plugins": [
+    "Antenna Design Kit",
+    "3D Component Library"
+  ]
+}
