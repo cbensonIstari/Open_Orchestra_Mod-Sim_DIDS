@@ -1,0 +1,40 @@
+{
+  "Tool": {
+    "File_Name": "2.6.1.4-MissionModels_AnyLogic.json",
+    "Class": "Simulations",
+    "Type": "MissionModels",
+    "Instance": "AnyLogic",
+    "Vendor": "The AnyLogic Company",
+    "Version": "8.7",
+    "POC": {
+      "Name": "AnyLogic Admin",
+      "Email": "anylogic.admin@example.com"
+    }
+  },
+  "Licensing": {
+    "Type": "Subscription",
+    "Server": {
+      "Vendor": "AnyLogic License Service",
+      "Hostname": "anylogic-license.corp.local",
+      "IP": "192.168.50.52",
+      "Port": "27000",
+      "Protocol": "TCP/IP"
+    }
+  },
+  "Access_Control": {
+    "IAM": "Active Directory"
+  },
+  "Deployment": {
+    "Level": "Business Unit",
+    "Type": "Cloud",
+    "Cloud": {
+      "Type": "Public",
+      "Provider": "AWS"
+    },
+    "InfoSec_Level": []
+  },
+  "Plugins": [
+    "Agent-Based Simulation",
+    "Discrete-Event Blocks"
+  ]
+}
