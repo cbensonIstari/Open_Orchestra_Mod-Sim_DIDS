@@ -1,0 +1,132 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:msn="http://example.com/missionExtraction#"
+    xml:base="http://example.com/missionExtraction"
+    owl:versionInfo="1.0">
+
+  <owl:Ontology rdf:about="">
+    <rdfs:label>Mission Models Extraction Output Ontology</rdfs:label>
+    <rdfs:comment>Captures scenario-level results: entity engagements, time-based events, resource usage, performance metrics.</rdfs:comment>
+  </owl:Ontology>
+  
+  <!-- Classes -->
+  <owl:Class rdf:about="msn:MissionExtractionOutput">
+    <rdfs:label>Mission Extraction Output</rdfs:label>
+    <rdfs:comment>Root concept for scenario-based data from mission modeling tools (AFSIM, STK, etc.).</rdfs:comment>
+  </owl:Class>
+  
+  <owl:Class rdf:about="msn:ProprietaryMissionFile">
+    <rdfs:label>Proprietary Mission File</rdfs:label>
+    <rdfs:comment>Native logs or scenario result archives: .afslog, .scn, .stk, etc.</rdfs:comment>
+  </owl:Class>
+  
+  <owl:Class rdf:about="msn:NeutralFile">
+    <rdfs:label>Neutral Mission File</rdfs:label>
+    <rdfs:comment>.csv, .json, .xml for scenario states, .mp4 for replays, etc.</rdfs:comment>
+  </owl:Class>
+  
+  <owl:Class rdf:about="msn:Metadata">
+    <rdfs:label>Mission Metadata</rdfs:label>
+    <rdfs:comment>Solver version, HPC job ID, scenario name, date/time, run type.</rdfs:comment>
+  </owl:Class>
+  
+  <owl:Class rdf:about="msn:ApplicableStandard">
+    <rdfs:label>Mission Applicable Standard</rdfs:label>
+    <rdfs:comment>Possible MSDL references, HLA, DIS, or QA (ISO 9001, etc.).</rdfs:comment>
+  </owl:Class>
+  
+  <owl:Class rdf:about="msn:CriticalDataField">
+    <rdfs:label>Mission Critical Data Field</rdfs:label>
+    <rdfs:comment>Core results: entity engagements, time-based events, resource usage, performance metrics, system interactions.</rdfs:comment>
+  </owl:Class>
+  
+  <!-- Subclasses for data fields -->
+  
+  <owl:Class rdf:about="msn:EntityEngagements">
+    <rdfs:subClassOf rdf:resource="msn:CriticalDataField"/>
+    <rdfs:label>Entity Engagements</rdfs:label>
+  </owl:Class>
+  
+  <owl:Class rdf:about="msn:TimeBasedEvents">
+    <rdfs:subClassOf rdf:resource="msn:CriticalDataField"/>
+    <rdfs:label>Time-Based Events</rdfs:label>
+  </owl:Class>
+  
+  <owl:Class rdf:about="msn:ResourceUsage">
+    <rdfs:subClassOf rdf:resource="msn:CriticalDataField"/>
+    <rdfs:label>Resource Usage</rdfs:label>
+  </owl:Class>
+  
+  <owl:Class rdf:about="msn:PerformanceMetrics">
+    <rdfs:subClassOf rdf:resource="msn:CriticalDataField"/>
+    <rdfs:label>Performance Metrics</rdfs:label>
+  </owl:Class>
+  
+  <owl:Class rdf:about="msn:SystemInteractions">
+    <rdfs:subClassOf rdf:resource="msn:CriticalDataField"/>
+    <rdfs:label>System Interactions</rdfs:label>
+  </owl:Class>
+  
+  <!-- Object Properties -->
+  <owl:ObjectProperty rdf:about="msn:hasProprietaryFile">
+    <rdfs:domain rdf:resource="msn:MissionExtractionOutput"/>
+    <rdfs:range rdf:resource="msn:ProprietaryMissionFile"/>
+  </owl:ObjectProperty>
+  
+  <owl:ObjectProperty rdf:about="msn:hasNeutralFile">
+    <rdfs:domain rdf:resource="msn:MissionExtractionOutput"/>
+    <rdfs:range rdf:resource="msn:NeutralFile"/>
+  </owl:ObjectProperty>
+  
+  <owl:ObjectProperty rdf:about="msn:hasMetadata">
+    <rdfs:domain rdf:resource="msn:MissionExtractionOutput"/>
+    <rdfs:range rdf:resource="msn:Metadata"/>
+  </owl:ObjectProperty>
+  
+  <owl:ObjectProperty rdf:about="msn:hasApplicableStandard">
+    <rdfs:domain rdf:resource="msn:MissionExtractionOutput"/>
+    <rdfs:range rdf:resource="msn:ApplicableStandard"/>
+  </owl:ObjectProperty>
+  
+  <owl:ObjectProperty rdf:about="msn:hasCriticalDataField">
+    <rdfs:domain rdf:resource="msn:MissionExtractionOutput"/>
+    <rdfs:range rdf:resource="msn:CriticalDataField"/>
+  </owl:ObjectProperty>
+  
+  <!-- Sub-properties for each specialized data field -->
+  
+  <owl:ObjectProperty rdf:about="msn:hasEntityEngagements">
+    <rdfs:subPropertyOf rdf:resource="msn:hasCriticalDataField"/>
+    <rdfs:domain rdf:resource="msn:MissionExtractionOutput"/>
+    <rdfs:range rdf:resource="msn:EntityEngagements"/>
+  </owl:ObjectProperty>
+  
+  <owl:ObjectProperty rdf:about="msn:hasTimeBasedEvents">
+    <rdfs:subPropertyOf rdf:resource="msn:hasCriticalDataField"/>
+    <rdfs:domain rdf:resource="msn:MissionExtractionOutput"/>
+    <rdfs:range rdf:resource="msn:TimeBasedEvents"/>
+  </owl:ObjectProperty>
+  
+  <owl:ObjectProperty rdf:about="msn:hasResourceUsage">
+    <rdfs:subPropertyOf rdf:resource="msn:hasCriticalDataField"/>
+    <rdfs:domain rdf:resource="msn:MissionExtractionOutput"/>
+    <rdfs:range rdf:resource="msn:ResourceUsage"/>
+  </owl:ObjectProperty>
+  
+  <owl:ObjectProperty rdf:about="msn:hasPerformanceMetrics">
+    <rdfs:subPropertyOf rdf:resource="msn:hasCriticalDataField"/>
+    <rdfs:domain rdf:resource="msn:MissionExtractionOutput"/>
+    <rdfs:range rdf:resource="msn:PerformanceMetrics"/>
+  </owl:ObjectProperty>
+  
+  <owl:ObjectProperty rdf:about="msn:hasSystemInteractions">
+    <rdfs:subPropertyOf rdf:resource="msn:hasCriticalDataField"/>
+    <rdfs:domain rdf:resource="msn:MissionExtractionOutput"/>
+    <rdfs:range rdf:resource="msn:SystemInteractions"/>
+  </owl:ObjectProperty>
+
+</rdf:RDF>
