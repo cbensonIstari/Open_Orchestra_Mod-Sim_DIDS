@@ -1,0 +1,37 @@
+{
+  "Tool": {
+    "File_Name": "2.4.1.1-EM_CSTStudioSuite.json",
+    "Class": "Simulations",
+    "Type": "EM",
+    "Instance": "CST Studio Suite",
+    "Vendor": "Dassault Systèmes",
+    "Version": "2023",
+    "POC": {
+      "Name": "CST Admin",
+      "Email": "cst.admin@example.com"
+    }
+  },
+  "Licensing": {
+    "Type": "Concurrent",
+    "Server": {
+      "Vendor": "DS License Server",
+      "Hostname": "cst-license.corp.local",
+      "IP": "192.168.35.50",
+      "Port": "27000",
+      "Protocol": "TCP/IP"
+    }
+  },
+  "Access_Control": {
+    "IAM": "Active Directory"
+  },
+  "Deployment": {
+    "Level": "Department",
+    "Type": "On-Premise",
+    "InfoSec_Level": ["CUI"]
+  },
+  "Plugins": [
+    "Time Domain Solver",
+    "Frequency Domain Solver",
+    "Thermal-EM Coupling"
+  ]
+}
