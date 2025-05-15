@@ -1,0 +1,40 @@
+{
+  "Tool": {
+    "File_Name": "2.5.1.10-Dynamic_DymolaMultiBody.json",
+    "Class": "Simulations",
+    "Type": "Dynamic",
+    "Instance": "Dymola MultiBody",
+    "Vendor": "Dassault Systèmes (Modelica-based)",
+    "Version": "2023x",
+    "POC": {
+      "Name": "Dymola Engineer",
+      "Email": "dymola.eng@example.com"
+    }
+  },
+  "Licensing": {
+    "Type": "Concurrent",
+    "Server": {
+      "Vendor": "DS License Server",
+      "Hostname": "dymola-license.corp.local",
+      "IP": "192.168.45.56",
+      "Port": "27000",
+      "Protocol": "TCP/IP"
+    }
+  },
+  "Access_Control": {
+    "IAM": "Active Directory"
+  },
+  "Deployment": {
+    "Level": "Enterprise",
+    "Type": "Hybrid",
+    "Cloud": {
+      "Type": "Private",
+      "Provider": "Azure"
+    },
+    "InfoSec_Level": ["CUI"]
+  },
+  "Plugins": [
+    "Modelica Standard Library",
+    "Vehicle Dynamics Library"
+  ]
+}
