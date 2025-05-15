@@ -1,0 +1,36 @@
+{
+  "Tool": {
+    "File_Name": "2.6.1.2-MissionModels_STK.json",
+    "Class": "Simulations",
+    "Type": "MissionModels",
+    "Instance": "STK (Systems Toolkit)",
+    "Vendor": "AGI / Ansys",
+    "Version": "12.2",
+    "POC": {
+      "Name": "STK Admin",
+      "Email": "stk.admin@example.com"
+    }
+  },
+  "Licensing": {
+    "Type": "Floating",
+    "Server": {
+      "Vendor": "AGI License Manager",
+      "Hostname": "stk-license.corp.local",
+      "IP": "192.168.50.51",
+      "Port": "2325",
+      "Protocol": "TCP/IP"
+    }
+  },
+  "Access_Control": {
+    "IAM": "LDAP"
+  },
+  "Deployment": {
+    "Level": "Department",
+    "Type": "On-Premise",
+    "InfoSec_Level": ["CUI"]
+  },
+  "Plugins": [
+    "Communications Analysis",
+    "EO/IR Sensor Modules"
+  ]
+}
