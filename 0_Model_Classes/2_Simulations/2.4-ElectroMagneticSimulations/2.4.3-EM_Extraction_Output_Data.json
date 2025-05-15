@@ -1,0 +1,44 @@
+{
+  "EM_Extraction_Output_Data": {
+    "Proprietary_Files": [
+      ".cst (CST project results)",
+      ".hfss (ANSYS HFSS project, .aedt)",
+      ".pe (Feko result files), .xfdtd (Remcom), .son (Sonnet output)"
+    ],
+    "Neutral_Files": [
+      ".s2p / .sNp (Touchstone S-parameters)",
+      ".csv/.xlsx for post-processed data (fields, patterns)",
+      ".vtk / .hdf5 for field distributions, .png/.mp4 for visualizations"
+    ],
+    "Metadata": [
+      "Solver version, HPC job ID, user, date/time, geometry name, freq range"
+    ],
+    "Applicable_Standards": {
+      "EM_Interchange": [
+        "Touchstone (S-parameter format)",
+        "IEEE standards for antenna patterns (145, 149, etc.)"
+      ],
+      "Process_and_Quality": [
+        "ISO 9001, AS9100 if aerospace QA",
+        "CMMI references for solver usage"
+      ]
+    },
+    "Critical_Data_Fields": {
+      "S_Parameters": [
+        "Magnitude/phase over freq for S11, S21, Snn, etc."
+      ],
+      "Antenna_Patterns": [
+        "Far-field polar plots, gain patterns, directivity"
+      ],
+      "Near_Field_Distributions": [
+        "E/H fields in volume around antenna or device"
+      ],
+      "RCS_Results": [
+        "Radar cross-section vs angle/freq, monostatic/bistatic data"
+      ],
+      "EMI_EMC_Analysis": [
+        "Shielding effectiveness, coupling paths"
+      ]
+    }
+  }
+}
