@@ -1,0 +1,37 @@
+{
+  "Tool": {
+    "File_Name": "2.4.1.6-EM_AltairFeko.json",
+    "Class": "Simulations",
+    "Type": "EM",
+    "Instance": "Altair Feko",
+    "Vendor": "Altair",
+    "Version": "2023",
+    "POC": {
+      "Name": "Altair Feko Lead",
+      "Email": "altair.feko@example.com"
+    }
+  },
+  "Licensing": {
+    "Type": "Floating",
+    "Server": {
+      "Vendor": "Altair License Manager",
+      "Hostname": "altair-license.corp.local",
+      "IP": "192.168.35.54",
+      "Port": "6200",
+      "Protocol": "TCP/IP"
+    }
+  },
+  "Access_Control": {
+    "IAM": "LDAP"
+  },
+  "Deployment": {
+    "Level": "Business Unit",
+    "Type": "On-Premise",
+    "InfoSec_Level": ["CUI"]
+  },
+  "Plugins": [
+    "MoM Solver",
+    "Finite Element Method",
+    "Physical Optics"
+  ]
+}
