@@ -1,0 +1,36 @@
+{
+  "Tool": {
+    "File_Name": "2.5.1.2-Dynamic_SimscapeMultibody.json",
+    "Class": "Simulations",
+    "Type": "Dynamic",
+    "Instance": "Simscape Multibody",
+    "Vendor": "MathWorks",
+    "Version": "R2023a",
+    "POC": {
+      "Name": "Simscape Lead",
+      "Email": "simscape.lead@example.com"
+    }
+  },
+  "Licensing": {
+    "Type": "Concurrent",
+    "Server": {
+      "Vendor": "MathWorks License Manager",
+      "Hostname": "matlab-license.corp.local",
+      "IP": "192.168.45.51",
+      "Port": "27000",
+      "Protocol": "TCP/IP"
+    }
+  },
+  "Access_Control": {
+    "IAM": "Active Directory"
+  },
+  "Deployment": {
+    "Level": "Project",
+    "Type": "On-Premise",
+    "InfoSec_Level": ["CUI"]
+  },
+  "Plugins": [
+    "Robot Kinematics",
+    "Hydraulics (Simscape Fluids)"
+  ]
+}
