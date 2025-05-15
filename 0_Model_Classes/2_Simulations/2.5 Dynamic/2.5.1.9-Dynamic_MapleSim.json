@@ -1,0 +1,36 @@
+{
+  "Tool": {
+    "File_Name": "2.5.1.9-Dynamic_MapleSim.json",
+    "Class": "Simulations",
+    "Type": "Dynamic",
+    "Instance": "MapleSim",
+    "Vendor": "Maplesoft",
+    "Version": "2023",
+    "POC": {
+      "Name": "MapleSim Specialist",
+      "Email": "maplesim.spec@example.com"
+    }
+  },
+  "Licensing": {
+    "Type": "Named User",
+    "Server": {
+      "Vendor": "Maplesoft License Service",
+      "Hostname": "maplesim-license.corp.local",
+      "IP": "192.168.45.55",
+      "Port": "27000",
+      "Protocol": "TCP/IP"
+    }
+  },
+  "Access_Control": {
+    "IAM": "SAML SSO"
+  },
+  "Deployment": {
+    "Level": "Department",
+    "Type": "On-Premise",
+    "InfoSec_Level": []
+  },
+  "Plugins": [
+    "Symbolic Modeling",
+    "Multibody Library"
+  ]
+}
