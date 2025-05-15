@@ -1,0 +1,133 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:em="http://example.com/emExtraction#"
+    xml:base="http://example.com/emExtraction"
+    owl:versionInfo="1.0">
+
+  <owl:Ontology rdf:about="">
+    <rdfs:label>EM Extraction Output Ontology</rdfs:label>
+    <rdfs:comment>Models typical output from EM solvers: S-parameters, antenna patterns, near-field data, RCS, etc.</rdfs:comment>
+  </owl:Ontology>
+  
+  <!-- Classes -->
+  <owl:Class rdf:about="em:EMExtractionOutput">
+    <rdfs:label>EM Extraction Output</rdfs:label>
+    <rdfs:comment>Root concept for data extracted from an EM solver (CST, HFSS, FEKO, etc.).</rdfs:comment>
+  </owl:Class>
+  
+  <owl:Class rdf:about="em:ProprietaryEMFile">
+    <rdfs:label>Proprietary EM File</rdfs:label>
+    <rdfs:comment>Native result files: .cst, .hfss, .pe (Feko), .xfdtd, .son, etc.</rdfs:comment>
+  </owl:Class>
+  
+  <owl:Class rdf:about="em:NeutralFile">
+    <rdfs:label>Neutral EM File</rdfs:label>
+    <rdfs:comment>.sNp (Touchstone), .csv, .vtk, or images for post-processing data.</rdfs:comment>
+  </owl:Class>
+  
+  <owl:Class rdf:about="em:Metadata">
+    <rdfs:label>EM Metadata</rdfs:label>
+    <rdfs:comment>Solver version, HPC job details, user, date/time, freq range, geometry name.</rdfs:comment>
+  </owl:Class>
+  
+  <owl:Class rdf:about="em:ApplicableStandard">
+    <rdfs:label>EM Applicable Standard</rdfs:label>
+    <rdfs:comment>Touchstone for S-params, IEEE antenna measurement standards, QA references.</rdfs:comment>
+  </owl:Class>
+  
+  <owl:Class rdf:about="em:CriticalDataField">
+    <rdfs:label>EM Critical Data Field</rdfs:label>
+    <rdfs:comment>Key fields: S-parameters, antenna patterns, near-field distributions, RCS, EMI/EMC data.</rdfs:comment>
+  </owl:Class>
+  
+  <!-- Subclasses of EM CriticalDataField -->
+  
+  <owl:Class rdf:about="em:SParameters">
+    <rdfs:subClassOf rdf:resource="em:CriticalDataField"/>
+    <rdfs:label>S-Parameters</rdfs:label>
+  </owl:Class>
+  
+  <owl:Class rdf:about="em:AntennaPatterns">
+    <rdfs:subClassOf rdf:resource="em:CriticalDataField"/>
+    <rdfs:label>Antenna Patterns</rdfs:label>
+  </owl:Class>
+  
+  <owl:Class rdf:about="em:NearFieldDistributions">
+    <rdfs:subClassOf rdf:resource="em:CriticalDataField"/>
+    <rdfs:label>Near-Field Distributions</rdfs:label>
+  </owl:Class>
+  
+  <owl:Class rdf:about="em:RCSResults">
+    <rdfs:subClassOf rdf:resource="em:CriticalDataField"/>
+    <rdfs:label>RCS Results</rdfs:label>
+  </owl:Class>
+  
+  <owl:Class rdf:about="em:EMIEMCAnalysis">
+    <rdfs:subClassOf rdf:resource="em:CriticalDataField"/>
+    <rdfs:label>EMI/EMC Analysis</rdfs:label>
+  </owl:Class>
+  
+  <!-- Object Properties -->
+  
+  <owl:ObjectProperty rdf:about="em:hasProprietaryFile">
+    <rdfs:domain rdf:resource="em:EMExtractionOutput"/>
+    <rdfs:range rdf:resource="em:ProprietaryEMFile"/>
+  </owl:ObjectProperty>
+  
+  <owl:ObjectProperty rdf:about="em:hasNeutralFile">
+    <rdfs:domain rdf:resource="em:EMExtractionOutput"/>
+    <rdfs:range rdf:resource="em:NeutralFile"/>
+  </owl:ObjectProperty>
+  
+  <owl:ObjectProperty rdf:about="em:hasMetadata">
+    <rdfs:domain rdf:resource="em:EMExtractionOutput"/>
+    <rdfs:range rdf:resource="em:Metadata"/>
+  </owl:ObjectProperty>
+  
+  <owl:ObjectProperty rdf:about="em:hasApplicableStandard">
+    <rdfs:domain rdf:resource="em:EMExtractionOutput"/>
+    <rdfs:range rdf:resource="em:ApplicableStandard"/>
+  </owl:ObjectProperty>
+  
+  <owl:ObjectProperty rdf:about="em:hasCriticalDataField">
+    <rdfs:domain rdf:resource="em:EMExtractionOutput"/>
+    <rdfs:range rdf:resource="em:CriticalDataField"/>
+  </owl:ObjectProperty>
+  
+  <!-- Sub-properties for each specialized data field if desired -->
+  
+  <owl:ObjectProperty rdf:about="em:hasSParameters">
+    <rdfs:subPropertyOf rdf:resource="em:hasCriticalDataField"/>
+    <rdfs:domain rdf:resource="em:EMExtractionOutput"/>
+    <rdfs:range rdf:resource="em:SParameters"/>
+  </owl:ObjectProperty>
+  
+  <owl:ObjectProperty rdf:about="em:hasAntennaPatterns">
+    <rdfs:subPropertyOf rdf:resource="em:hasCriticalDataField"/>
+    <rdfs:domain rdf:resource="em:EMExtractionOutput"/>
+    <rdfs:range rdf:resource="em:AntennaPatterns"/>
+  </owl:ObjectProperty>
+  
+  <owl:ObjectProperty rdf:about="em:hasNearFieldDistributions">
+    <rdfs:subPropertyOf rdf:resource="em:hasCriticalDataField"/>
+    <rdfs:domain rdf:resource="em:EMExtractionOutput"/>
+    <rdfs:range rdf:resource="em:NearFieldDistributions"/>
+  </owl:ObjectProperty>
+  
+  <owl:ObjectProperty rdf:about="em:hasRCSResults">
+    <rdfs:subPropertyOf rdf:resource="em:hasCriticalDataField"/>
+    <rdfs:domain rdf:resource="em:EMExtractionOutput"/>
+    <rdfs:range rdf:resource="em:RCSResults"/>
+  </owl:ObjectProperty>
+  
+  <owl:ObjectProperty rdf:about="em:hasEMIEMCAnalysis">
+    <rdfs:subPropertyOf rdf:resource="em:hasCriticalDataField"/>
+    <rdfs:domain rdf:resource="em:EMExtractionOutput"/>
+    <rdfs:range rdf:resource="em:EMIEMCAnalysis"/>
+  </owl:ObjectProperty>
+
+</rdf:RDF>
