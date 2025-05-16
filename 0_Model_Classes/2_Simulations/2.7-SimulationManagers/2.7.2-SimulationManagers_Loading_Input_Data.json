@@ -1,0 +1,24 @@
+{
+  "SimulationManagers_Loading_Input_Data": {
+    "Workflow_Configurations": [
+      "Process flow definitions (ANSYS .wbpj, ModelCenter .xml, OpenMDAO .py setup)",
+      ".sce or .m script for param drivers"
+    ],
+    "Solver_Integration": [
+      "References to external tools (CFD, FEA, CAD updates)",
+      "APIs or scripts for bridging multiple solvers"
+    ],
+    "Parameter_Definitions": [
+      "Variables, design ranges, step sizes, or distributions (for UQ)",
+      "Objective/constraint definitions"
+    ],
+    "HPC_or_Cloud_Setup": [
+      "Queue/batch system config, parallel run config",
+      "Docker containers or cluster details"
+    ],
+    "Reference_Data": [
+      "Previous optimization or param sets for warm start",
+      "Initial guesses from known designs"
+    ]
+  }
+}
