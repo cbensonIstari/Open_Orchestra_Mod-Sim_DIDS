@@ -1,0 +1,36 @@
+{
+  "Tool": {
+    "File_Name": "2.7.1.6-SimulationManagers_Isight.json",
+    "Class": "Simulations",
+    "Type": "SimulationManagers",
+    "Instance": "Simulia Isight",
+    "Vendor": "Dassault Systèmes (SIMULIA)",
+    "Version": "2023x",
+    "POC": {
+      "Name": "Isight Specialist",
+      "Email": "isight.spec@example.com"
+    }
+  },
+  "Licensing": {
+    "Type": "Floating",
+    "Server": {
+      "Vendor": "DS License Server",
+      "Hostname": "isight-license.corp.local",
+      "IP": "192.168.60.54",
+      "Port": "27000",
+      "Protocol": "TCP/IP"
+    }
+  },
+  "Access_Control": {
+    "IAM": "LDAP"
+  },
+  "Deployment": {
+    "Level": "Department",
+    "Type": "On-Premise",
+    "InfoSec_Level": ["CUI"]
+  },
+  "Plugins": [
+    "Process Composer",
+    "DOE/Optimization Modules"
+  ]
+}
