@@ -1,0 +1,36 @@
+{
+  "Tool": {
+    "File_Name": "2.7.1.5-SimulationManagers_HEEDS.json",
+    "Class": "Simulations",
+    "Type": "SimulationManagers",
+    "Instance": "Siemens HEEDS",
+    "Vendor": "Siemens",
+    "Version": "2023.2",
+    "POC": {
+      "Name": "HEEDS Coordinator",
+      "Email": "heeds.coord@example.com"
+    }
+  },
+  "Licensing": {
+    "Type": "Concurrent",
+    "Server": {
+      "Vendor": "Siemens License Manager",
+      "Hostname": "siemens-heeds-license.corp.local",
+      "IP": "192.168.60.53",
+      "Port": "28000",
+      "Protocol": "TCP/IP"
+    }
+  },
+  "Access_Control": {
+    "IAM": "Active Directory"
+  },
+  "Deployment": {
+    "Level": "Department",
+    "Type": "On-Premise",
+    "InfoSec_Level": ["CUI"]
+  },
+  "Plugins": [
+    "Pareto-based Optimization",
+    "Topology/Param Coupling"
+  ]
+}
