@@ -1,0 +1,36 @@
+{
+  "Tool": {
+    "File_Name": "2.7.1.4-SimulationManagers_modeFRONTIER.json",
+    "Class": "Simulations",
+    "Type": "SimulationManagers",
+    "Instance": "ESTECO modeFRONTIER",
+    "Vendor": "ESTECO",
+    "Version": "2023",
+    "POC": {
+      "Name": "modeFRONTIER Admin",
+      "Email": "modef.admin@example.com"
+    }
+  },
+  "Licensing": {
+    "Type": "Floating",
+    "Server": {
+      "Vendor": "ESTECO License Manager",
+      "Hostname": "modef-license.corp.local",
+      "IP": "192.168.60.52",
+      "Port": "28000",
+      "Protocol": "TCP/IP"
+    }
+  },
+  "Access_Control": {
+    "IAM": "LDAP"
+  },
+  "Deployment": {
+    "Level": "Business Unit",
+    "Type": "On-Premise",
+    "InfoSec_Level": ["CUI"]
+  },
+  "Plugins": [
+    "DOE/Optimization Tools",
+    "Post-processing & Data Mining"
+  ]
+}
