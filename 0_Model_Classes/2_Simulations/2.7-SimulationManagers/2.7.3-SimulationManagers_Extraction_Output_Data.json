@@ -1,0 +1,47 @@
+{
+  "SimulationManagers_Extraction_Output_Data": {
+    "Proprietary_Files": [
+      ".wbpj results (ANSYS Workbench)",
+      ".mcproj / .mco (ModelCenter?), .mdao (OpenMDAO internal?), .xml (modeFRONTIER flows)",
+      ".hs (HyperStudy), .dak (Dakota) or custom logs
+    ],
+    "Neutral_Files": [
+      ".csv/.xlsx for result tables, param sweeps, optimum sets",
+      ".json/.xml for final workflow definitions or HPC job logs"
+    ],
+    "Metadata": [
+      "Workflow version, HPC job ID, user, date/time, scenario name",
+      "Analysis type (DOE, MDAO, robust optimization, reliability-based design, etc.)"
+    ],
+    "Applicable_Standards": {
+      "Workflow_Exchange": [
+        "FMI/FMU for partial solver exchange",
+        "Modelica-based or custom HPC standards"
+      ],
+      "Process_and_Quality": [
+        "ISO 9001, AS9100 if relevant",
+        "CMMI references for orchestrated solver usage"
+      ]
+    },
+    "Critical_Data_Fields": {
+      "Parameter_Sweeps": [
+        "Input variables, boundary ranges, incremental steps"
+      ],
+      "Optimization_Results": [
+        "Best design sets, objective values, constraint violations",
+        "Pareto fronts if multi-objective"
+      ],
+      "Job_Logs": [
+        "Execution times, solver calls, concurrency usage",
+        "Error messages, warnings, HPC cluster reports"
+      ],
+      "Final_Design_or_Solution": [
+        "Chosen param combination, geometry ID, performance summary"
+      ],
+      "Trade_Off_Analyses": [
+        "Comparative plots, multi-run data for decision-making",
+        "Sensitivity or UQ results"
+      ]
+    }
+  }
+}
