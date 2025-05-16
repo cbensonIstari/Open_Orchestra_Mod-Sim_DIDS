@@ -1,0 +1,37 @@
+{
+  "Tool": {
+    "File_Name": "2.7.1.1-SimulationManagers_ANSYSWorkbench.json",
+    "Class": "Simulations",
+    "Type": "SimulationManagers",
+    "Instance": "ANSYS Workbench",
+    "Vendor": "ANSYS",
+    "Version": "2023 R1",
+    "POC": {
+      "Name": "Workbench Admin",
+      "Email": "wb.admin@example.com"
+    }
+  },
+  "Licensing": {
+    "Type": "Floating",
+    "Server": {
+      "Vendor": "ANSYS License Manager",
+      "Hostname": "ansys-license.corp.local",
+      "IP": "192.168.60.50",
+      "Port": "2325",
+      "Protocol": "TCP/IP"
+    }
+  },
+  "Access_Control": {
+    "IAM": "Active Directory"
+  },
+  "Deployment": {
+    "Level": "Department",
+    "Type": "On-Premise",
+    "InfoSec_Level": ["CUI"]
+  },
+  "Plugins": [
+    "Mechanical Coupling",
+    "Parametric Optimization",
+    "Co-simulation Link with Fluent/CFD"
+  ]
+}
