@@ -1,0 +1,131 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:sim="http://example.com/simManagersExtraction#"
+    xml:base="http://example.com/simManagersExtraction"
+    owl:versionInfo="1.0">
+
+  <owl:Ontology rdf:about="">
+    <rdfs:label>Simulation Managers Extraction Output Ontology</rdfs:label>
+    <rdfs:comment>Represents param sweeps, optimization results, HPC job logs, final designs from orchestration tools (ANSYS Workbench, ModelCenter, etc.).</rdfs:comment>
+  </owl:Ontology>
+  
+  <!-- Classes -->
+  <owl:Class rdf:about="sim:SimManagersExtractionOutput">
+    <rdfs:label>Simulation Managers Extraction Output</rdfs:label>
+    <rdfs:comment>Root concept for data extracted from multi-domain or multi-solver orchestration tools.</rdfs:comment>
+  </owl:Class>
+  
+  <owl:Class rdf:about="sim:ProprietarySimManagerFile">
+    <rdfs:label>Proprietary Simulation Manager File</rdfs:label>
+    <rdfs:comment>Native workflow or results archives: .wbpj, .mcproj, .hs, .dak, etc.</rdfs:comment>
+  </owl:Class>
+  
+  <owl:Class rdf:about="sim:NeutralFile">
+    <rdfs:label>Neutral Sim Manager File</rdfs:label>
+    <rdfs:comment>.csv, .xml, .json for param sweeps, HPC logs, or final optimum sets.</rdfs:comment>
+  </owl:Class>
+  
+  <owl:Class rdf:about="sim:Metadata">
+    <rdfs:label>Sim Manager Metadata</rdfs:label>
+    <rdfs:comment>Workflow version, HPC job details, user, date/time, scenario name, analysis type, etc.</rdfs:comment>
+  </owl:Class>
+  
+  <owl:Class rdf:about="sim:ApplicableStandard">
+    <rdfs:label>Sim Manager Applicable Standard</rdfs:label>
+    <rdfs:comment>Possible references to FMI, HPC usage standards, QA references (ISO 9001, etc.).</rdfs:comment>
+  </owl:Class>
+  
+  <owl:Class rdf:about="sim:CriticalDataField">
+    <rdfs:label>Sim Manager Critical Data Field</rdfs:label>
+    <rdfs:comment>Core outputs: parameter sweeps, optimization results, job logs, final solutions, trade-off analyses.</rdfs:comment>
+  </owl:Class>
+  
+  <!-- Subclasses of CriticalDataField -->
+  
+  <owl:Class rdf:about="sim:ParameterSweeps">
+    <rdfs:subClassOf rdf:resource="sim:CriticalDataField"/>
+    <rdfs:label>Parameter Sweeps</rdfs:label>
+  </owl:Class>
+  
+  <owl:Class rdf:about="sim:OptimizationResults">
+    <rdfs:subClassOf rdf:resource="sim:CriticalDataField"/>
+    <rdfs:label>Optimization Results</rdfs:label>
+  </owl:Class>
+  
+  <owl:Class rdf:about="sim:JobLogs">
+    <rdfs:subClassOf rdf:resource="sim:CriticalDataField"/>
+    <rdfs:label>Job Logs</rdfs:label>
+  </owl:Class>
+  
+  <owl:Class rdf:about="sim:FinalDesignOrSolution">
+    <rdfs:subClassOf rdf:resource="sim:CriticalDataField"/>
+    <rdfs:label>Final Design or Solution</rdfs:label>
+  </owl:Class>
+  
+  <owl:Class rdf:about="sim:TradeOffAnalyses">
+    <rdfs:subClassOf rdf:resource="sim:CriticalDataField"/>
+    <rdfs:label>Trade-Off Analyses</rdfs:label>
+  </owl:Class>
+  
+  <!-- Object Properties -->
+  <owl:ObjectProperty rdf:about="sim:hasProprietaryFile">
+    <rdfs:domain rdf:resource="sim:SimManagersExtractionOutput"/>
+    <rdfs:range rdf:resource="sim:ProprietarySimManagerFile"/>
+  </owl:ObjectProperty>
+  
+  <owl:ObjectProperty rdf:about="sim:hasNeutralFile">
+    <rdfs:domain rdf:resource="sim:SimManagersExtractionOutput"/>
+    <rdfs:range rdf:resource="sim:NeutralFile"/>
+  </owl:ObjectProperty>
+  
+  <owl:ObjectProperty rdf:about="sim:hasMetadata">
+    <rdfs:domain rdf:resource="sim:SimManagersExtractionOutput"/>
+    <rdfs:range rdf:resource="sim:Metadata"/>
+  </owl:ObjectProperty>
+  
+  <owl:ObjectProperty rdf:about="sim:hasApplicableStandard">
+    <rdfs:domain rdf:resource="sim:SimManagersExtractionOutput"/>
+    <rdfs:range rdf:resource="sim:ApplicableStandard"/>
+  </owl:ObjectProperty>
+  
+  <owl:ObjectProperty rdf:about="sim:hasCriticalDataField">
+    <rdfs:domain rdf:resource="sim:SimManagersExtractionOutput"/>
+    <rdfs:range rdf:resource="sim:CriticalDataField"/>
+  </owl:ObjectProperty>
+  
+  <!-- Sub-properties -->
+  <owl:ObjectProperty rdf:about="sim:hasParameterSweeps">
+    <rdfs:subPropertyOf rdf:resource="sim:hasCriticalDataField"/>
+    <rdfs:domain rdf:resource="sim:SimManagersExtractionOutput"/>
+    <rdfs:range rdf:resource="sim:ParameterSweeps"/>
+  </owl:ObjectProperty>
+  
+  <owl:ObjectProperty rdf:about="sim:hasOptimizationResults">
+    <rdfs:subPropertyOf rdf:resource="sim:hasCriticalDataField"/>
+    <rdfs:domain rdf:resource="sim:SimManagersExtractionOutput"/>
+    <rdfs:range rdf:resource="sim:OptimizationResults"/>
+  </owl:ObjectProperty>
+  
+  <owl:ObjectProperty rdf:about="sim:hasJobLogs">
+    <rdfs:subPropertyOf rdf:resource="sim:hasCriticalDataField"/>
+    <rdfs:domain rdf:resource="sim:SimManagersExtractionOutput"/>
+    <rdfs:range rdf:resource="sim:JobLogs"/>
+  </owl:ObjectProperty>
+  
+  <owl:ObjectProperty rdf:about="sim:hasFinalDesignOrSolution">
+    <rdfs:subPropertyOf rdf:resource="sim:hasCriticalDataField"/>
+    <rdfs:domain rdf:resource="sim:SimManagersExtractionOutput"/>
+    <rdfs:range rdf:resource="sim:FinalDesignOrSolution"/>
+  </owl:ObjectProperty>
+  
+  <owl:ObjectProperty rdf:about="sim:hasTradeOffAnalyses">
+    <rdfs:subPropertyOf rdf:resource="sim:hasCriticalDataField"/>
+    <rdfs:domain rdf:resource="sim:SimManagersExtractionOutput"/>
+    <rdfs:range rdf:resource="sim:TradeOffAnalyses"/>
+  </owl:ObjectProperty>
+
+</rdf:RDF>
