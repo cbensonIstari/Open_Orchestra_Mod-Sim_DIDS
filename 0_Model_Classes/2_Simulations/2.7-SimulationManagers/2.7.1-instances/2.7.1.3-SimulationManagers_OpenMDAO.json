@@ -1,0 +1,30 @@
+{
+  "Tool": {
+    "File_Name": "2.7.1.3-SimulationManagers_OpenMDAO.json",
+    "Class": "Simulations",
+    "Type": "SimulationManagers",
+    "Instance": "OpenMDAO",
+    "Vendor": "NASA / Open Source",
+    "Version": "3.15",
+    "POC": {
+      "Name": "OpenMDAO Maintainer",
+      "Email": "openmdao.maint@example.org"
+    }
+  },
+  "Licensing": {
+    "Type": "Apache 2.0",
+    "Server": null
+  },
+  "Access_Control": {
+    "IAM": "Local Accounts / GitHub Auth"
+  },
+  "Deployment": {
+    "Level": "Project",
+    "Type": "Desktop Install",
+    "InfoSec_Level": []
+  },
+  "Plugins": [
+    "In-house plugins for FEA/CFD coupling",
+    "Param sweep driver, optimization driver"
+  ]
+}
