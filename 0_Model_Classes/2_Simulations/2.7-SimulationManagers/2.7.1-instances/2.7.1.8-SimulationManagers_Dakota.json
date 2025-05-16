@@ -1,0 +1,31 @@
+{
+  "Tool": {
+    "File_Name": "2.7.1.8-SimulationManagers_Dakota.json",
+    "Class": "Simulations",
+    "Type": "SimulationManagers",
+    "Instance": "Dakota",
+    "Vendor": "Sandia National Labs (Open Source)",
+    "Version": "6.17",
+    "POC": {
+      "Name": "Dakota Maintainer",
+      "Email": "dakota.maint@example.gov"
+    }
+  },
+  "Licensing": {
+    "Type": "LGPL",
+    "Server": null
+  },
+  "Access_Control": {
+    "IAM": "Local Accounts"
+  },
+  "Deployment": {
+    "Level": "Project",
+    "Type": "Desktop Install",
+    "InfoSec_Level": []
+  },
+  "Plugins": [
+    "Param Sweeps",
+    "Uncertainty Quantification",
+    "Optimization Drivers"
+  ]
+}
